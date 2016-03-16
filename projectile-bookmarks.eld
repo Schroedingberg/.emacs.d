@@ -1,1 +1,1 @@
-("~/Dropbox/.org/" "~/Development/" "~/Publishing/Bachelor_Thesis/" "~/Dropbox/polyamides/")
+("~/.emacs.d/" "~/Publishing/Bachelor_Thesis/" "~/Dropbox/.org/" "~/Development/" "~/Dropbox/polyamides/")
