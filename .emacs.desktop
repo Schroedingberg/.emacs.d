@@ -1,0 +1,316 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Mar 17 13:58:11 2016
+;; Desktop file format version 206
+;; Emacs version 24.4.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22250 7491 531686 354000) (desktop . "206") "aaron@AaronsThinkPad.armkm.net" nil nil ((((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#5f5f5f") (background-color . "#fdfde7") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background . "grey75") (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (display-type . color) (background-mode . light) (cursor-color . "#5f5f5f") (visibility) (powerline-cache) (frameset--id . "795E-DCC6-7FEE-8808") (frameset--mini t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 35) (width . 114) (left . 0) (top . 0)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 1044) (pixel-height . 612) (total-width . 116) (total-height . 34) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins nil) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#5f5f5f") (background-color . "#fdfde7") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background . "grey75") (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . light) (cursor-color . "#5f5f5f") (environment) (powerline-cache) (frameset--id . "5C5E-D6A2-D8E0-1EC6") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (visibility . t) (display . ":0") (explicit-name) (height . 42) (width . 139) (left . 0) (top . 37)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 1276) (pixel-height . 743) (total-width . 142) (total-height . 41) (normal-height . 1.0) (normal-width . 1.0) (buffer "Labbook.org" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 13342) (start . 12727))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("rubbers" "table" "org" "raman" "ftir" "in" "addq" "f" "clock last" "clock" "org" "exec" "startup" "proje" "helm" "across"))
+(setq regexp-search-ring '("dired-narr" "undefined" "^ess" "^\\."))
+(setq register-alist '((3 . " target group \nand a suitable product is executed\ntaking the social thought \"Electricity\nfor all\" into account. This means\nthat especially electricity novices\nshall be addressed . Therefore an inspection\nof financial possibilities is\nperformed to make a start. Table \\ref{tab:IncomeClasses}\nshows the distribution of household income classes\nby residence and region. While in\nurban areas only 29.3 \\% earn\nless than 200.000 UGX a month, in\nrural areas the amount \nis comparably high with 54.4 \\% .\\\\\n\nWith the aid of the income distribution\nand the data describing the usage\nof electricity as lighting fuel a\nlimit can be approximated that shows\nwhich income classes can absolutely\nafford a grid connection.\nFor this the assumption must be made\nthat at first the people with\nthe highest income are supplied with\nelectricity.\nThis is best explained with a\nterritory as an example.\nIn urban areas averagely 40.5 \\% of\nthe households use electricity as lighting\nfuel. 16.9 \\% of the households earn\nmore than 1,000,000 UGX a month.\nAs it is assumed that at first the people with the highest income are\nsupplied with electricity\n40.5 \\% -16.9 \\% = 23.6 \\% remain \nfor the other income classes.\nIn urban areas 21.0 \\% have a monthly income between 500,000 and\n1,000,000 UGX (income class b) so that merely 23.6 \\% - 21.0 \\% = 2.6\n\\% remain for further income classes. With 2.6 \\%  the 19.2 \\% of\nhouseholds with a monthly income between 300,000 and 500,000 (income class c) can not be satisfied. From this follows that the initially described limit is located in this income class. It is important to note that this limit is only a value indicating in which income class people assuredly have electricity access. This doesnt mean that there is no possibility that in urban areas e.g. also people from the income class between 200,000 and 300,000 UGX a month (income class d)\nhave electricity access and instead less from income class b.\nThe results of this analysis are depicted in \\ref{fig: IncomeElectricity}.\nThe columns represent the income distribution while the black bars mark the limits determined by the energy usage. Since the electricity usage is considered starting with the highest income class the value e.g. for\nurban areas is delineated at 100 \\% - 40.5 \\% = 59.5 \\%.\nIn central, western and eastern Uganda the limit is located in income class b, in northern Uganda even directly at the point of intersection to income class a. Remarkable is again the difference between rural and urban areas.\nWhile the limit in overall Uganda likewise is located in income class b, it is in income class a in rural areas and in income class c in urban areas.\nBy the difference between rural and urban areas it is again confirmed, that\nthe distance to power stations and the range of the electric grid have a strong impact on the usage of electricity. A distinct correlation between \nthe number of household with grid connection and the income can not be found.\\\\\nKampala again stands out here. The limit is located in income class d which means that it is assured that in Kampala people with a monthly income between 300,000 and 500,000 UGX can afford a grid connection.\\\\\n\nA glance at the possession of houses delivers the explanation for this.\nIn overall Uganda averagely 78.2 \\% of households own a house. In Kampala on the other hand this quantity only amounts 24 \\%. This leads to the conclusion, that many people live in apartments here, which most likely have a grid connection by default.\nThe analysis entails, that income class a is irrelevant for further consideration because it is assumed, that households with monthly income of more than 1,000,000 UGX can afford an electrical grid connection, provided it is desirable. Further can be assumed, that many people below a monthly income of 500,000 UGX have difficulties with financing electricity supply or have different financial priorities.\\\\\n\nIf furthermore shall be considered, that the majority of households should be addressed with a product, the actual average income must regarded. The average monthly income in 2012/13 was 227,")))
+(setq file-name-history '("~/.emacs.d/init.el" "~/.emacs" "/home/aaron/org-protocol:/capture:/t/https%3A%2F%2Fwww.zomato.com%2Fsydney%2Fcafe-svensson-cbd%2Finfo%23tab/Cafe%20Svensson%2C%20CBD%2C%20Sydney%20-%20Urbanspoon%2FZomato/" "~/Dropbox/Aaron/Dynapurge13C.org" "~/Dropbox/tabs.org.txt" "~/Dropbox/polyamides/data/NMR/Aaron/Twaron13C.org" "~/Dropbox/polyamides/data/NMR/Aaron/Dynapurge13C.org" "~/Dropbox/polyamides/data/NMR/Aaron/Dynapurge13C.org~" "~/.i3/config" "~/Dropbox/polyamides/.dropbox" "~/Dropbox/polyamides/.projectile" "~/.dropbox_secondary.sh" "~/.emacsconfig/helmsettings.el" "~/texmf/tex/latex/beamercolorthememetropolis.sty" "~/texmf/tex/latex/beamerfontthememetropolis.sty" "~/Publishing/Bachelor_Thesis/Figures/IR_plots/Output/Dynapurge.eps" "~/Publishing/Bachelor_Thesis/Poster/beamerposter/conference_poster_2.tex" "~/Dropbox_Alt_Starter.sh" "~/.dropbox-dist/dropboxd" "~/Downloads/10.1007%2Fs10858-013-9718-x.bib" "~/Dropbox/polyamides/Presentations/Abstract_Aaron_NMR-polymers-symposium_16-03-14.docx" "~/Dropbox/polyamides/Presentations/Flowchart.png" "~/Downloads/NMR-polymers-symposium_6-April-2016_v3.pdf" "~/Publishing/Bachelor_Thesis/mail" "~/Publishing/Bachelor_Thesis/Poster/beamerposter/figures/logo.png" "~/Publishing/Bachelor_Thesis/Poster/baposter/conference_poster_3.tex" "~/Publishing/Bachelor_Thesis/Thesis/Thesis.tex" "~/Publishing/Bachelor_Thesis/Abstract template_NMR polymers symposium_6 April 2016.docx" "~/Publishing/Bachelor_Thesis/DOE.png" "~/Dropbox/Kamera-Uploads/2016-03-15 17.41.27.jpg"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/aaron/Publishing/Bachelor_Thesis/Labbook.org"
+  "Labbook.org"
+  'org-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode flycheck-mode)
+  13342
+  '(13152 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  nil
+  "Output"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  563
+  '(nil nil)
+  t
+  '("/home/aaron/Publishing/Bachelor_Thesis/Figures/IR_plots/Output/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/aaron/Publishing/Bachelor_Thesis/Figures/IR_plots/Output/R1P18.eps"
+  "R1P18.eps"
+  'doc-view-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  t
+  '((page . 1) (slice))
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Publishing/Bachelor_Thesis/Figures/IR_plots/Output/Dynapurge.eps"
+  "Dynapurge.eps"
+  'doc-view-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  t
+  '((page . 1) (slice))
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Publishing/Bachelor_Thesis/Figures/IR_plots/irplot.py"
+  "irplot.py"
+  'python-mode
+  '(smartparens-mode helm-mode elpy-mode company-mode eldoc-mode highlight-indentation-mode yas-minor-mode projectile-mode achievements-mode auto-dim-other-buffers-mode flycheck-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/nmrplot.py"
+  "nmrplot.py"
+  'python-mode
+  '(smartparens-mode helm-mode elpy-mode company-mode eldoc-mode highlight-indentation-mode yas-minor-mode projectile-mode achievements-mode auto-dim-other-buffers-mode flycheck-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode flycheck-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/.org/Organizer.org"
+  "Organizer.org"
+  'org-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode org-indent-mode flycheck-mode)
+  4149
+  '(8278 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  nil
+  ".adobe"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  165
+  '(nil nil)
+  t
+  '("/home/aaron/.adobe/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/aaron/Development/dev.org"
+  "dev.org"
+  'org-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode org-indent-mode flycheck-mode org-beamer-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/.org/Birthdays.org"
+  "Birthdays.org"
+  'org-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode flycheck-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Publishing/Bachelor_Thesis/Thesis.org"
+  "Thesis.org"
+  'org-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode flycheck-mode)
+  27577
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Books/edu.org"
+  "edu.org"
+  'org-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode org-indent-mode flycheck-mode org-beamer-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/.dropbox"
+  ".dropbox"
+  'fundamental-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  nil)
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/.org/from-mobile.org"
+  "from-mobile.org"
+  'org-mode
+  '(smartparens-mode helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode flycheck-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Publishing/Bachelor_Thesis/Literature/HonorsManiego.pdf"
+  "HonorsManiego.pdf"
+  'pdf-view-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  nil
+  "aaron"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1934
+  '(nil nil)
+  t
+  '("/home/aaron/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "config"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  223
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/config/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  ".git"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  936
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/.git/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "refs"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  223
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/.git/refs/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "heads"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  229
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/.git/refs/heads/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "objects"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  234
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/.git/objects/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "logs"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  223
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/.git/logs/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "info"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  223
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/.git/info/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "hooks"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  224
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/.git/hooks/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  ".emacs.d"
+  'dired-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode dired-narrow-mode)
+  122
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "*info*"
+  'Info-mode
+  '(helm-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  89251
+  '(965 nil)
+  t
+  '("/home/aaron/.emacs.d/elpa/org-20160314/org" "Column groups" ((history ("/home/aaron/.emacs.d/elpa/org-20160314/org" "Orgtbl mode" 90359) ("/home/aaron/.emacs.d/elpa/org-20160314/org" "The spreadsheet" 91346) ("/home/aaron/.emacs.d/elpa/org-20160314/org" "Orgtbl mode" 90550) ("/home/aaron/.emacs.d/elpa/org-20160314/org" "Column groups" 89044) ("/home/aaron/.emacs.d/elpa/org-20160314/org" "Column width and alignment" 88696) ("/home/aaron/.emacs.d/elpa/org-20160314/org" "Tables" 75808) ("/home/aaron/.emacs.d/elpa/org-20160314/org" "Top" 1807) ("dir" "Top" 1110))))
+  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t)))
+
