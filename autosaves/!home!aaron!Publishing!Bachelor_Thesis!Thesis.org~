@@ -1,0 +1,788 @@
+
+
+
+
+
+* Content
+** Tools
+   
+*** [[http://www.texample.net/tikz/examples/all/][TikZ and PGF examples]]
+ 
+** Reading Notes
+   
+***  (2005). Understanding Nmr Spectroscopy. Chichester, West Sussex PO19 8SQ, England: Wiley.
+     
+**** Chapter 2
+    - NMR spectrum is a plot of intensity of absorption or emission on the vertical axis against frequency on horizontal axis
+    - Position of lines in Unit "ppm" which refers to the chemical shift scale because frequencies are proportional to
+      magnetic field strength --> To compensate differences, the chemical shift is used --> Standardization
+    - It will probably be necessary to convert between field strength and chemical shift
+    - In experiment, only one isotope is measured at a time
+    
+
+***** Chemical shift scales
+      - First step: Agreeing on a reference compound, for 1H and 13C it TMS
+      - Position of a peak is specified by measuring its frequency separation from the reference peak and then dividing
+	this by the frequency of the reference peak --> Field dependence cancels out
+
+	#+BEGIN_SRC python
+	import sympy
+	nu, nuref  = sympy.symbols("nu nuref")
+	delta = (nu-nuref)/nuref
+# To convert from chemical shift to frequency just transform so that you get a Hz in both sides
+
+	#+END_SRC
+
+      - It looks like the "ppm" is not an actual unit because in the calculation only the corresponding power to ten is used
+
+
+***** Receiver reference and offset frequency
+      - Not understood what this is actually, should ask Marion
+      - Receiver reference frequency can be set by the operator
+***** Linewidths, lineshapes and integrals
+      - Peaks must be separated from each other to deliver useful information
+      - NMR experiments on complex molecules are primarily limited by the linewidths of the resonances involved
+      - If separation falls below linewidth, lines can no longer be distinguished, which I think is bad for evaluation
+***** Scalar coupling   (J coupling) (so far only valid for weak coupling)
+      - J coupling between nuclei is mediated by chemical bonds is therefore useful in finding out which nuclei are
+	close to another
+      - Presence of coupling causes multiplets in the spectrum
+      - Example: If to half spin nuclei are coupled, the resonance from each spin splits symmetrically about the chemical
+	shift into two lines, called a doublet
+      - Each doublet is split by the same amount, coupling constant J, of which the value is independent of the field strength
+      - Basic idea behind: Spin half nucleus can be in up or down state of spin
+      - The two lines of the doublet are separated by J_12 and placed symmetrically about the chemical shift
+***** Tree diagrams
+      - If there are couplings present to further spins, the form of the multiplets can be predicted using tree diagrams
+      - These are practiced a bit on paper
+      - If you introduce a third spin to a doublet that is coupled to the first spin with J_13 you get a four line
+	multiplet, a doublet of doublets
+      - Assumption made: Branching to the left reduces frequency of the line, branching to the right increases it
+	- Based on this, the frequencies of each of the four lines of the doublet of doublets can be determined
+	  like $\nu_{10} = \nu_1 - 0.5*J_{12}-0.5*J_{13}$ (exercised on paper)
+
+***** Weak and strong coupling
+      - Coupling is weak if frequency separation of two peaks is much higher than the coupling constant J_12
+      - Coupling between different isotopes is always weak
+      - If frequency separation is in the same dimension as the coupling constant one has strong coupling
+      - Strong coupling disturbs frequency and intensity of the lines are disturbed in comparison to the weak coupling 
+	prediction
+      - This might cause a roofing effect: The multiplets peak intensity profile mimics the profile shape of a roof
+      - Also the middle point of a line can become different from the chemical shift
+      - Full analysis of strong coupling spectra can become very complex and is mostly automated
+      - The book is therefore limiting the used examples to weak coupling
+     
+
+
+***** The basic NMR experiment
+      1) Relaxation delay $t_{r}$, spins come to an equilibrium
+      2) Short bust, about 20 $\mu s$, of high power RF is applied. This excites a signal called free induction decay.
+      3) The FID is then recorded for a time called the acquisition time $t_{acq}$, usually more than about 50 ms
+      4) Fourier transformation
+	 Since the FID from one scan is too weak, the experiment is repeated n times, which makes the signal n times stronger,
+	 while the noise, being a random signal only gets about $\sqrt{n}$ times stronger.
+
+
+
+
+ 
+***** TODO Heteronuclear NMR and broadband decoupling
+      :PROPERTIES:
+      :ID:       658c8660-d31c-44d3-b864-edf8c72b6eea
+      :END:
+
+***** Frequency, oscillations and rotations
+      - (Jumping directly to representation using complex numbers)
+      - $e^{i\theta} = \cos{\theta} + i\sin{\theta} $
+      - 
+      
+
+
+
+
+**** Chapter 3
+     
+***** The problem with the energy level approach
+      - Quantum mechanics does not say that a molecule must be in one of the energy levels
+      - If we measure the energy of a molecule, the obtained value will always corresponf to one of the energy levels
+      - Actually an energy difference is measured
+      
+
+
+
+
+****** Wavefunctions and mixed states
+       - It is important to make a distinction between a molecule actually being in one of the energy levels and the molecule
+	 appearing to be in one of those states
+       - Each energy level has a different wavefunction
+       - The wavefunction does not need to be one associated with an energy level
+       - The wavefunction for a molecule is generally a mixture of the wavefunctions associated with the energy levels
+	 This is often called a mixed state or superposition state
+       - Mixed states are important in NMR, in contrast to IR and UV, because in nuclei, any states are not easily perturbed
+	 and therefore are observable
+
+
+
+
+****** Energy levels in NMR
+       - Frequencies of lines in an NMR spectrum can always be predicted by thinking about allowed transitions between energy
+	 levels
+
+
+******* Wavefunctions
+	- $ \phi (r) = e^{-ar} $
+
+	  - with r: distance from electron to nucleus
+
+	  - a: known constant
+
+
+
+******* Eigenfunctions and eigenvalues of operators
+	- Operator [acting on] Eigenfunction = Eigenvalue * Eigenfunction
+	- If we measure the value of some observable, the result will always be one of the eigenvalues of the operator
+	  wich represents this observable
+	- Concretely: If energy of a system is measured, the result must be one of the eigenvalues of the operator for energy
+	  It is these eigenvalues which are the energy levels of the system 
+	  
+
+
+
+******* Hamiltonians and angular momentum
+	- Constructing Hamiltonians is not within the scope of learning NMR, so the needed Hamiltonians are just given in
+	  the book
+	- $\hat{H} _{one~spin}= -\gamma \cdot B_{0}\cdot \hat{I}_{z}$
+	
+
+
+******* Eigenfunctions and eigenvalues of $\hat{I}_{z}$
+	- Number of eigenvalues of the angular momentum (z-component) is specified by quantum number I, called the
+	  nuclear spin angular momentum quantum number, also known as spin quantum number
+	  $I \in \mathbf{N} $  or $I \in  \{x:\frac{x}{2}~ where~ x \in \textbf{N}\}$
+	- The operator  $\hat{I}_{z}$ has (2I+1) eigenfunctions, each of which is characterized by another quantum number
+	  $m\in[-I,+I]\land m\in\mathbf{N}$
+	- For spin half nucleus $\hat{I}_{z}$ has just two eigenfunctions, characterized by $m = +\frac{1}{2}$ and $m = -\frac{1}{2}$
+	- Therefore one has the eigenvalue equations of $\hat{I}_{z}$ as $\hat{I}_{z}\Psi_{m}=m\hbar\Psi_{m}$
+
+
+******* Taking a break on page 32 - Eigenvalues for one spin Hamiltonian
+
+
+
+    
+
+
+	
+******* Summary
+	
+
+      
+
+ 
+
+
+**** Chapter 6
+     
+***** Superposition states
+
+      - Wavefunction of a single spin can always be described as a linear combination of the eigenfunctions of the
+	hamiltonian for a single spin       $\Psi = c_{\frac{1}{2}}\Psi_{\frac{1}{2}}+c_{-\frac{1}{2}}\Psi_{-\frac{1}{2}}$
+      - The hamiltonian for a single spin in frequency units is $\hat{H} = \omega_{0}\hat{I}_{z}$
+	- 
+
+
+
+
+
+
+*** Paulines Presentation "Identification of surface amines on industrial colloids and chemical modification"    [2016-02-08 Mon] 
+    - Colloids: Dispersed insoluble particles 1 nm to $1000 \mu m$
+      - 1 mm?
+    - Secondary and primary amines on surface, discovered with Ninhydrin
+    - Grafting of a fluorescent probe to proof that the amines are really grafted to the surface ?
+    - Grafting of PEG with epoxyfunctionalized ends
+    - Quantification of epoxy degradation by HNMR --> Half life time can be determined
+      - Are there other possible ways of determining the amount of epoxy rings?
+
+    - NH: Functionalization (with PEGDE) can be done in water --> Aromatic amines on surface
+
+    - 
+
+
+    
+*** Frihart, C. ({2004}). Specific adhesion model for bonding hot-meltpolyamides to vinyl. {INTERNATIONAL JOURNAL OF ADHESION AND
+**** Adhesion models:
+     No matter what bonding type is present, a good wetting of the surface is required. This is in turn antiproportional to
+     viscosity and surface energy.
+     Concerning adhesion of polyamides to vinyl, no correlation to viscosity of polyamides has been mentioned in patents,
+     it is assumed that dynamic wetting is not the most important factor in such an experiment.
+     
+     Moreover, polyamides bond to smooth as well as to
+     rough vinyl substrates. Thus, because a mechanical
+     interlocking model does not explain adhesion very well,
+     we need to consider a chemical interaction model.
+***** Mechanical 
+
+***** Chemical
+
+**** Understanding of a typical hot-melt polyamide
+     
+***** Most of the mass of a typical dimer based polyamide is based on the dimer fraction (60 % - 80 %)
+      Dimer portion contributes very amorphous and non-polar character to the polymer
+      Moreover, dimer-based polyamides usually involve
+      a 9- to 12-carbon diacid feed to raise the softening point
+      and impart the strength of a more crystalline nylon.
+      Polyamides are often made from two or more diamines
+      to impart strength, flexibility, and sufficient open time.
+      Linear aliphatic diamines, such as ethylenediamine and
+      hexamethylenediamine, impart hardness and strength.
+      Longer chain diamines, such as dimmer diamine,
+      provide flexibility as a result of fewer amide groups in
+      the resulting polyamide. Certain diamines, such as
+      polyether diamines, can provide good low temperature
+      properties. Where one diamine is piperazine or a similar
+      diamine, the polyamide is softer as a result of fewer
+      hydrogen bonds between the chains
+
+***** Rheology
+      A second stage of wetting occurs as the molten
+      adhesive is cooling into a solid. Since the initial
+      temperature of the adhesive is high for only a short
+      time, there is insufficient time for the adhesive to flow
+      into all the pores as could be expected under equilibrium
+      temperature conditions. It is known that not all dimer-
+      based polyamides have the same open time, i.e., the time
+      for the adhesive to become solid [7,10]. The longer the
+      open time the more likely the polyamide is to wet the
+      surface prior to solidification.
+
+
+
+      The other rheological factor is related to properties of
+      the solid adhesive rather than the molten adhesive.
+      Researchers have observed that bonds are often stronger
+      if the modulus of the adhesive is similar to that of the
+      substrate. The rationale is that less stress is concentrated
+      at the interface if the adhesive and substrate are not
+      highly different in modulus. A stiffer adhesive would
+      cause greater stress at its interface with the substrate as
+      the substrate is flexed, and the greater stress could
+      exceed the bond strength of the adhesive to the
+      substrate. Since piperazine incorporation reduces the
+      internal hydrogen bonding of polyamides compared to
+      the use of mono-substituted diamines, these polyamides
+      generally have lower moduli. The hypothesis is that the
+      lower moduli of piperazine-derived polyamides are
+      closer to that of vinyl. Although most piperazine-
+      derived polyamides have lower moduli than many other
+      polyamides, some non-piperazine-derived polyamide
+      formulations have lower moduli and do not bond to
+      vinyl [9]. In fact, polyamides from dimer diamine have
+      moduli and elongations similar to those of piperazine
+      polyamides, but they show very low vinyl bond strength.
+      In addition, flexibility (modulus) of vinyl is dependent
+      on the amount of plasticizer added. The flexibility of
+      vinyl does not influence which polyamides bond to vinyl
+      and which do not. Thus, low stiffness of the polyamide
+      does not appear to play a major role in this specific
+      adhesion.
+
+***** Conclusion
+      For all of these
+      theories of adhesion the adhesive is assumed to have
+      sufficient wetting properties to develop contact at the
+      molecular level contact, at least in spots. Hot-melt
+      polyamides made from primary diamines do not form
+      strong bonds. The data do not fit for explanations
+      involving mechanical bonding, rheology, and solubility
+      parameters. The mechanical interlock mechanism is not
+      likely on the bases that adhesion does not depend on the
+      roughness of the vinyl surface and that hot-melt
+      adhesives do not penetrate the roughness well because
+      of their high molecular weight and fast solidification.
+      Vinyl- and non-vinyl-bonding polyamides are not
+      distinct based upon either their flow properties or their
+      moduli, as would be required by two rheological models.
+      Calculated solubility parameters are not able to
+      distinguish polyamides on the basis of whether or not
+      they bond to vinyl. However, a model based on acid-
+      base interaction between the vinyl and adhesive fits with
+      the available data. This model relies on the reduced
+      internal bonding of the polyamide for the amides made
+      from secondary diamines compared to those made from
+      primary diamines. Those tertiary amide groups that are
+      not tied up in internal bonds are free to be proton
+      acceptor groups for bonding to the proton-donating
+      vinyl resins. This model, in which free proton acceptors
+      are required for bonding to vinyl, not only explains the
+      adhesion of polyamides made from secondary diamines
+      but also fits with the adhesion to vinyl for poly(ester-
+      amides).
+      The acid-base interaction model explains the here-
+      tofore unexplained specific adhesion to vinyl of
+      polyamides made from secondary diamines compared
+      to the lack of adhesion of polyamides made from
+      primary diamines. This is not meant to imply that
+      rheological and cohesive energy density factors are
+      not important for good adhesion. Rather, these factors
+      are unsatisfactory explanations of the improved adhe-
+      sion observed with polyamides that are made from piperazine.
+      
+
+
+
+      
+*** Jha, A., Bhowmich, A., Fujitsuka, R., & Inoue,  T. ({1999}). Interfacial interaction and peel adhesion between  polyamide and acrylate rubber in thermoplastic elastomeric  blends.
+    
+
+
+    
+
+**** Results and discussion
+
+***** Interfacial parameters
+      
+***** IR and NMR studies
+      - IR spectra have been taken from solution cast films of nylon 6 and acm
+      
+
+
+
+
+*** Fedorko, G., Molnar, V., Dovica, M., Toth, T., & Fabianova,  J. ({2015}). Failure analysis of irreversible changes in the  construction of the damaged rubber hoses. 
+    
+**** Introduction
+    - Conclusion from the introduction:
+      - No proper research of irreversible changes in structure of conveyor belts has been done so far.
+    
+
+
+**** Material and methods
+     
+***** Problem formulation
+      - Aim of paper is knowledge of gradual damaging process of conveyor belts
+      - Most common damage is damage by sharp edge falling material
+      - Primary signal for this is small local surface defects on covering layer
+      - Damage of covering layer is only a secondary problem for operators
+      
+
+
+
+
+
+
+
+      
+***** Description of the experiment and methods
+      - DOE flowchart provided in paper
+	- 
+
+
+
+*** Hu, W., Ellul, M. D., Tsou
+    
+**** Things from abstract that sound interesting
+     - ssNMR to characterize filler distribution in rubber blends
+     - Correllation between filler content and MAS $^{13}C$ and $^{1}H$ NMR signal
+       linewidth
+     - In IIR/BR and BIMS/BR blends, carbon black enriches in BR phasec
+
+     - Spin diffusion NMR useful for quantifying amount of interfacial component in TPV
+    
+
+**** Introduction
+     - It has been known that MAS peaks become broader for samples filled with carbon black
+       - This is the result of restricted polymer segment motion
+     - Broadening by magnetic susceptibility effect has been consideres insignificant
+     - This relationship has been used for study of the filler partitioning problem
+     - Correlations between filler content and NMR peak broadening are established, then
+       filler content in individual phases is  predicted on basis of this broadening
+     - Spin diffusion NMR is used to determine domain size in these polymers and results are
+       compared with AFM
+     
+
+**** Experimental section
+     - $^{1}H$ 500.13 MHz
+     - $^{13}C$ 125.75 MHz
+     - For filler partitioning stury,
+       a single $^{1}H$ pulse program was used for acquisition of $^{1}H$ Spectra.
+     - Single $^{13}C$ pulse followed by high power $^{1}H$ decoupling for $^{13}C$spectra
+     - MAS speed for both isotopes : 5 kHz
+     - Recycle delay 5 s for $^{1}H$ and 10 s for $^{13}C$
+     - Temperature = 80 °C
+     
+
+***** Spin diffusion study
+      - $^{1}H$T$_{2}$ filter-diffusion cross polarization pulse sequence was used
+      - A 180 ° pulse was placed in the middle of the T$_{2}$ filter to refocus chemical shift
+      
+
+**** Results and discussion
+     - In MAS experiments of polymers, lineshapes change with filler content
+     - Effect of carbon black content MAS lineshape can be
+       utilized to probe partitioning of fillers in blends
+     - For a rubber molecule the peak broadening is only a function
+       of its distance to nearby fillers
+     - Consequence (assuming that filler is homogeneously distributed):
+       - The NMR signal width is a function of rubber content in one domain
+
+       
+
+***** Domain size in thermoplastic vulcanizates
+      - Spin diffusion NMR widely used to obtain domain size information in ... polymers
+      - It uses the difference in molecular mobility in the various phases in the sample to create a
+	magnetization gradient, which allows nuclear spin diffusion to occur
+      - This enables calculation of domain size
+      - Suitable subjects for SDNMR seem to be compounds with a soft and a rigid phase $\Rightarrow$ TPV
+
+
+****** Carbon black peak broadening could be proportional to effect of carbon black  on physical properties
+       - Compare R5&6 with Unirez
+       - Only line broadening not spin diffusion
+
+***** Difficulties of SDNMR
+      - Problems with detecting large domain sizes 
+      - $^{1}H$  diffusion is limited by $^{1}H$ T$_{1}$ relaxation $\Rightarrow$ 0.5 to 2 s for semicrystalline polymers
+      - Diffusion coefficient is in the order of 0.1-1 \si{\nano\square\metre\per\milli\second}
+      - Rigid phase is often not completely rigid
+      
+
+***** Diffusion
+      - The data show a well-defined diffusion process, which at the first sight seems surprising considering the broad
+	distribution of domain sizes in TPVs
+      - Reason: When most polypropylene domains are much bigger than what the current spin diffusion experiment
+	can reach, the diffusion behavior is not highly sensitive to the domain size distribution
+
+
+
+*** Kaal, J., Brodowski, S., Baldock, J. A., Nierop, K. G.   Martinez Cortizas, A. ({2008}). Characterisation of aged black carbon 
+    
+**** Purpose of ^13C NMR
+     - Additional quantification method for black carbon
+     
+
+**** Experimental
+     - Solid state 13 C CP and DP NMR spectra
+     - MAS at a 13 C frequency of 50.3 MHz
+     - Samples  7 mm diameter cylindrical zirconia rotor with Kel-F 
+     - Spun at 5000 ± 100 Hz 
+     - 1 ms contact time, 4000 transients
+    
+
+**** Experimental
+     - Inversion recovery pulse sequence
+     - Multiplying recovery time when signal intensity passed through null by 10
+     - FIDs acquired with sweep width 40 kHz
+     - 1217 dp in 15 ms acquisition time
+     - Zero filled to 8192 dp and processed with 50 Hz Lorentzian line broadening
+       and 0.005s Gaussian broadening
+
+
+**** Experimental
+     - Spin lattice relaxation in the
+     rotating frame values  measured 
+     with variable spin lock pulse sequence. The T 1 q H values
+     were used together with the total signal intensity acquired
+     between 300 and 50 ppm to calculate the observability
+     of carbon in each sample using the cross polarisation
+     (CP–C obs ) and direct polarisation (DP–C obs ) pulse sequences
+     (Baldock and Smernik, 2002). The relative allocation of sig-
+     nal intensity to eight regions (alkyl 0–45 ppm; N-alkyl/meth-
+     oxyl 45–60 ppm; O-alkyl 60–95; di-O-alkyl 95–110 ppm; aryl
+     110–145 ppm; O-aryl 145–165 ppm; amide/carbonyl 165–
+     190 ppm and ketone 190–215 ppm) was determined after
+     reallocating signal intensity from spinning side bands back
+     to their parent resonances (Baldock and Smernik, 2002). The
+     relative signal intensities obtained from the CP and DP spectra
+     were used in conjunction with a MMM (Baldock et al., 2004)
+     to estimate the molecular composition of the organic mate
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+  
+
+
+*** TODO Find direct CB measurement methods for NMR  and Raman<2016-03-22 Tue 18:00>
+    :PROPERTIES:
+    :ID:       e3b8db46-3e5d-4156-9e95-a1679eb70075
+    :END:
+    :LOGBOOK:
+    CLOCK: [2016-03-18 Fri 17:31]--[2016-03-18 Fri 18:38] =>  1:07
+    CLOCK: [2016-03-15 Tue 12:28]--[2016-03-15 Tue 12:28] =>  0:00
+    CLOCK: [2016-03-15 Tue 12:19]--[2016-03-15 Tue 12:19] =>  0:00
+    CLOCK: [2016-03-15 Tue 12:00]--[2016-03-15 Tue 12:11] =>  0:11
+    :END:
+** Roadmap
+** Data Analysis
+*** STARTED Bibliography management 
+    :PROPERTIES:
+    :ID:       c5977f7e-eea4-4135-a1cd-d3ddc3e96d34
+    :END:
+    :LOGBOOK:
+    CLOCK: [2016-03-03 Thu 12:47]--[2016-03-03 Thu 13:02] =>  0:15
+    :END:
+*** TODO Learn how Savitzky Golay filter works
+    :PROPERTIES:
+    :ID:       d04ecee7-9e99-49c1-9e37-a5932aa9d23a
+    :END:
+    
+*** DONE NMR Data processing <2016-03-18 Fri 11:30>
+    :PROPERTIES:
+    :ID:       115cad84-1dd9-4a06-b712-79cc85694956
+    :END:
+    :LOGBOOK:
+    CLOCK: [2016-03-18 Fri 17:16]--[2016-03-18 Fri 17:31] =>  0:15
+    CLOCK: [2016-03-18 Fri 15:10]--[2016-03-18 Fri 15:12] =>  0:02
+    CLOCK: [2016-03-18 Fri 15:10]--[2016-03-18 Fri 15:10] =>  0:00
+    CLOCK: [2016-03-18 Fri 14:38]--[2016-03-18 Fri 15:10] =>  0:32
+    CLOCK: [2016-03-18 Fri 14:19]--[2016-03-18 Fri 14:38] =>  0:19
+    CLOCK: [2016-03-18 Fri 12:10]--[2016-03-18 Fri 13:39] =>  1:29
+    CLOCK: [2016-03-18 Fri 11:50]--[2016-03-18 Fri 12:04] =>  0:14
+    CLOCK: [2016-03-18 Fri 11:24]--[2016-03-18 Fri 11:50] =>  0:26
+    CLOCK: [2016-03-17 Thu 23:21]--[2016-03-17 Thu 23:30] =>  0:09
+    CLOCK: [2016-03-17 Thu 16:39]--[2016-03-17 Thu 17:50] =>  1:11
+    CLOCK: [2016-03-16 Wed 18:54]--[2016-03-16 Wed 19:21] =>  0:27
+    CLOCK: [2016-03-16 Wed 18:48]--[2016-03-16 Wed 18:54] =>  0:06
+    CLOCK: [2016-03-16 Wed 18:39]--[2016-03-16 Wed 18:48] =>  0:09
+    CLOCK: [2016-03-16 Wed 11:58]--[2016-03-16 Wed 12:39] =>  0:41
+    :END:
+** TODO Make poster for NMR symposium				    
+   DEADLINE: <2016-04-04 Mon>
+   :PROPERTIES:
+   :ID:       c446e165-f948-4b67-9d56-905804c57d6d
+   :END:
+   :LOGBOOK:
+   CLOCK: [2016-03-16 Wed 15:35]--[2016-03-16 Wed 17:13] =>  1:38
+   CLOCK: [2016-03-16 Wed 14:37]--[2016-03-16 Wed 15:35] =>  0:58
+   CLOCK: [2016-03-16 Wed 14:00]--[2016-03-16 Wed 14:03] =>  0:03
+   CLOCK: [2016-03-16 Wed 13:47]--[2016-03-16 Wed 13:48] =>  0:01
+   CLOCK: [2016-03-15 Tue 23:46]--[2016-03-16 Wed 00:07] =>  0:21
+   CLOCK: [2016-03-15 Tue 15:18]--[2016-03-15 Tue 16:08] =>  0:50
+   CLOCK: [2016-03-15 Tue 14:26]--[2016-03-15 Tue 15:00] =>  0:34
+   CLOCK: [2016-03-15 Tue 14:19]--[2016-03-15 Tue 14:26] =>  0:07
+   :END:
+   - [[file:~/Publishing/Bachelor_Thesis/Poster][File]]
+
+
+
+   
+   [[file:Figures/NMR_plots/nmr.org][File]]
+* Organisation
+
+  
+** APPT UWS Team meeting <2016-03-22 Tue 12:30>
+   :PROPERTIES:
+   :ID:       0c309deb-b80c-489b-96cc-b850c3114829
+   :END:
+
+** APPT Project specific meeting with Patrice and Marion  <2016-03-21 Mon 15:00 +1w>
+   :PROPERTIES:
+   :ID:       2224a2db-f2e3-474a-a92e-56b07aa1dab8
+   :LAST_REPEAT: [2016-03-14 Mon 16:32]
+   :END:
+   - State "DONE"       from "APPT"       [2016-03-14 Mon 16:32]
+   :LOGBOOK:
+   CLOCK: [2016-03-14 Mon 15:06]--[2016-03-14 Mon 16:29] =>  1:23
+   :END:
+   - State "ATTENDED"   from "APPT"       [2016-03-10 Thu 22:02]
+
+
+   
+*** Notes
+    - Marion corrected abstract
+      - Figure wanted:
+
+	- Some DOE chart that summarizes
+
+    - Looked for Ric for Risk assignment
+
+
+
+
+
+
+** TODO Do Carbon black CP NMR <2016-03-22 Tue>
+   :PROPERTIES:
+   :ID:       2434a710-a17c-4a05-b3cd-cca980d213fe
+   :END:
+
+** CANCELED Create profile for UWS Library request service <2016-03-14 Mon> 
+   :PROPERTIES:
+   :ID:       000ccc12-eda0-4786-98f5-bb5c4743197c
+   :END:
+
+** TODO Complete labbook <2016-03-22 Tue 15:00>
+:PROPERTIES:
+:LINK: [[file:Labbook.org][ FILE]]
+:ID:       2678cf09-7129-4ca6-8831-45f44b76e437
+:END:
+** DONE Email to Thorsten Hofe <2016-03-16 Wed 13:00> 
+:PROPERTIES:
+:ID:       26e38e10-03eb-4d8d-aacd-4ffa51ad458d
+:END:
+:LOGBOOK:
+CLOCK: [2016-03-10 Thu 22:07]--[2016-03-10 Thu 22:08] =>  0:01
+:END:
+:MESSAGE:
+Hallo Herr Hofe(Thorsten),
+Wir sind jetzt schon seit ... in Australien und haben uns bereits gut in das Team von Marion und Patrice eingelebt.
+
+:END:
+
+
+:PROPERTIES:
+:ID:       1e8a648f-e1b9-4a57-8344-5444be379d82
+:END:
+
+** TODO Check if DSC for adhesive can be done <2016-03-22 Tue>
+:PROPERTIES:
+:ID:       980dfef0-de96-4fda-9294-52da2c9e29e4
+:END:
+** TODO Build tree table of contents for thesis/presentation
+:PROPERTIES:
+:ID:       be35980d-a4fd-4531-932d-a7b07792092e
+:END:
+  
+  [[file:~/Publishing/Bachelor_Thesis/Presentation.tex::\node%5Bconcept,scale=0.5%5D%20{Analysis%20of%20industrial%20adhesive}]]
+** APPT Meeting with Duncan <2016-03-21 Mon 13:00-19:00>
+:PROPERTIES:
+:ID:       58c4fb44-fe65-49f8-a522-2c35ffe60b30
+:END:
+** DONE Get Ric´s signature on risk assessment <2016-03-16 Wed 15:00>
+:PROPERTIES:
+:ID:       f2988d58-3946-44ee-95b5-6f75de3830b5
+:END:
+:LOGBOOK:
+CLOCK: [2016-03-15 Tue 16:08]--[2016-03-15 Tue 16:19] =>  0:11
+CLOCK: [2016-03-15 Tue 15:00]--[2016-03-15 Tue 15:12] =>  0:12
+CLOCK: [2016-03-15 Tue 10:58]--[2016-03-15 Tue 11:04] =>  0:06
+:END:
+  
+  [[file:~/Publishing/Bachelor_Thesis/Thesis.org::*Notes][Notes]]
+** TODO Compare NMR spectra rubbers 5&6 with Unirez <2016-03-22 Tue 17:00>
+:PROPERTIES:
+:ID:       6d01cbfb-4bee-4c5d-bc67-12de92233cdd
+:END:
+  
+  [[file:~/Publishing/Bachelor_Thesis/Labbook.org::*Rubbers%20measured][Rubbers measured]]
+*** TODO Measure NMR of rubbers 5&6
+    :PROPERTIES:
+    :ID:       4084bd28-c199-42a9-8561-d8b069e48011
+    :END:
+** TODO Merge working dir with Dropbox <2016-03-22 Tue>
+** TODO New presentation for NMR Data 
+   DEADLINE: <2016-03-21 Mon>
+   :LOGBOOK:
+   CLOCK: [2016-03-21 Mon 10:12]
+   CLOCK: [2016-03-20 Sun 15:55]--[2016-03-20 Sun 21:44] =>  5:49
+   CLOCK: [2016-03-20 Sun 14:04]--[2016-03-20 Sun 15:03] =>  0:59
+   CLOCK: [2016-03-19 Sat 21:20]--[2016-03-19 Sat 23:10] =>  1:50
+   CLOCK: [2016-03-19 Sat 21:08]--[2016-03-19 Sat 21:12] =>  0:04
+   CLOCK: [2016-03-19 Sat 20:52]--[2016-03-19 Sat 21:07] =>  0:15
+   CLOCK: [2016-03-19 Sat 01:07]--[2016-03-19 Sat 01:15] =>  0:08
+   CLOCK: [2016-03-19 Sat 00:03]--[2016-03-19 Sat 01:07] =>  1:04
+   CLOCK: [2016-03-18 Fri 20:31]--[2016-03-19 Sat 00:03] =>  3:32
+   :END:
+   - [X] Dynapurge : No chance to see it in the rubber with NMR
+     - Which Dynapurge is it? What is it?
+   - [X] Twaron: Prefer proton spectrum
+   - [X] P18: Not in rotor
+   - [X] Mention need of rotors
+   - [X] Carbon spectrum of carbon black does not work
+     - We want to do more proton measurement of that (Different temperature)--> Signal is an issue here --> We need more of that!
+   - [X] Raman: Summarize the outcome of the raman experiments
+   - [X] Mention that peak width is antiproportional to the flexibility of the chains
+         Joel has a slide on that [[file:~/Dropbox/polyamides/Presentations/150911%20new%20rubber%20sample%20NMR%20and%20FTIR%20spectroscopy%20analysis.pptx][file:~/Dropbox/polyamides/Presentations/150911 new rubber sample NMR and FTIR spectroscopy analysis.pptx]]
+   - [X] Merge things from Joels presentations with my data
+
+
+
+* Writing of Thesis [%]
+** TODO Materials & Methods [/]
+   DEADLINE: <2016-04-04 Mon>
+   :PROPERTIES:
+   :ID:       da83eba3-c080-48bc-81eb-b6b99f83bcb0
+   :END:
+*** TODO FTIR
+    
+    :PROPERTIES:
+    :ID:       6ce1799b-bcd9-450f-b81f-c16c320b8abf
+    :END:
+*** TODO NMR
+    :PROPERTIES:
+    :ID:       81cc7c77-5a66-42ad-9052-3eee1f56faf5
+    :END:
+   
+
+
+** TODO Introduction [/]
+   DEADLINE: <2016-04-12 Tue>
+   :PROPERTIES:
+   :ID:       e009d810-bc75-4a32-92f5-f28dd4794dea
+   :END:
+   
+
+
+** TODO General section [/]
+   DEADLINE: <2016-04-16 Sat>
+   :PROPERTIES:
+   :ID:       564b9620-1772-4e37-8910-028d24c1d720
+   :END:
+
+** TODO Outline results & discussion [/]
+   :PROPERTIES:
+   :ID:       02e51a6c-4068-471f-8a03-02362ce0229e
+   :END:
+   
+   DEADLINE: <2016-04-25 Mon>
+
+** TODO Results and discussion [/]
+   DEADLINE: <2016-04-27 Wed>
+   :PROPERTIES:
+   :ID:       c20b5850-95d2-46da-a7fe-fff997ba11d2
+   :END:
+
+** TODO Summary and list of abbreviations, etc. [/]
+   DEADLINE: <2016-05-11 Wed>
+   :PROPERTIES:
+   :ID:       08ec9547-e599-4b2c-a44c-6ac7137754df
+   :END:
+
+** TODO First full draft
+   DEADLINE: <2016-05-13 Fri>
+   :PROPERTIES:
+   :ID:       94ed9322-8c3c-4561-be1b-c51386ea35f9
+   :END:
+
+** TODO Second full draft
+   DEADLINE: <2016-05-27 Fri>
+   :PROPERTIES:
+   :ID:       d0dd2008-4be1-4b0b-bb3c-ebbed6b6fa34
+   :END:
+
+** TODO Bind thesis 
+   DEADLINE: <2016-06-10 Fri>
+   :PROPERTIES:
+   :ID:       4fb84218-dd6b-49c4-8913-64ae5bc8fe67
+   :END:
+
+
+** TODO Send in Thesis 
+   DEADLINE: <2016-06-11 Sat>
+   :PROPERTIES:
+   :ID:       f7858f34-4a10-47f8-8d39-611531332c78
+   :END:
+   
+

@@ -1,7 +1,14 @@
-* TODO Migrate uncetogorized or custom set preferences <2016-03-19 Sat>
+
+
+
+* Source of inspiration for this file: [[https://github.com/larstvei/dot-emacs/blob/master/init.org][dot-emacs/init.org at master · larstvei/dot-emacs]]
+* TODO Migrate uncatogorized or custom set preferences <2016-03-19 Sat>
   :LOGBOOK:
   CLOCK: [2016-03-18 Fri 11:00]--[2016-03-18 Fri 11:02] =>  0:02
   :END:
+
+  
+
   #+begin_src emacs-lisp :tangle yes
   ;; Code ;; 
   (custom-set-variables
@@ -80,7 +87,6 @@ static char *gnus-pointer[] = {
      ("Deutsche Nationalbibliothek" . "https://portal.dnb.de/opac.htm?query=%s")
      ("British National Library" . "http://explore.bl.uk/primo_library/libweb/action/search.do?&vl(freeText0)=%s&fn=search")
      ("Bibliothèque nationale de France" . "http://catalogue.bnf.fr/servlet/RechercheEquation?host=catalogue?historique1=Recherche+par+mots+de+la+notice&niveau1=1&url1=/jsp/recherchemots_simple.jsp?host=catalogue&maxNiveau=1&categorieRecherche=RechercheMotsSimple&NomPageJSP=/jsp/recherchemots_simple.jsp?host=catalogue&RechercheMotsSimpleAsauvegarder=0&ecranRechercheMot=/jsp/recherchemots_simple.jsp&resultatsParPage=20&x=40&y=22&nbElementsHDJ=6&nbElementsRDJ=7&nbElementsRCL=12&FondsNumerise=M&CollectionHautdejardin=TVXZROM&HDJ_DAV=R&HDJ_D2=V&HDJ_D1=T&HDJ_D3=X&HDJ_D4=Z&HDJ_SRB=O&CollectionRezdejardin=UWY1SPQM&RDJ_DAV=S&RDJ_D2=W&RDJ_D1=U&RDJ_D3=Y&RDJ_D4=1&RDJ_SRB=P&RDJ_RLR=Q&RICHELIEU_AUTRE=ABCDEEGIKLJ&RCL_D1=A&RCL_D2=K&RCL_D3=D&RCL_D4=E&RCL_D5=E&RCL_D6=C&RCL_D7=B&RCL_D8=J&RCL_D9=G&RCL_D10=I&RCL_D11=L&ARSENAL=H&LivrePeriodique=IP&partitions=C&images_fixes=F&son=S&images_animees=N&Disquette_cederoms=E&multimedia=M&cartes_plans=D&manuscrits=BT&monnaies_medailles_objets=JO&salle_spectacle=V&Monographie_TN=M&Periodique_TN=S&Recueil_TN=R&CollectionEditorial_TN=C&Ensemble_TN=E&Spectacle_TN=A&NoticeB=%s")
-     ("Gallica Bibliothèque Numérique" . "http://gallica.bnf.fr/Search?q=%s")
      ("EZB" . "http://rzblx1.uni-regensburg.de/ezeit/search.phtml?bibid=EFF&colors=2&lang=de"))))
  '(helm-dash-browser-func (quote eww))
  '(helm-el-package-initial-filter (quote all))
@@ -94,13 +100,6 @@ static char *gnus-pointer[] = {
  '(org-agenda-files
    (quote
     ("~/Dropbox/.org/Organizer.org" "~/Dropbox/.org/from-mobile.org" "~/Dropbox/.org/Birthdays.org" "~/Books/edu.org" "~/Publishing/Bachelor_Thesis/Thesis.org" "~/Development/dev.org")))
- '(org-babel-load-languages
-   (quote
-    ((emacs-lisp . t)
-     (ditaa . t)
-     (python . t)
-     (latex . t)
-     (dot . t))))
  '(org-clock-idle-time 10)
  '(org-clock-persist t)
  '(org-directory "~")
@@ -132,16 +131,23 @@ static char *gnus-pointer[] = {
 
   #+end_src
 
+  #+RESULTS:
+  | /home/aaron/.emacs.d/elpa/alect-themes-20150920.1124/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160316.1835/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160311.739/ | /home/aaron/.emacs.d/lisp/moe-theme.el/ | ~/.emacs.d/lisp/moe-theme.el/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
 
 
 
+  
 * Appearance
 ** Theme
    #+begin_src emacs-lisp :tangle yes
    (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
    (add-to-list 'load-path "~/.emacs.d/lisp/moe-theme.el/")
-   (load "~/.emacs.d/config/moe_config.el")					      ;;
+   (require 'moe-theme)
+   (moe-light)
    #+end_src
+
+   #+RESULTS:
+
 ** Powerline
    #+BEGIN_SRC emacs-lisp :tangle yes
    (add-to-list 'load-path "~/.emacs.d/lisp/powerline")
@@ -171,6 +177,10 @@ static char *gnus-pointer[] = {
   ;;		'("user42" . "http://download.tuxfamily.org/user42/elpa/packages/")))
 
   #+end_src
+
+  #+RESULTS:
+  : t
+
 * Org-mode
   #+begin_src emacs-lisp :tangle yes
   ;; ;; Custom Org-settings
@@ -272,11 +282,18 @@ static char *gnus-pointer[] = {
 	 ;(setq org-agenda-include-diary t)
 
 	 ;; Latex Export Settings
-
 	 ;;Babel
-	 ;; (org-babel-do-load-languages
-	 ;;  'org-babel-load-languages
-	 ;;  '((python . t)))
+	 (org-babel-do-load-languages
+	  'org-babel-load-languages
+	  (quote
+	  ((emacs-lisp . t)
+	  (ditaa . t)
+	  (python . t)
+	  (latex . t)
+	  (ipython .t)
+	  (dot . t))))
+
+	 (require 'ob-ipython)
 	 (setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
 	 ;;; display/update images in the buffer after I evaluate
 	 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
@@ -296,6 +313,8 @@ static char *gnus-pointer[] = {
 	 (setq org-mu4e-link-query-in-headers-mode nil)
   #+end_src
 
+  #+RESULTS:
+
 
 
 * Completion
@@ -313,6 +332,10 @@ static char *gnus-pointer[] = {
 ;(company-auctex-init)
 
   #+end_src
+
+  #+RESULTS:
+  | #[nil \300\301!\205         \301\302!\207 [fboundp auto-dim-other-buffers-mode t] 2] | global-company-mode | debian-ispell-set-startup-menu | x-wm-set-size-hint | #[0 \302\303\304\305        \300@\306N\300A\203 \307\202 \310\311\312\300A\313#%\314#\207 [(void-variable p) user-init-file display-warning initialization format An error occurred while loading `%s': |
+
 
 * Helm
   Settings for Helm usage
@@ -364,6 +387,9 @@ static char *gnus-pointer[] = {
 (helm-mode)
   #+end_src
 
+  #+RESULTS:
+  : t
+
 * Mail
   Settings for mail integration, mainly mu4e
 
@@ -393,8 +419,8 @@ static char *gnus-pointer[] = {
     ("HSF"
      (user-mail-address  "rebmann.aaron@stud.hs-fresenius.de")
      (mu4e-sent-folder   "/HSF/Gesendet")
-     (mu4e-drafts-folder "/HSF/Entwürfe")
-     (mu4e-trash-folder  "/HSF/Gelöscht")
+     (mu4e-drafts-folder "/HSF/Entwuerfe")
+     (mu4e-trash-folder  "/HSF/Geloescht")
      (mu4e-refile-folder "/HSF/Archive")
 
    )
@@ -556,6 +582,9 @@ static char *gnus-pointer[] = {
 
   #+end_src
 
+  #+RESULTS:
+  | openwith-file-handler | jka-compr-handler | image-file-handler | epa-file-handler |
+
 * Dired
   Settings for Dired
   #+begin_src emacs-lisp :tangle yes
@@ -586,20 +615,35 @@ static char *gnus-pointer[] = {
 
   #+end_src
 
+  #+RESULTS:
+  | \.zip\' | .zip | unzip      |
+  | \.gz\'  |      | gunzip     |
+  | \.tgz\' | .tar | gunzip     |
+  | \.Z\'   |      | uncompress |
+  | \.z\'   |      | gunzip     |
+  | \.dz\'  |      | dictunzip  |
+  | \.tbz\' | .tar | bunzip2    |
+  | \.bz2\' |      | bunzip2    |
+  | \.xz\'  |      | unxz       |
+  | \.tar\' | .tgz | nil        |
+
 * Yasnippet
   Yasnippet settings
-#+begin_src emacs-lisp :tangle yes
-;(add-hook 'prog-mode-hook #'yas-minor-mode)
-;; (yas-snippet-dirs
-;; ("/home/aaron/.emacs.d/elpa/elpy-20160131.118/snippets/"
-;;  "/home/aaron/.emacs.d/elpa/django-snippets-20131229.811/snippets")) 
-(yas-global-mode 1)
-#+end_src
+  #+begin_src emacs-lisp :tangle yes
+  ;(add-hook 'prog-mode-hook #'yas-minor-mode)
+  ;; (yas-snippet-dirs
+  ;; ("/home/aaron/.emacs.d/elpa/elpy-20160131.118/snippets/"
+  ;;  "/home/aaron/.emacs.d/elpa/django-snippets-20131229.811/snippets")) 
+  (yas-global-mode 1)
+  #+end_src
+
+  #+RESULTS:
+  : t
 
 
 
-* Dotemacs
-  Settings that are specific to the strategy of organizing the initfile as an org file.
+* Dotemacs hook
+  A hooked function that tangles and compiles the init.org after saving.
   #+begin_src emacs-lisp :tangle yes
 
   (defun tangle-init ()
@@ -610,19 +654,33 @@ static char *gnus-pointer[] = {
   ;; Avoid running hooks when tangling.
   (let ((prog-mode-hook nil))
   (org-babel-tangle))))
-  ;(byte-compile-file (concat user-emacs-directory "init.el")))))
+;  (byte-compile-file (concat user-emacs-directory "init.el")
+
 
   (add-hook 'after-save-hook 'tangle-init)
-
+  (set-language-environment "UTF-8")
   #+end_src
 
   #+RESULTS:
-  | tangle-init |
+  : t
 
 
 
 
+* Filesystem behavior
+  #+begin_src emacs-lisp :tangle yes
+  (defvar emacs-autosave-directory
+  (concat user-emacs-directory "autosaves/")
+  "This variable dictates where to put auto saves. It is set to a
+  directory called autosaves located wherever your .emacs.d/ is
+  located.")
 
+;; Sets all files to be backed up and auto saved in a single directory.
+(setq backup-directory-alist
+      `((".*" . ,emacs-autosave-directory))
+      auto-save-file-name-transforms
+      `((".*" ,emacs-autosave-directory t)))p
+  #+end_src
 * Temporary place for all the stuff from the init that comes after the specific stuff
   #+begin_src emacs-lisp :tangle yes
 ;(toggle-diredp-find-file-reuse-dir 1)
@@ -636,8 +694,6 @@ static char *gnus-pointer[] = {
 
 
 
-;;PDF tools 
-;(pdf-tools-install)
 
 
 
@@ -645,7 +701,7 @@ static char *gnus-pointer[] = {
 (setq TeX-show-compilation nil)
 ;(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
-;;(company-auctex-init)
+(company-auctex-init)
 (setq TeX-auto-save t)
      (setq TeX-parse-self t)
      (setq-default TeX-master nil)
@@ -680,24 +736,7 @@ static char *gnus-pointer[] = {
 ;; (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 
-;; (defun my-compile ()
-;;   "Use compile to run python programs"
-;;   (interactive)
-;;   (compile (concat "python " (buffer-name))))
-;; (setq compilation-scroll-output t)
-;; ;; this mode-hook is taken straight from the comments in autopair.el
-;; (add-hook 'python-mode-hook
-;;       #'(lambda ()
-;; 	  (local-set-key "\C-c\C-c" 'my-compile)))
 
-;; Convenience functions for Graphviz mode
-;; (defun show-me-the-graph ()
-;;   "Build the png file of the dot-graph and show it directly in the preview pane"
-;;   (interactive)
-;;   (compile (concat "dot " (buffer-name) "-o ./"  ))
-;;     )
-
-;(put 'LaTeX-narrow-to-environment 'disabled nil)
 ;(smartparens-mode t)
 ;; Skype settings
 ;;(setq skype--my-user-handle "your skype account")
@@ -714,5 +753,10 @@ static char *gnus-pointer[] = {
 (projectile-global-mode)
 (achievements-mode)
 (server-start)
+;;PDF tools 
+(pdf-tools-install)
 
   #+end_src
+
+  #+RESULTS:
+

@@ -1,7 +1,14 @@
-* TODO Migrate uncatogorized or custom set preferences <2016-03-19 Sat>
+#+Tags: APPEARANCE (a) 
+
+
+* Source of inspiration for this file: [[https://github.com/larstvei/dot-emacs/blob/master/init.org][dot-emacs/init.org at master · larstvei/dot-emacs]]
+* TODO Migrate uncategorized or custom set preferences <2016-03-19 Sat>
   :LOGBOOK:
   CLOCK: [2016-03-18 Fri 11:00]--[2016-03-18 Fri 11:02] =>  0:02
   :END:
+
+  
+
   #+begin_src emacs-lisp :tangle yes
   ;; Code ;; 
   (custom-set-variables
@@ -21,7 +28,6 @@
  '(diary-entry-marker (quote font-lock-variable-name-face))
  '(doc-view-continuous t)
  '(electric-pair-mode nil)
- '(elfeed-feeds (quote ("http://blog.revolutionanalytics.com/atom.xml")))
  '(elpy-rpc-python-command "python")
  '(emms-mode-line-icon-image-cache
    (quote n
@@ -80,7 +86,6 @@ static char *gnus-pointer[] = {
      ("Deutsche Nationalbibliothek" . "https://portal.dnb.de/opac.htm?query=%s")
      ("British National Library" . "http://explore.bl.uk/primo_library/libweb/action/search.do?&vl(freeText0)=%s&fn=search")
      ("Bibliothèque nationale de France" . "http://catalogue.bnf.fr/servlet/RechercheEquation?host=catalogue?historique1=Recherche+par+mots+de+la+notice&niveau1=1&url1=/jsp/recherchemots_simple.jsp?host=catalogue&maxNiveau=1&categorieRecherche=RechercheMotsSimple&NomPageJSP=/jsp/recherchemots_simple.jsp?host=catalogue&RechercheMotsSimpleAsauvegarder=0&ecranRechercheMot=/jsp/recherchemots_simple.jsp&resultatsParPage=20&x=40&y=22&nbElementsHDJ=6&nbElementsRDJ=7&nbElementsRCL=12&FondsNumerise=M&CollectionHautdejardin=TVXZROM&HDJ_DAV=R&HDJ_D2=V&HDJ_D1=T&HDJ_D3=X&HDJ_D4=Z&HDJ_SRB=O&CollectionRezdejardin=UWY1SPQM&RDJ_DAV=S&RDJ_D2=W&RDJ_D1=U&RDJ_D3=Y&RDJ_D4=1&RDJ_SRB=P&RDJ_RLR=Q&RICHELIEU_AUTRE=ABCDEEGIKLJ&RCL_D1=A&RCL_D2=K&RCL_D3=D&RCL_D4=E&RCL_D5=E&RCL_D6=C&RCL_D7=B&RCL_D8=J&RCL_D9=G&RCL_D10=I&RCL_D11=L&ARSENAL=H&LivrePeriodique=IP&partitions=C&images_fixes=F&son=S&images_animees=N&Disquette_cederoms=E&multimedia=M&cartes_plans=D&manuscrits=BT&monnaies_medailles_objets=JO&salle_spectacle=V&Monographie_TN=M&Periodique_TN=S&Recueil_TN=R&CollectionEditorial_TN=C&Ensemble_TN=E&Spectacle_TN=A&NoticeB=%s")
-     ("Gallica Bibliothèque Numérique" . "http://gallica.bnf.fr/Search?q=%s")
      ("EZB" . "http://rzblx1.uni-regensburg.de/ezeit/search.phtml?bibid=EFF&colors=2&lang=de"))))
  '(helm-dash-browser-func (quote eww))
  '(helm-el-package-initial-filter (quote all))
@@ -94,13 +99,6 @@ static char *gnus-pointer[] = {
  '(org-agenda-files
    (quote
     ("~/Dropbox/.org/Organizer.org" "~/Dropbox/.org/from-mobile.org" "~/Dropbox/.org/Birthdays.org" "~/Books/edu.org" "~/Publishing/Bachelor_Thesis/Thesis.org" "~/Development/dev.org")))
- '(org-babel-load-languages
-   (quote
-    ((emacs-lisp . t)
-     (ditaa . t)
-     (python . t)
-     (latex . t)
-     (dot . t))))
  '(org-clock-idle-time 10)
  '(org-clock-persist t)
  '(org-directory "~")
@@ -132,25 +130,39 @@ static char *gnus-pointer[] = {
 
   #+end_src
 
+  #+RESULTS:
+  | /home/aaron/.emacs.d/elpa/alect-themes-20150920.1124/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160316.1835/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160311.739/ | /home/aaron/.emacs.d/lisp/moe-theme.el/ | ~/.emacs.d/lisp/moe-theme.el/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
 
 
 
-* Appearance
+  
+* Appearance 							 :APPEARANCE:
 ** Theme
    #+begin_src emacs-lisp :tangle yes
    (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
    (add-to-list 'load-path "~/.emacs.d/lisp/moe-theme.el/")
-   (load "~/.emacs.d/config/moe_config.el")					      ;;
+   (require 'moe-theme)
+   ;; Show highlighted buffer-id as decoration. (Default: nil)
+   ;; Choose a color for mode-line.(Default: blue)
+    (moe-theme-set-color 'black)
+    (setq moe-theme-highlight-buffer-id t)
+
+   (moe-light)
    #+end_src
+
+   #+RESULTS:
+
 ** Powerline
    #+BEGIN_SRC emacs-lisp :tangle yes
    (add-to-list 'load-path "~/.emacs.d/lisp/powerline")
    (require 'powerline)
    (powerline-default-theme)
+
+
    #+END_SRC
 
    #+RESULTS:
-   | %e | (:eval (let* ((active (powerline-selected-window-active)) (mode-line (if active (quote mode-line) (quote mode-line-inactive))) (face1 (if active (quote powerline-active1) (quote powerline-inactive1))) (face2 (if active (quote powerline-active2) (quote powerline-inactive2))) (separator-left (intern (format powerline-%s-%s (powerline-current-separator) (car powerline-default-separator-dir)))) (separator-right (intern (format powerline-%s-%s (powerline-current-separator) (cdr powerline-default-separator-dir)))) (lhs (list (powerline-raw %* nil (quote l)) (when powerline-display-buffer-size (powerline-buffer-size nil (quote l))) (when powerline-display-mule-info (powerline-raw mode-line-mule-info nil (quote l))) (powerline-buffer-id nil (quote l)) (when (and (boundp (quote which-func-mode)) which-func-mode) (powerline-raw which-func-format nil (quote l))) (powerline-raw  ) (funcall separator-left mode-line face1) (when (and (boundp (quote erc-track-minor-mode)) erc-track-minor-mode) (powerline-raw erc-modified-channels-object face1 (quote l))) (powerline-major-mode face1 (quote l)) (powerline-process face1) (powerline-minor-modes face1 (quote l)) (powerline-narrow face1 (quote l)) (powerline-raw   face1) (funcall separator-left face1 face2) (powerline-vc face2 (quote r)) (when (bound-and-true-p nyan-mode) (powerline-raw (list (nyan-create)) face2 (quote l))))) (rhs (list (powerline-raw global-mode-string face2 (quote r)) (funcall separator-right face2 face1) (unless window-system (powerline-raw (char-to-string 57505) face1 (quote l))) (powerline-raw %4l face1 (quote l)) (powerline-raw : face1 (quote l)) (powerline-raw %3c face1 (quote r)) (funcall separator-right face1 mode-line) (powerline-raw  ) (powerline-raw %6p nil (quote r)) (when powerline-display-hud (powerline-hud face2 face1))))) (concat (powerline-render lhs) (powerline-fill face2 (powerline-width rhs)) (powerline-render rhs)))) |
+   : t
 
 * Package management
   Settings for emacs package management
@@ -171,6 +183,10 @@ static char *gnus-pointer[] = {
   ;;		'("user42" . "http://download.tuxfamily.org/user42/elpa/packages/")))
 
   #+end_src
+
+  #+RESULTS:
+  : t
+
 * Org-mode
   #+begin_src emacs-lisp :tangle yes
   ;; ;; Custom Org-settings
@@ -241,9 +257,9 @@ static char *gnus-pointer[] = {
 	 - Software: Topspin\n
 	 - Standard used: %^{prompt} in rotor %^{prompt}\n
 	 - Rotary frequency: %^{prompt} \\si{\kilo\hertz} %^{prompt|MAS| }\n
-	 - - 90° $^1H$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
+	 - - 90 $^1H$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
 	 SR $^1H$ = %^{prompt} \\si{\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
-	 - - 90° $^{13}C$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
+	 - - 90 $^{13}C$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
 	 SR $^{13}C$ = %^{prompt} \\si{\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
 	 - Comment: %^{prompt}
 	 \n
@@ -272,11 +288,18 @@ static char *gnus-pointer[] = {
 	 ;(setq org-agenda-include-diary t)
 
 	 ;; Latex Export Settings
-
 	 ;;Babel
-	 ;; (org-babel-do-load-languages
-	 ;;  'org-babel-load-languages
-	 ;;  '((python . t)))
+	 (org-babel-do-load-languages
+	  'org-babel-load-languages
+	  (quote
+	  ((emacs-lisp . t)
+	  (ditaa . t)
+	  (python . t)
+	  (latex . t)
+	  (ipython .t)
+	  (dot . t))))
+
+	 (require 'ob-ipython)
 	 (setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
 	 ;;; display/update images in the buffer after I evaluate
 	 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
@@ -296,6 +319,8 @@ static char *gnus-pointer[] = {
 	 (setq org-mu4e-link-query-in-headers-mode nil)
   #+end_src
 
+  #+RESULTS:
+
 
 
 * Completion
@@ -313,6 +338,31 @@ static char *gnus-pointer[] = {
 ;(company-auctex-init)
 
   #+end_src
+
+  #+RESULTS:
+
+
+* LaTeX
+#+begin_src emacs-lisp :tangle yes
+
+;;This is mainly for making beamer frames appear in the reftex tox
+(setq reftex-section-levels '(("part" . 0)
+                  ("chapter" . 1)
+                  ("section" . 2)
+                  ("subsection" . 3)
+                  ("subsubsection" . 4)
+                  ("paragraph" . 5)
+                  ("subparagraph" . 6)
+                  ("frametitle" . 7)
+                  ("addchap" . -1)
+                  ("addsec" . -2)))
+
+(setq TeX-fold-mode t)
+
+#+end_src
+
+#+RESULTS:
+: t
 
 * Helm
   Settings for Helm usage
@@ -364,6 +414,9 @@ static char *gnus-pointer[] = {
 (helm-mode)
   #+end_src
 
+  #+RESULTS:
+  : t
+
 * Mail
   Settings for mail integration, mainly mu4e
 
@@ -393,8 +446,8 @@ static char *gnus-pointer[] = {
     ("HSF"
      (user-mail-address  "rebmann.aaron@stud.hs-fresenius.de")
      (mu4e-sent-folder   "/HSF/Gesendet")
-     (mu4e-drafts-folder "/HSF/Entwürfe")
-     (mu4e-trash-folder  "/HSF/Gelöscht")
+     (mu4e-drafts-folder "/HSF/Entwuerfe")
+     (mu4e-trash-folder  "/HSF/Geloescht")
      (mu4e-refile-folder "/HSF/Archive")
 
    )
@@ -556,6 +609,9 @@ static char *gnus-pointer[] = {
 
   #+end_src
 
+  #+RESULTS:
+  | openwith-file-handler | jka-compr-handler | image-file-handler | epa-file-handler |
+
 * Dired
   Settings for Dired
   #+begin_src emacs-lisp :tangle yes
@@ -586,6 +642,18 @@ static char *gnus-pointer[] = {
 
   #+end_src
 
+  #+RESULTS:
+  | \.zip\' | .zip | unzip      |
+  | \.gz\'  |      | gunzip     |
+  | \.tgz\' | .tar | gunzip     |
+  | \.Z\'   |      | uncompress |
+  | \.z\'   |      | gunzip     |
+  | \.dz\'  |      | dictunzip  |
+  | \.tbz\' | .tar | bunzip2    |
+  | \.bz2\' |      | bunzip2    |
+  | \.xz\'  |      | unxz       |
+  | \.tar\' | .tgz | nil        |
+
 * Yasnippet
   Yasnippet settings
   #+begin_src emacs-lisp :tangle yes
@@ -593,13 +661,28 @@ static char *gnus-pointer[] = {
   ;; (yas-snippet-dirs
   ;; ("/home/aaron/.emacs.d/elpa/elpy-20160131.118/snippets/"
   ;;  "/home/aaron/.emacs.d/elpa/django-snippets-20131229.811/snippets")) 
-(yas-global-mode 1)
+  (yas-global-mode 1)
   #+end_src
 
+  #+RESULTS:
+  : t
 
+* Browsing
+#+begin_src emacs-lisp :tangle yes
+(setq '(elfeed-feeds (quote ("http://blog.revolutionanalytics.com/atom.xml"))))
 
-* Dotemacs
-  Settings that are specific to the strategy of organizing the initfile as an org file.
+#+end_src
+* Navigation
+  #+begin_src emacs-lisp :tangle yes
+(win-switch-setup-keys-ijkl "\C-xo")
+(setq win-switch-idle-time 2)
+  #+end_src
+
+  #+RESULTS:
+  : 2
+
+* Dotemacs hook
+  A hooked function that tangles and compiles the init.org after saving.
   #+begin_src emacs-lisp :tangle yes
 
   (defun tangle-init ()
@@ -610,10 +693,12 @@ static char *gnus-pointer[] = {
   ;; Avoid running hooks when tangling.
   (let ((prog-mode-hook nil))
   (org-babel-tangle))))
-  ;(byte-compile-file (concat user-emacs-directory "init.el")))))
+;  (byte-compile-file (concat user-emacs-directory "init.el")
+
+
 
   (add-hook 'after-save-hook 'tangle-init)
-
+;;  (set-language-environment "UTF-8")
   #+end_src
 
   #+RESULTS:
@@ -623,6 +708,21 @@ static char *gnus-pointer[] = {
 
 
 
+
+* Filesystem behavior
+  #+begin_src emacs-lisp :tangle yes
+  (defvar emacs-autosave-directory
+  (concat user-emacs-directory "autosaves/")
+  "This variable dictates where to put auto saves. It is set to a
+  directory called autosaves located wherever your .emacs.d/ is
+  located.")
+
+;; Sets all files to be backed up and auto saved in a single directory.
+(setq backup-directory-alist
+      `((".*" . ,emacs-autosave-directory))
+      auto-save-file-name-transforms
+      `((".*" ,emacs-autosave-directory t)))
+  #+end_src
 * Temporary place for all the stuff from the init that comes after the specific stuff
   #+begin_src emacs-lisp :tangle yes
 ;(toggle-diredp-find-file-reuse-dir 1)
@@ -636,8 +736,6 @@ static char *gnus-pointer[] = {
 
 
 
-;;PDF tools 
-;(pdf-tools-install)
 
 
 
@@ -645,7 +743,7 @@ static char *gnus-pointer[] = {
 (setq TeX-show-compilation nil)
 ;(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
-;;(company-auctex-init)
+(company-auctex-init)
 (setq TeX-auto-save t)
      (setq TeX-parse-self t)
      (setq-default TeX-master nil)
@@ -680,24 +778,7 @@ static char *gnus-pointer[] = {
 ;; (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 
-;; (defun my-compile ()
-;;   "Use compile to run python programs"
-;;   (interactive)
-;;   (compile (concat "python " (buffer-name))))
-;; (setq compilation-scroll-output t)
-;; ;; this mode-hook is taken straight from the comments in autopair.el
-;; (add-hook 'python-mode-hook
-;;       #'(lambda ()
-;; 	  (local-set-key "\C-c\C-c" 'my-compile)))
 
-;; Convenience functions for Graphviz mode
-;; (defun show-me-the-graph ()
-;;   "Build the png file of the dot-graph and show it directly in the preview pane"
-;;   (interactive)
-;;   (compile (concat "dot " (buffer-name) "-o ./"  ))
-;;     )
-
-;(put 'LaTeX-narrow-to-environment 'disabled nil)
 ;(smartparens-mode t)
 ;; Skype settings
 ;;(setq skype--my-user-handle "your skype account")
@@ -714,5 +795,10 @@ static char *gnus-pointer[] = {
 (projectile-global-mode)
 (achievements-mode)
 (server-start)
+;;PDF tools 
+(pdf-tools-install)
 
   #+end_src
+
+  #+RESULTS:
+

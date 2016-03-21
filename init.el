@@ -1,5 +1,5 @@
-;; Code ;; 
-(custom-set-variables
+  ;; Code ;; 
+  (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -16,7 +16,6 @@
  '(diary-entry-marker (quote font-lock-variable-name-face))
  '(doc-view-continuous t)
  '(electric-pair-mode nil)
- '(elfeed-feeds (quote ("http://blog.revolutionanalytics.com/atom.xml")))
  '(elpy-rpc-python-command "python")
  '(emms-mode-line-icon-image-cache
    (quote n
@@ -75,7 +74,6 @@ static char *gnus-pointer[] = {
      ("Deutsche Nationalbibliothek" . "https://portal.dnb.de/opac.htm?query=%s")
      ("British National Library" . "http://explore.bl.uk/primo_library/libweb/action/search.do?&vl(freeText0)=%s&fn=search")
      ("Bibliothèque nationale de France" . "http://catalogue.bnf.fr/servlet/RechercheEquation?host=catalogue?historique1=Recherche+par+mots+de+la+notice&niveau1=1&url1=/jsp/recherchemots_simple.jsp?host=catalogue&maxNiveau=1&categorieRecherche=RechercheMotsSimple&NomPageJSP=/jsp/recherchemots_simple.jsp?host=catalogue&RechercheMotsSimpleAsauvegarder=0&ecranRechercheMot=/jsp/recherchemots_simple.jsp&resultatsParPage=20&x=40&y=22&nbElementsHDJ=6&nbElementsRDJ=7&nbElementsRCL=12&FondsNumerise=M&CollectionHautdejardin=TVXZROM&HDJ_DAV=R&HDJ_D2=V&HDJ_D1=T&HDJ_D3=X&HDJ_D4=Z&HDJ_SRB=O&CollectionRezdejardin=UWY1SPQM&RDJ_DAV=S&RDJ_D2=W&RDJ_D1=U&RDJ_D3=Y&RDJ_D4=1&RDJ_SRB=P&RDJ_RLR=Q&RICHELIEU_AUTRE=ABCDEEGIKLJ&RCL_D1=A&RCL_D2=K&RCL_D3=D&RCL_D4=E&RCL_D5=E&RCL_D6=C&RCL_D7=B&RCL_D8=J&RCL_D9=G&RCL_D10=I&RCL_D11=L&ARSENAL=H&LivrePeriodique=IP&partitions=C&images_fixes=F&son=S&images_animees=N&Disquette_cederoms=E&multimedia=M&cartes_plans=D&manuscrits=BT&monnaies_medailles_objets=JO&salle_spectacle=V&Monographie_TN=M&Periodique_TN=S&Recueil_TN=R&CollectionEditorial_TN=C&Ensemble_TN=E&Spectacle_TN=A&NoticeB=%s")
-     ("Gallica Bibliothèque Numérique" . "http://gallica.bnf.fr/Search?q=%s")
      ("EZB" . "http://rzblx1.uni-regensburg.de/ezeit/search.phtml?bibid=EFF&colors=2&lang=de"))))
  '(helm-dash-browser-func (quote eww))
  '(helm-el-package-initial-filter (quote all))
@@ -89,13 +87,6 @@ static char *gnus-pointer[] = {
  '(org-agenda-files
    (quote
     ("~/Dropbox/.org/Organizer.org" "~/Dropbox/.org/from-mobile.org" "~/Dropbox/.org/Birthdays.org" "~/Books/edu.org" "~/Publishing/Bachelor_Thesis/Thesis.org" "~/Development/dev.org")))
- '(org-babel-load-languages
-   (quote
-    ((emacs-lisp . t)
-     (ditaa . t)
-     (python . t)
-     (latex . t)
-     (dot . t))))
  '(org-clock-idle-time 10)
  '(org-clock-persist t)
  '(org-directory "~")
@@ -108,8 +99,8 @@ static char *gnus-pointer[] = {
  '(projectile-global-mode t)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
- '(vc-handled-backends (quote (RCS CVS SVN SCCS Bzr Hg Mtn Arch))))
-
+ '(vc-handled-backends (quote (RCS CVS SVN SCCS Bzr Hg Mtn Arch)))
+)
 
 
 
@@ -122,22 +113,484 @@ static char *gnus-pointer[] = {
 (add-to-list 'custom-theme-load-path "/home/aaron/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/lisp/" )
 (add-to-list 'custom-theme-load-path "home/aaron/.emacs.d/elpa")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
-(add-to-list 'load-path "~/.emacs.d/lisp/moe-theme.el/")
-(add-to-list 'load-path "~/.emacs.d/lisp/powerline")
-(load"~/.emacs.d/config/powerlinesettings.el")
-(load "~/.emacs.d/config/moe_config.el")
-(load "~/.emacs.d/config/completion.el")
-(load "~/.emacs.d/config/helmsettings.el")
-(load "~/.emacs.d/config/mail.el")
-(load "~/.emacs.d/config/orgsettings.el")
-(load "~/.emacs.d/config/diredsettings.el")
-(load "~/.emacs.d/config/pkg.el")
-;(toggle-diredp-find-file-reuse-dir 1)
+
+   (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
+   (add-to-list 'load-path "~/.emacs.d/lisp/moe-theme.el/")
+   (require 'moe-theme)
+   ;; Show highlighted buffer-id as decoration. (Default: nil)
+   ;; Choose a color for mode-line.(Default: blue)
+    (moe-theme-set-color 'black)
+    (setq moe-theme-highlight-buffer-id t)
+
+   (moe-light)
+
+   (add-to-list 'load-path "~/.emacs.d/lisp/powerline")
+   (require 'powerline)
+   (powerline-default-theme)
+
+  ;; ;; Package management
+  (require 'package)
+  ;(add-to-list 'package-archives
+  ;;	     '("marmalade" . "http://marmalade-repo.org/packages/")
+  (add-to-list 'package-archives
+  '("melpa" . "http://melpa.org/packages/"))
+  ; (when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  ;  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+  (package-initialize)
+  ;; ;(ac-config-default)
+  ;; (eval-after-load "package"
+  ;;   '(add-to-list 'package-archives
+  ;;		'("user42" . "http://download.tuxfamily.org/user42/elpa/packages/")))
+
+  ;; ;; Custom Org-settings
+  ;; ;(require 'org-ac)
+  (setq org-mobile-directory "~/Dropbox/.org/MobileOrg")
+  (setq org-src-fontify-natively t)
+  (setq org-src-preserve-indentation t)
+  (setq org-enforce-todo-dependencies t)
+  (setq org-enforce-todo-checkbox-dependencies t)
+  ;; (setq org-beamer-mode t)
+  (define-key global-map "\C-cl" 'org-store-link)
+  (define-key global-map "\C-ca" 'org-agenda)
+  (global-set-key "\C-cc" 'org-capture)
+  (global-set-key "\C-cb" 'org-iswitchb)
+  (global-set-key "\C-cq" 'org-dashboard-display)
+  ;(global-set-key "\C-c\C-x\C-a" 'org-ar
+  (setq org-hide-leading-stars 'hidestars)
+  ;; (setq org-log-done t)
+  (setq org-return-follows-link t)
+  (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+  ;;Org Refiling settings
+  ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
+  (setq org-refile-targets (quote ((nil :maxlevel . 9)
+  (org-agenda-files :maxlevel . 9))))
+  (setq org-completion-use-ido nil)
+  (setq org-refile-use-outline-path (quote file))
+  ;(setq org-outline-path-complete-in-steps t)
+  ;;Org TODO settings
+  (setq org-todo-keywords
+  '((sequence "TODO(t)" "|" "DONE(d)")
+  (sequence "STARTED(s)" "WAITING(w)" "|" "DELEGATED(g)")
+  (sequence "APPT(a)" "|" "ATTENDED(1)")
+  (sequence "BUG(b@)" "TESTING(i)""|" "FIXED(f)")
+  (sequence "|" "CANCELED(c)")))
+  ;; ;; Farben anpassen
+(setq org-todo-keyword-faces
+      '(("STARTED"  . (:foreground "#b70101" :weight bold))
+	("APPT"  . (:foreground "blue" :weight bold))
+ 	("BUG" . (:foreground "brown" :weight bold))
+ 	("TESTING" . (:foreground "purple" :weight bold))
+	("WAITING"  . (:foreground "orange" :weight bold))
+	("DELEGATED"  . (:foreground "forestgreen" :weight bold))
+	("CANCELED"  . shadow)
+	
+	))
+;; ;; Capture settings
+ (setq org-default-notes-file "~/Dropbox/.org/Organizer.org")
+;;  ;;Org Capture templates
+ (setq org-capture-templates
+       '(
+	 ("t" "Todo" entry (file+headline "~/Dropbox/.org/Organizer.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/Dropbox/.org/Journal.org")
+	 "* %?\nEntered on %U\n  %i\n  %a")
+	("c" "Configure" entry (file+headline "~/Dropbox/.org/Organizer.org" "Configure")
+	 )
+	("b" "Birthday" entry (file+headline "~/Dropbox/.org/Birthdays.org" "New Birthdays")
+	 "* APPT %?\n %i\n")
+	("l" "Labbook" entry (file+datetree "~/Publishing/Bachelor_Thesis/Labbook.org")
+	 "* %?\nEntered on %U\n  %i\n  %a")
+	("N" "NMR-Labbook" entry (file+datetree "~/Publishing/Bachelor_Thesis/Labbook.org")
+	 "* %?%^{prompt} \n
+	 \** Aim\n
+	 %^{prompt}\n 
+	 \** Setup\n
+	 - Instrument: Bruker DPX 200 Spectrometer \n
+	 - Probehead size: %^{prompt} \\si{\milli\metre}\n 
+	 - Software: Topspin\n
+	 - Standard used: %^{prompt} in rotor %^{prompt}\n
+	 - Rotary frequency: %^{prompt} \\si{\kilo\hertz} %^{prompt|MAS| }\n
+	 - - 90 $^1H$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
+	 SR $^1H$ = %^{prompt} \\si{\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
+	 - - 90 $^{13}C$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
+	 SR $^{13}C$ = %^{prompt} \\si{\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
+	 - Comment: %^{prompt}
+	 \n
+
+
+
+	 Entered on %U\n  %i\n"
+	 
+	 )
+	
+	 )
+	 )
+
+
+	 ;; Org Agenda settings
+
+	 ;; ;; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
+	 (setq org-agenda-skip-deadline-if-done t)
+	 (setq org-agenda-skip-scheduled-if-done t)
+	 (setq org-agenda-skip-timestamp-if-deadline-is-shown t)
+	 (setq org-agenda-skip-timestamp-if-done t)
+	 (setq org-deadline-warning-days 7)
+
+	 ;; Aktuelle Zeile in der Agenda hervorheben
+	 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1 )))
+	 ;(setq org-agenda-include-diary t)
+
+	 ;; Latex Export Settings
+	 ;;Babel
+	 (org-babel-do-load-languages
+	  'org-babel-load-languages
+	  (quote
+	  ((emacs-lisp . t)
+	  (ditaa . t)
+	  (python . t)
+	  (latex . t)
+	  (ipython .t)
+	  (dot . t))))
+
+	 (require 'ob-ipython)
+	 (setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+	 ;;; display/update images in the buffer after I evaluate
+	 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+	 ;;Time settings
+	 (setq org-clock-persist 'history)
+	 ;; Mobile org settings
+	 ;; (add-hook 
+	 ;;   'after-save-hook 
+	 ;;   (lambda () 
+	 ;;      (if (string= buffer-file-name "~/Dropbox/.org/Organizer.org") 
+	 ;; 	 (org-mobile-push)
+	 ;;        (org-mobile-pull)
+	 ;;      )
+	 ;;   ))
+	 ;; mail integration
+	 ;;store link to message if in header view, not to header query
+	 (setq org-mu4e-link-query-in-headers-mode nil)
+
+;; ;; Auto completion settings
+;; ;;
+;; ;;(require 'auto-complete-auctex)
+; Jedi
+ (add-hook 'python-mode-hook 'jedi:setup)
+ (setq jedi:complete-on-dot t)                 ; optional
+;; Company
+(add-hook 'after-init-hook 'global-company-mode)
+;(company-auctex-init)
+
+;;This is mainly for making beamer frames appear in the reftex tox
+(setq reftex-section-levels '(("part" . 0)
+                  ("chapter" . 1)
+                  ("section" . 2)
+                  ("subsection" . 3)
+                  ("subsubsection" . 4)
+                  ("paragraph" . 5)
+                  ("subparagraph" . 6)
+                  ("frametitle" . 7)
+                  ("addchap" . -1)
+                  ("addsec" . -2)))
+
+(setq TeX-fold-mode t)
+
+  ;; ;; No asking for typing complete "yes" or "no"
+  (fset 'yes-or-no-p 'y-or-n-p)
+  ;; ;; Switch of beep sound
+  (setq visible-bell t)
+  ;; ;; Global shortcuts
+  (global-set-key "\C-cd" 'dictcc)
+  (global-set-key "\M-x" 'helm-M-x)
+  (global-set-key "\C-x\C-f" 'helm-find-files)
+  (global-set-key "\C-x\C-b" 'helm-buffers-list)
+  (global-set-key "\M-y" 'helm-show-kill-ring)
+  (global-set-key (kbd "C-x b") 'helm-mini)
+  (global-set-key (kbd "C-ä") ' helm-occur-from-isearch)
+  (global-set-key (kbd "<f9>") ' helm-bibtex)
+  (global-set-key (kbd "C-h a") 'helm-apropos)
+  (global-set-key (kbd "C-c -") 'helm-calcul-expression)
+  ;; ;; Visual effects for more intuitive navigation
+  (add-hook 'after-init-hook (lambda ()
+  (when (fboundp 'auto-dim-other-buffers-mode)
+  (auto-dim-other-buffers-mode t))))
+  ;; ;; Helm settings
+  ;;(helm-autoresize-mode t)
+  (setq helm-bibtex-bibliography '("/home/aaron/Publishing/Bachelor_Thesis/Thesis/UWS.bib" "/home/aaron/Books/Library.bib"))
+  (setq helm-bibtex-library-path '("/home/aaron/Publishing/Bachelor_Thesis/Literature/" "/home/aaron/Books/"))
+;(setq helm-bibtex-notes-path '("/home/aaron/Publishing/Bachelor_Thesis/Literature/Notes/"))
+(autoload 'helm-bibtex "helm-bibtex" "" t)
+
+ (setq helm-ff-auto-update-initial-value t)
+(setq helm-bibtex-pdf-field "File")
+(setq helm-split-window-in-side-p           t ; open helm uffer inside current window, not occupy whole other window
+      helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+      helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+      helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+      helm-ff-file-name-history-use-recentf t)
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t
+      helm-M-x-fuzzy-match t)
+      
+
+
+
+(setq helm-apropos-fuzzy-match t)
+
+
+
+(helm-mode)
+
+  ;;'(send-mail-function sendemail)
+;;(setq mail-user-agent 'mu4e-user-agent)
+;; Mu4e settings
+(add-to-list 'load-path "~/.emacs.d/lisp/mu4e-multi")  ;; if it's not already in `load-path'
+(require 'mu4e-multi)
+;;(mu4e-maildirs-extension)
+
+;; these are actually the defaults
+ (setq
+   mu4e-maildir       "~/Mail")   ;; top-level Maildir)
+;;   mu4e-sent-folder   "/Sent"       ;; folder for sent messages
+;;   mu4e-drafts-folder "/Drafts"     ;; unfinished messages
+;;   mu4e-trash-folder  "/Trash"      ;; trashed messages
+;;   mu4e-refile-folder "/archive")   ;; saved messages
+
+
+
+
+
+(defvar my-mu4e-account-alist
+  '(
+    
+    ("HSF"
+     (user-mail-address  "rebmann.aaron@stud.hs-fresenius.de")
+     (mu4e-sent-folder   "/HSF/Gesendet")
+     (mu4e-drafts-folder "/HSF/Entwuerfe")
+     (mu4e-trash-folder  "/HSF/Geloescht")
+     (mu4e-refile-folder "/HSF/Archive")
+
+   )
+   
+  ("Gmail"
+    (user-mail-address  "aaronrebmann@gmail.com")
+     (mu4e-sent-folder   "/Gmail/Sent")
+     (mu4e-drafts-folder "/Gmail/Drafts")
+     (mu4e-trash-folder  "/Gmail/Trash")
+     (mu4e-refile-folder "/Gmail/Archive")
+
+     )
+  )
+  ) 
+(setq mu4e-user-mail-address-list
+     (mapcar (lambda (account) (cadr (assq 'user-mail-address account)))
+            my-mu4e-account-alist))
+
+
+(defun my-mu4e-set-account ()
+  "Set the account for composing a message."
+  (let* ((account
+          (if mu4e-compose-parent-message
+              (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
+                (string-match "/\\(.*?\\)/" maildir)
+                (match-string 1 maildir))
+            (completing-read (format "Compose with account: (%s) "
+                                     (mapconcat #'(lambda (var) (car var))
+                                                my-mu4e-account-alist "/"))
+                             (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
+                             nil t nil nil (caar my-mu4e-account-alist))))
+         (account-vars (cdr (assoc account my-mu4e-account-alist))))
+    (if account-vars
+        (mapc #'(lambda (var)
+                  (set (car var) (cadr var)))
+              account-vars)
+      (error "No email account found"))))
+
+;;ask for account when composing mail
+(add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
+
+
+
+;; allow for updating mail using 'U' in the main view:
+(setq mu4e-get-mail-command "offlineimap")
+
+;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
+
+;; set update interval (testing, there will be trouble with the credentials)
+(setq mu4e-update-interval 60)
+;; HTML rendering settings
+;(setq mu4e-html2text-command "html2text")
+(setq mu4e-view-prefer-html t)
+
+;; attachments go here
+(setq mu4e-attachment-dir "~/Downloads")
+
+;; when you reply to a message, use the identity that the mail was sent to
+;; the cpbotha variation — function that checks to, cc and bcc fields
+(defun cpb-mu4e-is-message-to (msg rx)
+"Check if to, cc or bcc field in MSG has any address in RX."
+(or (mu4e-message-contact-field-matches msg :to rx)
+(mu4e-message-contact-field-matches msg :cc rx)
+(mu4e-message-contact-field-matches msg :bcc rx)))
+
+
+;; mu4e-multi settings
+
+;;; Replies
+
+(setq message-citation-line-function 'message-insert-formatted-citation-line) 
+(setq message-citation-line-format "On %a, %b %d %Y, %f wrote:\n")
+
+
+(global-set-key (kbd "C-x m") 'mu4e)
+
+(setq smtpmail-multi-accounts
+      (quote
+       ((HSF . ("rebmann.aaron@stud.hs-fresenius.de"
+                 "mail.hs-fresenius.de"
+                 587
+                nil
+                 nil nil nil nil))
+        (Gmail . ("aaronrebmann@gmail.com"
+                   "smtp.gmail.com"
+                   587
+                   nil
+                   starttls
+                   nil nil nil)))))
+
+(setq smtpmail-multi-associations
+      (quote
+       (("aaronrebmann@gmail.com" Gmail)
+        ("rebmann.aaron@stud.hs-fresenius.de" HSF))))
+
+(setq smtpmail-multi-default-account (quote gmail))
+
+(setq message-send-mail-function 'smtpmail-multi-send-it)
+
+(setq smtpmail-debug-info t)
+(setq smtpmail-debug-verbose t)
+
+
+;; Custom functions
+(add-to-list 'mu4e-header-info-custom
+       '(:recipnum .
+         ( :name "Number of recipients"  ;; long name, as seen in the message-view
+           :shortname "Recip#"           ;; short name, as seen in the headers view
+           :help "Number of recipients for this message" ;; tooltip
+           :function
+           (lambda (msg)
+     	(format "%d"
+     	  (+ (length (mu4e-message-field msg :to))
+     	    (length (mu4e-message-field msg :cc))))))))
+
+
+
+
+     (add-to-list 'mu4e-headers-custom-markers
+       '("More than n recipients"
+           (lambda (msg n)
+             (> (+ (length (mu4e-message-field msg :to))
+                   (length (mu4e-message-field msg :cc))) n))
+           (lambda ()
+             (read-number "Match messages with more recipients than: "))) t)
+
+
+;; enable inline images
+     (setq mu4e-view-show-images t)
+     ;; use imagemagick, if available
+     (when (fboundp 'imagemagick-register-types)
+        (imagemagick-register-types))
+
+;; Bookmarks
+ (add-to-list 'mu4e-bookmarks
+	      '("size:5M..500M"       "Big messages"     ?b)
+
+	      )
+
+(add-to-list 'mu4e-bookmarks
+	     '("maildir:/HSF/INBOX"    "HSF"    ?1)
+	     )
+
+
+(add-to-list 'mu4e-bookmarks
+	     '("maildir:/Gmail/INBOX"    "Gmail"    ?g)
+	     )
+
+
+
+
+;; prevent <openwith> from interfering with mail attachments
+(require 'mm-util)
+(add-to-list 'mm-inhibit-file-name-handlers 'openwith-file-handler)
+
+
+;(require 'org-mu4e)
+
+  (add-hook 'dired-mode-hook
+ (lambda ()
+  (define-key dired-mode-map (kbd "C-<up>")
+    (lambda () (interactive) (find-alternate-file "..")))
+  ; was dired-up-directory
+ ))
+
+
+
+
+(add-hook 'dired-mode-hook
+	  (lambda ()
+	    (define-key dired-mode-map (kbd "C-s")
+	      (lambda () (interactive) (dired-narrow-fuzzy))
+	      )
+	    )
+	  )
+
+
 
 (eval-after-load "dired-aux"
    '(add-to-list 'dired-compress-file-suffixes 
                  '("\\.zip\\'" ".zip" "unzip")))
+
+  ;(add-hook 'prog-mode-hook #'yas-minor-mode)
+  ;; (yas-snippet-dirs
+  ;; ("/home/aaron/.emacs.d/elpa/elpy-20160131.118/snippets/"
+  ;;  "/home/aaron/.emacs.d/elpa/django-snippets-20131229.811/snippets")) 
+  (yas-global-mode 1)
+
+(setq '(elfeed-feeds (quote ("http://blog.revolutionanalytics.com/atom.xml"))))
+
+(win-switch-setup-keys-ijkl "\C-xo")
+(setq win-switch-idle-time 2)
+
+  (defun tangle-init ()
+  "If the current buffer is 'init.org' the code-blocks are
+  tangled, and the tangled file is compiled."
+  (when (equal (buffer-file-name)
+  (expand-file-name (concat user-emacs-directory "init.org")))
+  ;; Avoid running hooks when tangling.
+  (let ((prog-mode-hook nil))
+  (org-babel-tangle))))
+;  (byte-compile-file (concat user-emacs-directory "init.el")
+
+
+
+  (add-hook 'after-save-hook 'tangle-init)
+;;  (set-language-environment "UTF-8")
+
+  (defvar emacs-autosave-directory
+  (concat user-emacs-directory "autosaves/")
+  "This variable dictates where to put auto saves. It is set to a
+  directory called autosaves located wherever your .emacs.d/ is
+  located.")
+
+;; Sets all files to be backed up and auto saved in a single directory.
+(setq backup-directory-alist
+      `((".*" . ,emacs-autosave-directory))
+      auto-save-file-name-transforms
+      `((".*" ,emacs-autosave-directory t)))
+
+;(toggle-diredp-find-file-reuse-dir 1)
 
 
 
@@ -148,8 +601,6 @@ static char *gnus-pointer[] = {
 
 
 
-;;PDF tools 
-(pdf-tools-install)
 
 
 
@@ -157,7 +608,7 @@ static char *gnus-pointer[] = {
 (setq TeX-show-compilation nil)
 ;(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
-;;(company-auctex-init)
+(company-auctex-init)
 (setq TeX-auto-save t)
      (setq TeX-parse-self t)
      (setq-default TeX-master nil)
@@ -192,38 +643,22 @@ static char *gnus-pointer[] = {
 ;; (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 
-;; (defun my-compile ()
-;;   "Use compile to run python programs"
-;;   (interactive)
-;;   (compile (concat "python " (buffer-name))))
-;; (setq compilation-scroll-output t)
-;; ;; this mode-hook is taken straight from the comments in autopair.el
-;; (add-hook 'python-mode-hook
-;;       #'(lambda ()
-;; 	  (local-set-key "\C-c\C-c" 'my-compile)))
 
-;; Convenience functions for Graphviz mode
-;; (defun show-me-the-graph ()
-;;   "Build the png file of the dot-graph and show it directly in the preview pane"
-;;   (interactive)
-;;   (compile (concat "dot " (buffer-name) "-o ./"  ))
-;;     )
-
-;(put 'LaTeX-narrow-to-environment 'disabled nil)
-(smartparens-mode t)
+;(smartparens-mode t)
 ;; Skype settings
 ;;(setq skype--my-user-handle "your skype account")
 ;; Activate global modes that I like for convenience after everything else is loaded
 ;; These should probably be wrapped into hooks
-;; Most important, of course, the helm mode
-;; It replaces many tab completion prompts with a sweet helm interface
 
-(helm-mode)
-;;Here we enable elpy as default PyIDE and we tell it to use Ipython when compiling a script. This will lead to a more interactive
-;; way of development, e.g. if you want to check a plot but don´t want it in your final script.
+
+
+
+
 (elpy-enable)
 (elpy-use-ipython)
 (smartparens-global-mode)
 (projectile-global-mode)
 (achievements-mode)
 (server-start)
+;;PDF tools 
+(pdf-tools-install)

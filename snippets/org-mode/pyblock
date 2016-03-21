@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: pyblock
+# key: pyblock
+#+BEGIN_SRC python :session
+
+#+END_SRC
+# --

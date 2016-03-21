@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/Publishing/Bachelor_Thesis/" "~/Dropbox/.org/" "~/Dropbox/polyamides/" "~/Development/")
+("~/Publishing/Bachelor_Thesis/" "~/.emacs.d/" "~/Dropbox/.org/" "~/Dropbox/polyamides/" "~/Development/" "~/.emacs.d/lisp/moe-theme.el/" "~/.emacs.d/lisp/powerline/")
