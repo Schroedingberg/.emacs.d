@@ -1,0 +1,70 @@
+#+STARTUP: indent
+#+STARTUP: overview
+#+TAGS: UNIVERSITY(u) COMPUTER(c) HOME(h) MELISSA(m) WORK(w)
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+
+
+* Mathematics
+** Linear Algebra
+** Analysis
+** Statistics
+** TODO Learn to do Fourier transformation
+:PROPERTIES:
+:ID:       efb58fa8-2ef5-4887-9e09-95d6dbd7a84d
+:END:
+- Figure out the differences concerning Maths and computer science (FFT)
+  [2015-12-14 Mon]
+[[http://www.thefouriertransform.com/][Fourier Transform]]
+* Languages
+https://www.hackerrank.com/challenges/solve-me-first
+
+** Python
+
+*** [[http://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/learning-path-data-science-python/][Python Training | Python For Data Science | Learn Python]]
+*** [[http://jinja.pocoo.org/][Welcome | Jinja2 (The Python Template Engine)]]
+*** SciPy (and all subpackages)
+*** SymPy
+
+*** SimPy
+*** Links
+- [[https://www.google.de/search?q=seaborn+interactive+plot&ie=utf-8&oe=utf-8&gws_rd=cr&ei=VNRYVsqzHou6Ua7EqogJ][seaborn interactive plot - Google-Suche]]
+- [[https://github.com/bokeh/bokeh][bokeh/bokeh · GitHub]]
+- [[http://bokeh.pydata.org/en/latest/docs/quickstart.html#quick-installation][Quickstart — Bokeh 0.10.0 documentation]]
+- [[http://pbpython.com/visualization-tools-1.html][Overview of Python Visualization Tools - Practical Business Python]]
+- [[http://vpython.org/][VPython]]
+** Lisp
+
+*** Links:
+[[http://sds.podval.org/tool.html][The Right Tool For The Job]]
+[[http://www.gigamonkeys.com/book/][Practical Common Lisp]]
+[[http://www-cgi.cs.cmu.edu/afs/cs.cmu.edu/user/dst/www/LispBook/index.html][Common Lisp: A Gentle Introduction to Symbolic Computation]]
+[[http://www.clisp.org/resources.html][CLISP Common Lisp Resources]]
+[[http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/0.html][Topic: (/)]]
+** C
+
+** LaTeX
+*** Links:
+[[https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management][LaTeX/Bibliography Management - Wikibooks, open books for an open world]]
+[[http://tex.stackexchange.com/questions/553/what-packages-do-people-load-by-default-in-latex][big list - What packages do people load by default in LaTeX? - TeX - LaTeX Stack Exchange]]
+[[http://www.howtotex.com/templates/template-added-titlepage/][LaTeX Template of a titlepage | howtoTeX.com - Your LaTeX resource site]]
+[[http://www.math-linux.com/latex-26/article/how-to-make-a-presentation-with-latex-introduction-to-beamer][How to make a presentation with Latex - Introduction to Beamer - math-linux.com]]
+[[http://tex.stackexchange.com/questions/782/what-are-the-available-documentclass-types-and-their-uses][document classes - What are the available "documentclass" types and their uses? - TeX - LaTeX Stack Exchange]]
+[[http://www.peteryu.ca/tutorials/start][Tutorials peteryu.ca]]
+[[http://texcatalogue.ctan.org/bytopic.html#classes][The TeX Catalogue OnLine, Topic Index]] 
+[[http://www.texdev.net/2014/01/17/the-beamer-slide-overlay-concept/][The beamer slide overlay concept – Some TeX Developments]]
+* Physics
+** Density functional theory
+** General quantum mechanics
+*** Quantum mechanics specific to NMR --> There is a [[file:~/Publishing/Bachelor_Thesis/Thesis.org][file]] for that
+* Robotics
+** Links
+:LINKS:
+- [[http://www.pyrorobotics.com/][Pyro, Python Robotics: Pyro]]
+- [[http://www.instructables.com/id/Building-robots-with-Raspberry-Pi-and-Python/][Building robots with Raspberry Pi and Python]]
+- [[http://stackoverflow.com/questions/4707399/robot-programming-with-lisp][artificial intelligence - robot programming with lisp? - Stack Overflow]]
+- [[http://www.roborealm.com/help/Leaf.php][The Leaf Project]]
+- [[http://www.myshopping.com.au/PR--575542_Sony_SmartBand_2_SWR12?Sort=PS][Compare Sony SmartBand 2 Prices Online from $25 & Buy in Australia - MyShopping.com.au]]
+
+:END:
+

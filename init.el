@@ -282,6 +282,9 @@ static char *gnus-pointer[] = {
 (add-hook 'after-init-hook 'global-company-mode)
 ;(company-auctex-init)
 
+;; Set XeTex as default engine
+;(setq-default TeX-engine "xetex")
+;(setq-default TeX-engine-set "Xetex")
 ;;This is mainly for making beamer frames appear in the reftex tox
 (setq reftex-section-levels '(("part" . 0)
                   ("chapter" . 1)
@@ -558,7 +561,9 @@ static char *gnus-pointer[] = {
   ;;  "/home/aaron/.emacs.d/elpa/django-snippets-20131229.811/snippets")) 
   (yas-global-mode 1)
 
-(setq '(elfeed-feeds (quote ("http://blog.revolutionanalytics.com/atom.xml"))))
+(setq elfeed-feeds '(
+"http://blog.revolutionanalytics.com/atom.xml"
+        "http://www.terminally-incoherent.com/blog/feed/"))
 
 (win-switch-setup-keys-ijkl "\C-xo")
 (setq win-switch-idle-time 2)

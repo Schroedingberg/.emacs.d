@@ -1,0 +1,249 @@
+#+STARTUP: align
+#+LATEX_HEADER: \usepackage{array}                                                                                          
+#+LATEX_HEADER: \usepackage{tabu}
+#+LATEX_HEADER: \usepackage[top=2.5cm,bottom=3 cm,left=3cm,right=2.5cm]{geometry}
+
+* 2016
+** 2016-02 February
+
+*** 2016-02-10 Wednesday
+**** FTIR-ATR Measurement of Samples
+***** Aim of the experiment: 
+     Getting a brief idea of the structure of the compounds in the rubber samples and additive samples
+     provided by Imatech.
+***** Measurement parameters
+     FTIR with ATR (Germanium crystal) was used. Background correction between each two measurements.
+     If not further specified, each sample has just been put on the stage without further preparation.
+     An ATR correction was executed for each dataset.
+     Settings:
+
+***** Samples Measured:
+      - Unirez pure
+	Measured twice
+      - P18 Anti static
+      - Sylvarez
+	- With Sylvarez the platform could not be closed completely because the crystal would burst under the force
+	- Second measurement executed, got even less signal than in the first one
+	- A third measurement with crushed sample has been done, which yielded much more signal
+	- ATTENTION: There is a file called Rubber 2.0, that is actually Sylvarez 
+      - Dyna purge
+
+      - Twaron powder
+	Measured twice
+
+      - Carbon black 5303
+	Named Rubber 6.1 by accident
+
+      #+Caption:Analyzed samples	
+      #+ATTR_LATEX: environment tabu
+      | Sample name            | Purpose               | Disguise name | Approx. available mass / \si{\gram} | FTIR measured | NMR measured |
+      |------------------------+-----------------------+---------------+-------------------------------------+---------------+--------------|
+      | Unirez                 | Rubber, main compound | Resin         |                                 0.5 | True          | False        |
+      | P18                    | Anti static           | Anti Static 1 |                                 0.5 | True          | False        |
+      | Twaron powder          | Abrasion resistance   | Anti abrasion |                                 0.1 | True          | False        |
+      | Dyna purge             | Purging agent         | Purging agent |                                   1 | True          | False        |
+      | Carbon black 5303      |                       | CBA           |                                 0.1 | Fail          | False        |
+      | Carbon black Nano 27   |                       | CBB           |                                 0.1 | Fail          | False        |
+      | Carbon black Powcarbon |                       | CBC           |                                0.05 | Fail          | Fail         |
+      
+
+      #+Caption:Analyzed samples	
+      #+ATTR_LATEX: environment tabu
+      | Sample name            | Purpose               | Disguise name | Approx. available mass / \si{\gram} |
+      |------------------------+-----------------------+---------------+-------------------------------------|
+      | Unirez                 | Rubber, main compound | Resin         |                                 0.5 |
+      | P18                    | Anti static           | Anti Static 1 |                                 0.5 |
+      | Twaron powder          | Abrasion resistance   | Anti abrasion |                                 0.1 |
+      | Dyna purge             | Purging agent         | Purging agent |                                   1 |
+      | Carbon black 5303      |                       | CBA           |                                 0.1 |
+      | Carbon black Nano 27   |                       | CBB           |                                 0.1 |
+      | Carbon black Powcarbon |                       | CBC           |                                0.05 |
+
+
+****** Rubbers measured
+
+       
+ 
+
+       #+Caption: Analyzed rubbers
+       #+ATTR_LATEX: environment tabu
+	  | NMR Sample prepared | NMR Measured | FTIR ATR measured | Rubber | $\omega_{Unirez}$ | $\omega_{Twaron~powder}$ | $\omega_{P18}$ | $\omega_{POW~Carbon}$ | $\omega_{Nano~27}$ | $\omega_{5303}$ |
+	  |                     |              |                   |        |                   |                          |                |                     < |                    |               > |
+	  |---------------------+--------------+-------------------+--------+-------------------+--------------------------+----------------+-----------------------+--------------------+-----------------|
+	  | True                | True         | True              |      1 |             0.849 |                        0 |           0.15 |                0.0001 |                  0 |               0 |
+	  | True                | True         | True              |      2 |             0.949 |                     0.05 |              0 |                0.0001 |                  0 |               0 |
+	  | False               | False        | True              |      3 |             0.949 |                     0.05 |              0 |                0.0001 |                  0 |               0 |
+	  | False               | False        | True              |      4 |             0.949 |                        0 |           0.05 |                0.0001 |                  0 |               0 |
+	  | False               | False        | True              |      5 |               0.9 |                        0 |              0 |                     0 |                0.1 |               0 |
+	  | False               | False        | True              |      6 |              0.95 |                        0 |              0 |                     0 |                  0 |            0.05 |
+
+       
+	  | Rubber | $\omega_{Unirez}$ | $\omega_{Twaron~powder}$ | $\omega_{P18}$ | $\omega_{POW~Carbon}$ | $\omega_{Nano~27}$ | $\omega_{5303}$ |
+	  |--------+-------------------+--------------------------+----------------+-----------------------+--------------------+-----------------|
+	  |      1 |             0.849 |                        0 |           0.15 |                0.001  |                  0 |               0 |
+	  |      2 |             0.949 |                     0.05 |              0 |                0.001  |                  0 |               0 |
+	  |      3 |             0.949 |                     0.05 |              0 |                0.001  |                  0 |               0 |
+	  |      4 |             0.949 |                        0 |           0.05 |                0.001  |                  p |               0 |
+	  |      5 |               0.9 |                        0 |              0 |                     0 |                0.1 |               0 |
+	  |      6 |              0.95 |                        0 |              0 |                     0 |                  0 |            0.05 |
+
+
+
+	  Due to the different geometry and elasticity
+	  of the pieces of rubber, there might be differences concerning the exact position
+	  of the pieces in the sample space. This can cause deviations that blur the results.
+	  
+
+
+
+	  Entered on [2016-02-10 Wed 10:55]
+
+*** 2016-02-16 Tuesday
+**** Sample preparation of Unirez sample for SSNMR
+     The Unirez beads were placed on top of the rotor vessel and placed in an
+     oven at 150 °C to melt the resin into the rotor.
+   Entered on [2016-02-16 Tue 10:12]
+*** 2016-02-17 Wednesday
+**** Sample preparation of Unirez
+     Unirez molten at 150°C has flown into the rotor. The outside surface of the rotor is partly coated with Unirez.
+     Also the rotor is too full to put the cap onto it.
+     
+:Marion:
+Sample Unirez was packed by melting it into the rotor (bit by bit) in an oven at 150 °C.  The sample first did not spin,
+that cap was checked and found damaged, and changed for a non-damaged one. The sample then only spun at ~900 Hz. In an attempt to re-arrange the sample inside the rotor, 
+it was heated at 60 °C under MAS (~850 Hz). After ~1h at 60 °C the rotor had slowly accelerated to ~980 Hz. 
+It was decided to run a different sample overnight and try to spin the rotor up again the next day.
+Different sample preparation for Unirez (melting smaller chunks at 180 °C), and sample preparation for other samples, are reported in Aaron's labbook.
+
+:END:
+
+
+
+
+
+
+     
+***** Cleaning of the surface 
+      The outer surface has coarsely been freed from the Unirez-Rubber with a surgical blade. The rotor was clutched with
+      tweezers during this process to avoid the risk of injuries.
+***** Gaining of space for the capacity
+      A drill was used to remove the excess rubber from the tube in order to make insertion of cap possible.
+      The cap was inserted
+   Entered on [2016-02-17 Wed 11:03]
+*** 2016-02-18 Thursday
+**** NMR Analysis of Unirez Sample prepared on [2016-02-17 Wed] 
+     
+
+
+   Entered on [2016-02-18 Thu 15:51]
+  
+     [[file:~/Dropbox/.org/Organizer.org::*Build%20tables%20for%20evaluation%20of%20IR-Spectra][Build tables for evaluation of IR-Spectra]]
+*** 2016-02-19 Friday
+**** Sample preparation of Unirez sample
+     According to the entry on [2016-02-18 Thu], the Unirez sample did not spin properly.
+     To achieve symmetry of the rotor, the rotor with Unirez in it is put in the oven at 180°C.
+   Entered on [2016-02-19 Fri 11:07]
+  
+     [[file:~/Publishing/Bachelor_Thesis/Figures/IR_plots/Rubber1_merged_normalized.py::additive1%20=%20merged.peakplot(merged.get_data(1)%5B0%5D,%20merged.get_data(1)%5B1%5D,merged.axes%5B0%5D,merged.c%5B"white"%5D,%20merged.c%5B"green"%5D)]]
+*** 2016-02-22 Monday
+**** Sample preparation of Dyna purge
+     :LOGBOOK:
+     CLOCK: [2016-02-22 Mon 17:47]--[2016-02-22 Mon 23:43] =>  5:56
+     :END:
+     
+     Dyna purge pellets have been cut into pieces with scalpel and placed in a highspeed rotor.
+     The highspeed rotor with the Dyna purge pieces in it was then placed in an oven at 180°C.
+     This was repeated until the rotor had the desired fill level.
+     
+
+   Entered on [2016-02-22 Mon 17:12]
+  
+
+**** Sample preparation of P18
+   
+   Entered on [2016-02-22 Mon 17:12]
+*** 2016-02-23 Tuesday
+*** 2016-02-26 Friday
+** 2016-03 March
+*** 2016-03-01 Tuesday
+*** 2016-03-02 Wednesday
+**** Sample preparation of Twaron powder
+     The sample of twaron powder provided by Imatech was filled in a ... rotor without previous preparation.
+   Entered on [2016-03-02 Wed 15:27]
+**** ^1H SPE-MAS NMR of Twaron powder 
+
+***** Aim
+
+
+ 
+***** Setup
+
+   - Instrument: Bruker DPX 200 Spectrometer 
+
+   - Probehead size: 4 \si{millimetre}
+ 
+   - Software: Topspin
+
+   - Standard used: Adamantane in rotor #102
+
+   - Rotation frequency: 10 \si{kilohertz} MAS
+
+       - - 90° $^1H$: P$_1$ = 5 \si{micro\second}, PL$_1$ = 4.9 \si{\decibel}
+
+	 SR $^1H$ =  \si{hertz} (for  ppm, in Setup 2)
+
+       - - 90° $^{13}C$: P$_1$ =  \si{micro\second}, PL$_1$ =  \si{\decibel}
+
+	 SR $^{13}C$ =  \si{hertz} (for  ppm, in Setup 2)
+
+   - Comment: 
+
+
+
+
+
+   Entered on [2016-03-02 Wed 18:57]
+*** 2016-03-05 Saturday
+*** 2016-03-14 Monday
+*** 2016-03-16 Wednesday
+*** 2016-03-17 Thursday
+**** Raman measurements
+***** Aim
+      Acquire Raman spectra of the Imatech samples to compare them and to complement the FTIR data. Tuning of measurements is required
+***** TODO Measurement parameters <2016-03-17 Thu 16:00> 
+      
+      :meta:
+            To be retrieved from filename. Maybe ask tim whats the best way to note this
+      :END:
+***** Samples
+      #+Caption:Analyzed samples	
+      #+ATTR_LATEX: environment tabu
+      | Sample code   | Sample name            | Purpose               | Raman measurement | $\lambda$/nm | Raman comments |
+      |               |                        |                       |                   |              | <8>      |
+      |---------------+------------------------+-----------------------+-------------------+--------------+----------|
+      | Resin         | Unirez                 | Rubber, main compound | True              |              | Fluorescence at 532 nm, try again with higher wavelength |
+      | Anti Static 1 | P18                    | Anti static           | True              |              | Fluorescence at 532 nm, next time other wavelength |
+      | Anti abrasion | Twaron powder          | Abrasion resistance   |                   |              |          |
+      | Purging agent | Dyna purge             | Purging agent         | True              |          532 | Strong signal, low noise |
+      | CBA           | Carbon black 5303      |                       |                   |              |          |
+      | CBB           | Carbon black Nano 27   |                       |                   |              |          |
+      | CBC           | Carbon black Powcarbon |                       |                   |              |          |
+
+
+
+      #+CAPTION: Rubbers Analyzed Raman
+      	  | Rubber | $\omega_{Unirez}$ | $\omega_{Twaron~powder}$ | $\omega_{P18}$ | $\omega_{POW~Carbon}$ | $\omega_{Nano~27}$ | $\omega_{5303}$ | Raman measured | $\lambda$/nm | Raman comment |
+      	  |        |                   |                          |                |                       |                    |                 |                |              | <8>      |
+      	  |--------+-------------------+--------------------------+----------------+-----------------------+--------------------+-----------------+----------------+--------------+----------|
+      	  |      1 |             0.849 |                        0 |           0.15 |                0.0001 |                  0 |               0 |                |          633 | Noisy baseline, no signal |
+      	  |      2 |             0.949 |                     0.05 |              0 |                0.0001 |                  0 |               0 |                |              |          |
+      	  |      3 |             0.949 |                     0.05 |              0 |                0.0001 |                  0 |               0 |                |              |          |
+      	  |      4 |             0.949 |                        0 |           0.05 |                0.0001 |                  0 |               0 |                |              |          |
+      	  |      5 |               0.9 |                        0 |              0 |                     0 |                0.1 |               0 |                |              |          |
+      	  |      6 |              0.95 |                        0 |              0 |                     0 |                  0 |            0.05 |                |              |          |
+
+
+      
+   Entered on [2016-03-17 Thu 00:00]
+*** 2016-03-18 Friday
+

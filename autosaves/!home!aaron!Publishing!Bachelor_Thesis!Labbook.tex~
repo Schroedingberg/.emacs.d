@@ -1,0 +1,369 @@
+% Created 2016-03-21 Mon 11:41
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{tabu}
+\usepackage{array}
+\usepackage{tabu}
+\usepackage{siunitx}
+\usepackage[top=2.5cm,bottom=3 cm,left=3cm,right=2.5cm]{geometry}
+\author{Aaron Rebmann}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Aaron Rebmann},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.4.1 (Org mode 8.3.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+
+\section{2016}
+\label{sec:orgheadline40}
+\subsection{2016-02 February}
+\label{sec:orgheadline22}
+
+\subsubsection{2016-02-10 Wednesday}
+\label{sec:orgheadline6}
+\begin{enumerate}
+\item FTIR-ATR Measurement of Samples
+\label{sec:orgheadline5}
+\begin{enumerate}
+\item Aim of the experiment:
+\label{sec:orgheadline1}
+Getting a brief idea of the structure of the compounds in the rubber samples and additive samples
+provided by Imatech.
+\item Measurement parameters
+\label{sec:orgheadline2}
+FTIR with ATR (Germanium crystal) was used. Background correction between each two measurements.
+If not further specified, each sample has just been put on the stage without further preparation.
+An ATR correction was executed for each dataset.
+Settings:
+
+\item Samples Measured:
+\label{sec:orgheadline4}
+\begin{itemize}
+\item Unirez pure
+Measured twice
+\item P18 Anti static
+\item Sylvarez
+\begin{itemize}
+\item With Sylvarez the platform could not be closed completely because the crystal would burst under the force
+\item Second measurement executed, got even less signal than in the first one
+\item A third measurement with crushed sample has been done, which yielded much more signal
+\item ATTENTION: There is a file called Rubber 2.0, that is actually Sylvarez
+\end{itemize}
+\item Dyna purge
+
+\item Twaron powder
+Measured twice
+
+\item Carbon black 5303
+Named Rubber 6.1 by accident
+\end{itemize}
+
+\begin{table}[htb]
+\caption{Analyzed samples}
+\centering
+\begin{tabular}{lllrll}
+Sample name & Purpose & Disguise name & Approx. available mass / \si{\g} & FTIR measured & NMR measured\\
+\hline
+Unirez & Rubber, main compound & Resin & 0.5 & True & False\\
+P18 & Anti static & Anti Static 1 & 0.5 & True & False\\
+Twaron powder & Abrasion resistance & Anti abrasion & 0.1 & True & False\\
+Dyna purge & Purging agent & Purging agent & 1 & True & False\\
+Carbon black 5303 &  & CBA & 0.1 & Fail & False\\
+Carbon black Nano 27 &  & CBB & 0.1 & Fail & False\\
+Carbon black Powcarbon &  & CBC & 0.05 & Fail & Fail\\
+\end{tabular}
+\end{table}
+
+
+\begin{table}[htb]
+\caption{Analyzed samples}
+\centering
+\begin{tabular}{lllr}
+Sample name & Purpose & Disguise name & Approx. available mass / \si{\g}\\
+\hline
+Unirez & Rubber, main compound & Resin & 0.5\\
+P18 & Anti static & Anti Static 1 & 0.5\\
+Twaron powder & Abrasion resistance & Anti abrasion & 0.1\\
+Dyna purge & Purging agent & Purging agent & 1\\
+Carbon black 5303 &  & CBA & 0.1\\
+Carbon black Nano 27 &  & CBB & 0.1\\
+Carbon black Powcarbon &  & CBC & 0.05\\
+\end{tabular}
+\end{table}
+
+
+\begin{enumerate}
+\item Rubbers measured
+\label{sec:orgheadline3}
+
+
+
+
+\begin{table}[htb]
+\caption{Analyzed rubbers}
+\centering
+\begin{tabular}{lllrrrrrrr}
+NMR Sample prepared & NMR Measured & FTIR ATR measured & Rubber & \(\omega_{Unirez}\) & \(\omega_{Twaron~powder}\) & \(\omega_{P18}\) & \(\omega_{POW~Carbon}\) & \(\omega_{Nano~27}\) & \(\omega_{5303}\)\\
+ &  &  &  &  &  &  & < &  & >\\
+\hline
+True & True & True & 1 & 0.849 & 0 & 0.15 & 0.0001 & 0 & 0\\
+True & True & True & 2 & 0.949 & 0.05 & 0 & 0.0001 & 0 & 0\\
+False & False & True & 3 & 0.949 & 0.05 & 0 & 0.0001 & 0 & 0\\
+False & False & True & 4 & 0.949 & 0 & 0.05 & 0.0001 & 0 & 0\\
+False & False & True & 5 & 0.9 & 0 & 0 & 0 & 0.1 & 0\\
+False & False & True & 6 & 0.95 & 0 & 0 & 0 & 0 & 0.05\\
+\end{tabular}
+\end{table}
+
+
+\begin{center}
+\begin{tabular}{rrrrrrr}
+Rubber & \(\omega_{Unirez}\) & \(\omega_{Twaron~powder}\) & \(\omega_{P18}\) & \(\omega_{POW~Carbon}\) & \(\omega_{Nano~27}\) & \(\omega_{5303}\)\\
+\hline
+1 & 0.849 & 0 & 0.15 & 0.001 & 0 & 0\\
+2 & 0.949 & 0.05 & 0 & 0.001 & 0 & 0\\
+3 & 0.949 & 0.05 & 0 & 0.001 & 0 & 0\\
+4 & 0.949 & 0 & 0.05 & 0.001 & p & 0\\
+5 & 0.9 & 0 & 0 & 0 & 0.1 & 0\\
+6 & 0.95 & 0 & 0 & 0 & 0 & 0.05\\
+\end{tabular}
+\end{center}
+
+
+
+Due to the different geometry and elasticity
+of the pieces of rubber, there might be differences concerning the exact position
+of the pieces in the sample space. This can cause deviations that blur the results.
+
+
+
+
+Entered on \textit{[2016-02-10 Wed 10:55]}
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\subsubsection{2016-02-16 Tuesday}
+\label{sec:orgheadline8}
+\begin{enumerate}
+\item Sample preparation of Unirez sample for SSNMR
+\label{sec:orgheadline7}
+  The Unirez beads were placed on top of the rotor vessel and placed in an
+  oven at 150 °C to melt the resin into the rotor.
+Entered on \textit{[2016-02-16 Tue 10:12]}
+\end{enumerate}
+\subsubsection{2016-02-17 Wednesday}
+\label{sec:orgheadline12}
+\begin{enumerate}
+\item Sample preparation of Unirez
+\label{sec:orgheadline11}
+Unirez molten at 150°C has flown into the rotor. The outside surface of the rotor is partly coated with Unirez.
+Also the rotor is too full to put the cap onto it.
+
+Sample Unirez was packed by melting it into the rotor (bit by bit) in an oven at 150 °C.  The sample first did not spin,
+that cap was checked and found damaged, and changed for a non-damaged one. The sample then only spun at \textasciitilde{}900 Hz. In an attempt to re-arrange the sample inside the rotor, 
+it was heated at 60 °C under MAS (\textasciitilde{}850 Hz). After \textasciitilde{}1h at 60 °C the rotor had slowly accelerated to \textasciitilde{}980 Hz. 
+It was decided to run a different sample overnight and try to spin the rotor up again the next day.
+Different sample preparation for Unirez (melting smaller chunks at 180 °C), and sample preparation for other samples, are reported in Aaron's labbook.
+
+
+
+
+
+
+
+\begin{enumerate}
+\item Cleaning of the surface
+\label{sec:orgheadline9}
+The outer surface has coarsely been freed from the Unirez-Rubber with a surgical blade. The rotor was clutched with
+tweezers during this process to avoid the risk of injuries.
+\item Gaining of space for the capacity
+\label{sec:orgheadline10}
+   A drill was used to remove the excess rubber from the tube in order to make insertion of cap possible.
+   The cap was inserted
+Entered on \textit{[2016-02-17 Wed 11:03]}
+\end{enumerate}
+\end{enumerate}
+\subsubsection{2016-02-18 Thursday}
+\label{sec:orgheadline14}
+\begin{enumerate}
+\item NMR Analysis of Unirez Sample prepared on \textit{[2016-02-17 Wed]}
+\label{sec:orgheadline13}
+
+
+
+Entered on \textit{[2016-02-18 Thu 15:51]}
+
+\href{file:///home/aaron/Dropbox/.org/Organizer.org}{Build tables for evaluation of IR-Spectra}
+\end{enumerate}
+\subsubsection{2016-02-19 Friday}
+\label{sec:orgheadline16}
+\begin{enumerate}
+\item Sample preparation of Unirez sample
+\label{sec:orgheadline15}
+  According to the entry on \textit{[2016-02-18 Thu]}, the Unirez sample did not spin properly.
+  To achieve symmetry of the rotor, the rotor with Unirez in it is put in the oven at 180°C.
+Entered on \textit{[2016-02-19 Fri 11:07]}
+
+\url{file:///home/aaron/Publishing/Bachelor_Thesis/Figures/IR_plots/Rubber1_merged_normalized.py}
+\end{enumerate}
+\subsubsection{2016-02-22 Monday}
+\label{sec:orgheadline19}
+\begin{enumerate}
+\item Sample preparation of Dyna purge
+\label{sec:orgheadline17}
+Dyna purge pellets have been cut into pieces with scalpel and placed in a highspeed rotor.
+The highspeed rotor with the Dyna purge pieces in it was then placed in an oven at 180°C.
+This was repeated until the rotor had the desired fill level.
+
+
+Entered on \textit{[2016-02-22 Mon 17:12]}
+
+
+\item Sample preparation of P18
+\label{sec:orgheadline18}
+
+Entered on \textit{[2016-02-22 Mon 17:12]}
+\end{enumerate}
+\subsubsection{2016-02-23 Tuesday}
+\label{sec:orgheadline20}
+\subsubsection{2016-02-26 Friday}
+\label{sec:orgheadline21}
+\subsection{2016-03 March}
+\label{sec:orgheadline39}
+\subsubsection{2016-03-01 Tuesday}
+\label{sec:orgheadline23}
+\subsubsection{2016-03-02 Wednesday}
+\label{sec:orgheadline28}
+\begin{enumerate}
+\item Sample preparation of Twaron powder
+\label{sec:orgheadline24}
+  The sample of twaron powder provided by Imatech was filled in a \ldots{} rotor without previous preparation.
+Entered on \textit{[2016-03-02 Wed 15:27]}
+\item \^{}1H SPE-MAS NMR of Twaron powder
+\label{sec:orgheadline27}
+
+\begin{enumerate}
+\item Aim
+\label{sec:orgheadline25}
+
+
+
+\item Setup
+\label{sec:orgheadline26}
+
+\begin{itemize}
+\item Instrument: Bruker DPX 200 Spectrometer
+
+\item Probehead size: 4 \si{millimetre}
+
+\item Software: Topspin
+
+\item Standard used: Adamantane in rotor \#102
+
+\item Rotation frequency: 10 \si{kilohertz} MAS
+
+\begin{itemize}
+\item - 90° \(^1H\): P\(_1\) = 5 \si{micro\second}, PL\(_1\) = 4.9 \si{\decibel}
+
+SR \(^1H\) =  \si{hertz} (for  ppm, in Setup 2)
+
+\item - 90° \(^{13}C\): P\(_1\) =  \si{micro\second}, PL\(_1\) =  \si{\decibel}
+
+SR \(^{13}C\) =  \si{hertz} (for  ppm, in Setup 2)
+\end{itemize}
+
+\item Comment:
+\end{itemize}
+
+
+
+
+
+Entered on \textit{[2016-03-02 Wed 18:57]}
+\end{enumerate}
+\end{enumerate}
+\subsubsection{2016-03-05 Saturday}
+\label{sec:orgheadline29}
+\subsubsection{2016-03-14 Monday}
+\label{sec:orgheadline30}
+\subsubsection{2016-03-16 Wednesday}
+\label{sec:orgheadline31}
+\subsubsection{2016-03-17 Thursday}
+\label{sec:orgheadline36}
+\begin{enumerate}
+\item Raman measurements
+\label{sec:orgheadline35}
+\begin{enumerate}
+\item Aim
+\label{sec:orgheadline32}
+Acquire Raman spectra of the Imatech samples to compare them and to complement the FTIR data. Tuning of measurements is required
+\item {\bfseries\sffamily TODO} Measurement parameters \textit{<2016-03-17 Thu 16:00>}
+\label{sec:orgheadline33}
+
+To be retrieved from filename. Maybe ask tim whats the best way to note this
+\item Samples
+\label{sec:orgheadline34}
+\begin{table}[htb]
+\caption{Analyzed samples}
+\centering
+\begin{tabular}{llllrl}
+Sample code & Sample name & Purpose & Raman measurement & \$\(\lambda\)\$/nm & Raman comments\\
+\hline
+Resin & Unirez & Rubber, main compound & True &  & Fluorescence at 532 nm, try again with higher wavelength\\
+Anti Static 1 & P18 & Anti static & True &  & Fluorescence at 532 nm, next time other wavelength\\
+Anti abrasion & Twaron powder & Abrasion resistance &  &  & \\
+Purging agent & Dyna purge & Purging agent & True & 532 & Strong signal, low noise\\
+CBA & Carbon black 5303 &  &  &  & \\
+CBB & Carbon black Nano 27 &  &  &  & \\
+CBC & Carbon black Powcarbon &  &  &  & \\
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[htb]
+\caption{Rubbers Analyzed Raman}
+\centering
+\begin{tabular}{rrrrrrrlrl}
+Rubber & \(\omega_{Unirez}\) & \(\omega_{Twaron~powder}\) & \(\omega_{P18}\) & \(\omega_{POW~Carbon}\) & \(\omega_{Nano~27}\) & \(\omega_{5303}\) & Raman measured & \$\(\lambda\)\$/nm & Raman comment\\
+\hline
+1 & 0.849 & 0 & 0.15 & 0.0001 & 0 & 0 &  & 633 & Noisy baseline, no signal\\
+2 & 0.949 & 0.05 & 0 & 0.0001 & 0 & 0 &  &  & \\
+3 & 0.949 & 0.05 & 0 & 0.0001 & 0 & 0 &  &  & \\
+4 & 0.949 & 0 & 0.05 & 0.0001 & 0 & 0 &  &  & \\
+5 & 0.9 & 0 & 0 & 0 & 0.1 & 0 &  &  & \\
+6 & 0.95 & 0 & 0 & 0 & 0 & 0.05 &  &  & \\
+\end{tabular}
+\end{table}
+
+
+
+Entered on \textit{[2016-03-17 Thu 00:00]}
+\end{enumerate}
+\end{enumerate}
+\subsubsection{2016-03-18 Friday}
+\label{sec:orgheadline37}
+\subsubsection{2016-03-21 Monday}
+\label{sec:orgheadline38}
+\end{document}

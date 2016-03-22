@@ -514,11 +514,12 @@
   
 
 
-*** TODO Find direct CB measurement methods for NMR  and Raman<2016-03-22 Tue 18:00>
+*** TODO Find direct CB measurement methods for NMR  and Raman<2016-03-23 Wed 18:00>
     :PROPERTIES:
     :ID:       e3b8db46-3e5d-4156-9e95-a1679eb70075
     :END:
     :LOGBOOK:
+    CLOCK: [2016-03-21 Mon 14:05]--[2016-03-21 Mon 14:17] =>  0:12
     CLOCK: [2016-03-18 Fri 17:31]--[2016-03-18 Fri 18:38] =>  1:07
     CLOCK: [2016-03-15 Tue 12:28]--[2016-03-15 Tue 12:28] =>  0:00
     CLOCK: [2016-03-15 Tue 12:19]--[2016-03-15 Tue 12:19] =>  0:00
@@ -538,32 +539,13 @@
     :ID:       d04ecee7-9e99-49c1-9e37-a5932aa9d23a
     :END:
     
-*** DONE NMR Data processing <2016-03-18 Fri 11:30>
-    :PROPERTIES:
-    :ID:       115cad84-1dd9-4a06-b712-79cc85694956
-    :END:
-    :LOGBOOK:
-    CLOCK: [2016-03-18 Fri 17:16]--[2016-03-18 Fri 17:31] =>  0:15
-    CLOCK: [2016-03-18 Fri 15:10]--[2016-03-18 Fri 15:12] =>  0:02
-    CLOCK: [2016-03-18 Fri 15:10]--[2016-03-18 Fri 15:10] =>  0:00
-    CLOCK: [2016-03-18 Fri 14:38]--[2016-03-18 Fri 15:10] =>  0:32
-    CLOCK: [2016-03-18 Fri 14:19]--[2016-03-18 Fri 14:38] =>  0:19
-    CLOCK: [2016-03-18 Fri 12:10]--[2016-03-18 Fri 13:39] =>  1:29
-    CLOCK: [2016-03-18 Fri 11:50]--[2016-03-18 Fri 12:04] =>  0:14
-    CLOCK: [2016-03-18 Fri 11:24]--[2016-03-18 Fri 11:50] =>  0:26
-    CLOCK: [2016-03-17 Thu 23:21]--[2016-03-17 Thu 23:30] =>  0:09
-    CLOCK: [2016-03-17 Thu 16:39]--[2016-03-17 Thu 17:50] =>  1:11
-    CLOCK: [2016-03-16 Wed 18:54]--[2016-03-16 Wed 19:21] =>  0:27
-    CLOCK: [2016-03-16 Wed 18:48]--[2016-03-16 Wed 18:54] =>  0:06
-    CLOCK: [2016-03-16 Wed 18:39]--[2016-03-16 Wed 18:48] =>  0:09
-    CLOCK: [2016-03-16 Wed 11:58]--[2016-03-16 Wed 12:39] =>  0:41
-    :END:
 ** TODO Make poster for NMR symposium				    
    DEADLINE: <2016-04-04 Mon>
    :PROPERTIES:
    :ID:       c446e165-f948-4b67-9d56-905804c57d6d
    :END:
    :LOGBOOK:
+   CLOCK: [2016-03-22 Tue 11:41]--[2016-03-22 Tue 12:23] =>  0:42
    CLOCK: [2016-03-16 Wed 15:35]--[2016-03-16 Wed 17:13] =>  1:38
    CLOCK: [2016-03-16 Wed 14:37]--[2016-03-16 Wed 15:35] =>  0:58
    CLOCK: [2016-03-16 Wed 14:00]--[2016-03-16 Wed 14:03] =>  0:03
@@ -582,16 +564,21 @@
 * Organisation
 
   
-** APPT UWS Team meeting <2016-03-22 Tue 12:30>
+** APPT UWS Team meeting
+   SCHEDULED: <2016-03-29 Tue 12:30>
    :PROPERTIES:
    :ID:       0c309deb-b80c-489b-96cc-b850c3114829
    :END:
+   :LOGBOOK:
+   CLOCK: [2016-03-22 Tue 12:23]--[2016-03-22 Tue 13:42] =>  1:19
+   :END:
 
-** APPT Project specific meeting with Patrice and Marion  <2016-03-21 Mon 15:00 +1w>
+** APPT Project specific meeting with Patrice and Marion  <2016-03-28 Mon 15:00 +1w>
    :PROPERTIES:
    :ID:       2224a2db-f2e3-474a-a92e-56b07aa1dab8
-   :LAST_REPEAT: [2016-03-14 Mon 16:32]
+   :LAST_REPEAT: [2016-03-21 Mon 13:32]
    :END:
+   - State "CANCELED"   from "APPT"       [2016-03-21 Mon 13:32]
    - State "DONE"       from "APPT"       [2016-03-14 Mon 16:32]
    :LOGBOOK:
    CLOCK: [2016-03-14 Mon 15:06]--[2016-03-14 Mon 16:29] =>  1:23
@@ -613,7 +600,7 @@
 
 
 
-** TODO Do Carbon black CP NMR <2016-03-22 Tue>
+** TODO Do Carbon black CP NMR <2016-03-24 Thu>
    :PROPERTIES:
    :ID:       2434a710-a17c-4a05-b3cd-cca980d213fe
    :END:
@@ -627,6 +614,9 @@
 :PROPERTIES:
 :LINK: [[file:Labbook.org][ FILE]]
 :ID:       2678cf09-7129-4ca6-8831-45f44b76e437
+:END:
+:LOGBOOK:
+CLOCK: [2016-03-21 Mon 13:48]--[2016-03-21 Mon 13:49] =>  0:01
 :END:
 ** DONE Email to Thorsten Hofe <2016-03-16 Wed 13:00> 
 :PROPERTIES:
@@ -646,7 +636,7 @@ Wir sind jetzt schon seit ... in Australien und haben uns bereits gut in das Tea
 :ID:       1e8a648f-e1b9-4a57-8344-5444be379d82
 :END:
 
-** TODO Check if DSC for adhesive can be done <2016-03-22 Tue>
+** TODO Check if DSC for adhesive can be done <2016-03-24 Thu>
 :PROPERTIES:
 :ID:       980dfef0-de96-4fda-9294-52da2c9e29e4
 :END:
@@ -656,10 +646,22 @@ Wir sind jetzt schon seit ... in Australien und haben uns bereits gut in das Tea
 :END:
   
   [[file:~/Publishing/Bachelor_Thesis/Presentation.tex::\node%5Bconcept,scale=0.5%5D%20{Analysis%20of%20industrial%20adhesive}]]
-** APPT Meeting with Duncan <2016-03-21 Mon 13:00-19:00>
+** ATTENDED Meeting with Duncan [3/3]  <2016-03-21 Mon 13:00-19:00> 
+   :LOGBOOK:
+   CLOCK: [2016-03-21 Mon 15:16]--[2016-03-21 Mon 19:13] =>  3:57
+   :END:
+   - [X] Ask for physical propertie
+s data
+
+   - [X] Ask for parameters that are most important for Imatech to be characterized
+   - [X] Find out about P18 sample prep
+   
+
+   
 :PROPERTIES:
 :ID:       58c4fb44-fe65-49f8-a522-2c35ffe60b30
 :END:
+
 ** DONE Get Ric´s signature on risk assessment <2016-03-16 Wed 15:00>
 :PROPERTIES:
 :ID:       f2988d58-3946-44ee-95b5-6f75de3830b5
@@ -671,7 +673,7 @@ CLOCK: [2016-03-15 Tue 10:58]--[2016-03-15 Tue 11:04] =>  0:06
 :END:
   
   [[file:~/Publishing/Bachelor_Thesis/Thesis.org::*Notes][Notes]]
-** TODO Compare NMR spectra rubbers 5&6 with Unirez <2016-03-22 Tue 17:00>
+** TODO Compare NMR spectra rubbers 5&6 with Unirez <2016-03-23 Wed 17:00>
 :PROPERTIES:
 :ID:       6d01cbfb-4bee-4c5d-bc67-12de92233cdd
 :END:
@@ -682,10 +684,11 @@ CLOCK: [2016-03-15 Tue 10:58]--[2016-03-15 Tue 11:04] =>  0:06
     :ID:       4084bd28-c199-42a9-8561-d8b069e48011
     :END:
 ** TODO Merge working dir with Dropbox <2016-03-22 Tue>
-** TODO New presentation for NMR Data 
+** DONE New presentation for NMR Data 
    DEADLINE: <2016-03-21 Mon>
    :LOGBOOK:
-   CLOCK: [2016-03-21 Mon 10:12]
+   CLOCK: [2016-03-21 Mon 11:27]--[2016-03-21 Mon 13:32] =>  2:05
+   CLOCK: [2016-03-21 Mon 10:12]--[2016-03-21 Mon 11:27] =>  1:15
    CLOCK: [2016-03-20 Sun 15:55]--[2016-03-20 Sun 21:44] =>  5:49
    CLOCK: [2016-03-20 Sun 14:04]--[2016-03-20 Sun 15:03] =>  0:59
    CLOCK: [2016-03-19 Sat 21:20]--[2016-03-19 Sat 23:10] =>  1:50
@@ -709,6 +712,14 @@ CLOCK: [2016-03-15 Tue 10:58]--[2016-03-15 Tue 11:04] =>  0:06
 
 
 
+** WAITING Complete NMR abstract <2016-03-22 Tue 14:00>
+   :LOGBOOK:
+   CLOCK: [2016-03-22 Tue 14:02]--[2016-03-22 Tue 14:25] =>  0:23
+   :END:
+** TODO Update presentation <2016-03-22 Tue 14:00>
+   :LOGBOOK:
+   CLOCK: [2016-03-22 Tue 14:41]
+   :END:
 * Writing of Thesis [%]
 ** TODO Materials & Methods [/]
    DEADLINE: <2016-04-04 Mon>

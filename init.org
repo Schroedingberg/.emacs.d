@@ -136,7 +136,7 @@ static char *gnus-pointer[] = {
 
 
   
-* Appearance 							 :APPEARANCE:
+* Appearance
 ** Theme
    #+begin_src emacs-lisp :tangle yes
    (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
@@ -344,7 +344,9 @@ static char *gnus-pointer[] = {
 
 * LaTeX
 #+begin_src emacs-lisp :tangle yes
-
+;; Set XeTex as default engine
+;(setq-default TeX-engine "xetex")
+;(setq-default TeX-engine-set "Xetex")
 ;;This is mainly for making beamer frames appear in the reftex tox
 (setq reftex-section-levels '(("part" . 0)
                   ("chapter" . 1)
@@ -363,6 +365,11 @@ static char *gnus-pointer[] = {
 
 #+RESULTS:
 : t
+
+** TODO Elisp function to add resources to Bibliography <2016-03-25 Fri> 
+HelmBib should be incorporated in the process 
+** TODO AucTeX shortcuts for changes package 
+For fast collaborative LaTeX editing
 
 * Helm
   Settings for Helm usage
@@ -669,9 +676,15 @@ static char *gnus-pointer[] = {
 
 * Browsing
 #+begin_src emacs-lisp :tangle yes
-(setq '(elfeed-feeds (quote ("http://blog.revolutionanalytics.com/atom.xml"))))
+(setq elfeed-feeds '(
+"http://blog.revolutionanalytics.com/atom.xml"
+        "http://www.terminally-incoherent.com/blog/feed/"))
 
 #+end_src
+
+#+RESULTS:
+| [[http://blog.revolutionanalytics.com/atom.xml]] | [[http://www.terminally-incoherent.com/blog/feed/]] |
+
 * Navigation
   #+begin_src emacs-lisp :tangle yes
 (win-switch-setup-keys-ijkl "\C-xo")
@@ -684,7 +697,6 @@ static char *gnus-pointer[] = {
 * Dotemacs hook
   A hooked function that tangles and compiles the init.org after saving.
   #+begin_src emacs-lisp :tangle yes
-
   (defun tangle-init ()
   "If the current buffer is 'init.org' the code-blocks are
   tangled, and the tangled file is compiled."

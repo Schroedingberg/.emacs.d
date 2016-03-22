@@ -1,4 +1,4 @@
-#+LAST_MOBILE_CHANGE: 2016-03-10 10:04:53
+#+LAST_MOBILE_CHANGE: 2016-03-21 13:52:50
 #+STARTUP: indent
 #+STARTUP: overview
 #+TAGS: UNIVERSITY(u) MELISSA(m) WORK(w) EDUCATION(e) ORGANISATIONAL(o) LEISURE(l) HEALTHANDBODY(h) FINANCE(f)
@@ -9,11 +9,13 @@ The tag configuration is still being tested. It might be necessary to further op
 
 
 * Repeating tasks
-** TODO Workout <2016-03-21 Mon 08:00 +1d>
+** TODO Workout <2016-03-23 Wed 08:00 +1d>
 :PROPERTIES:
-:LAST_REPEAT: [2016-03-20 Sun 13:49]
+:LAST_REPEAT: [2016-03-22 Tue 14:00]
 :ID:       a1d36937-feb3-4754-ae44-3bb7fce3a034
 :END:
+- State "CANCELED"   from "TODO"       [2016-03-22 Tue 14:00]
+- State "CANCELED"   from "TODO"       [2016-03-21 Mon 13:32]
 - State "DONE"       from "TODO"       [2016-03-20 Sun 13:49]
 - State "CANCELED"   from "TODO"       [2016-03-19 Sat 23:12]
 - State "CANCELED"   from "TODO"       [2016-03-19 Sat 23:12]
@@ -90,6 +92,9 @@ very low angle ranges.
 :END:
 - State "DONE"       from "TODO"       [2016-03-03 Thu 23:01]
 :LOGBOOK:
+CLOCK: [2016-03-21 Mon 21:12]--[2016-03-21 Mon 21:12] =>  0:00
+CLOCK: [2016-03-21 Mon 13:55]--[2016-03-21 Mon 14:05] =>  0:10
+CLOCK: [2016-03-21 Mon 13:55]--[2016-03-21 Mon 13:55] =>  0:00
 CLOCK: [2016-03-18 Fri 15:53]--[2016-03-18 Fri 17:03] =>  1:10
 CLOCK: [2016-03-18 Fri 15:16]--[2016-03-18 Fri 15:53] =>  0:37
 CLOCK: [2016-03-18 Fri 13:39]--[2016-03-18 Fri 14:19] =>  0:40
@@ -292,13 +297,16 @@ https://www.reddit.com/r/emacs/comments/3t8zqh/emacs_and_email_pt_2/
 :ID:       5df36651-5444-4dbb-a7bf-99df06cfb4b7
 :END:
 ** TODO Download Book Peter Larkin (Raman and IR) <2016-03-22 Tue 17:00> 
-** TODO Make new Raman appointment <2016-03-22 Tue>
-** TODO Print abstract for meeting <2016-03-21 Mon 09:00> 
-6x
-** TODO Zoom in peaks <2016-03-21 Mon 11:00>
+** TODO Make new Raman appointment <2016-03-28 Mon>
+** TODO Ask Joel about NMR <2016-03-25 Fri>
   
-  [[file:~/Dropbox/polyamides/Presentations/Aaron%20second%20presentation%20to%20Imatech%20March%202016/Source/Presentation_to_Imatech__2016-03-21.tex::\item%20Information%20regarding%20different%20chemical%20shifts%20and%20allows%20identification%20of%20different%20functional%20groups%20of%20the%20sample]]
+  [[file:~/Dropbox/polyamides/Presentations/Aaron%20second%20presentation%20to%20Imatech%20March%202016/Source/Presentation_to_Imatech__2016-03-21.pdf][file:~/Dropbox/polyamides/Presentations/Aaron second presentation to Imatech March 2016/Source/Presentation_to_Imatech__2016-03-21.pdf]]
+
+** TODO [#B] Write to people in Germany
+<2016-03-20 Su.>
 * Configure
 ** BUG Jedi asks for install server
 - State "BUG"        from              [2016-03-17 Thu 15:42] \\
-** BUG Mu4e destroys outlook corporate xml trails <2016-03-21 Mon>  
+** FIXED Mu4e destroys outlook corporate xml trails <2016-03-21 Mon>  
+
+I now think that it was rather me answering to the first mail in a thread. So user error :D

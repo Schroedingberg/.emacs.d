@@ -1,0 +1,450 @@
+%Bibliography file for my Bachelor thesis at UWS
+
+
+
+@article{Frihart_Polyamides ,
+Author = {Frihart, CR},
+Title = {{Specific adhesion model for bonding hot-melt polyamides to vinyl}},
+Journal = {{INTERNATIONAL JOURNAL OF ADHESION AND ADHESIVES}},
+Year = {{2004}},
+Volume = {{24}},
+Number = {{5}},
+Pages = {{415-422}},
+Month = {{OCT}},
+DOI = {{10.1016/j.ijadhadh.2003.11.008}},
+ISSN = {{0143-7496}},
+Unique-ID = {{ISI:000221949500005}},
+}
+
+
+
+
+@Online{ CIS,
+  ALTauthor = 	 {},
+  ALTeditor = 	 {},
+  title = 	 {Rochester Institute of Technology - Center for imaging science - The Basics of NMR},
+  ALTyear = 	 {},
+  ALTdate = 	 {},
+  url = 	 {http://www.cis.rit.edu/htbooks/nmr/chap-3/chap-3.htm},
+  OPTkey = 	 {},
+  OPTsubtitle =  {},
+  OPTtitleaddon = {},
+  OPTlanguage =  {},
+  OPTversion = 	 {},
+  OPTnote = 	 {},
+  OPTorganization = {},
+  OPTdate = 	 {},
+ month = 	 {2},
+  OPTyear = 	 {},
+  OPTaddendum =  {},
+  OPTpubstate =  {},
+  OPTurldate = 	 {},
+  OPTannote = 	 {}
+}
+
+
+
+
+@Book{NMRKeeler,
+  ALTauthor = 	 {James Keeler},
+  ALTeditor = 	 {},
+  title = 	 {Understanding NMR Spectroscopy},
+  publisher = 	 {Wiley},
+  year = 	 {2005},
+  OPTkey = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+address = 	 {Chichester, West Sussex PO19 8SQ, England},
+  OPTedition = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+
+@article{ Fedorko1,
+Author = {Fedorko, Gabriel and Molnar, Vieroslav and Dovica, Miroslav and Toth,
+   Teodor and Fabianova, Jana},
+Title = {{Failure analysis of irreversible changes in the construction of the
+   damaged rubber hoses}},
+Journal = {{ENGINEERING FAILURE ANALYSIS}},
+Year = {{2015}},
+Volume = {{58}},
+Number = {{1}},
+Pages = {{31-43}},
+Month = {{DEC}},
+Abstract = {{The high-pressure hydraulic hoses are components used in operation of
+   various kinds of machines and machinery. Operational reliability and
+   safety of the pressure hoses belong among the most important
+   requirements influencing functionality of the hydraulic circuits, which
+   are installed in a wide range of technical equipment. Users of the
+   machines equipped with the hydraulic hoses are aiming to avoid emergency
+   situations caused by possible failures of the pressure hoses. Therefore
+   it is necessary to know and to describe damaging processes arising in
+   the hoses. The up to now used testing methods are insufficient at
+   present because they are not able to offer necessary information about
+   the damaging processes as well as about the degradation changes
+   occurring in the hoses during their current operation. Therefore in
+   order to describe the degradation processes in more detail, new,
+   progressive diagnostic methods are developed nowadays. One of the most
+   frequently applied modern diagnostic methods is the computer industrial
+   tomography. This method can be utilised for analysing of the
+   high-pressure hoses, however it is necessary to verify whether this
+   method is suitable for application in this area with regard to the
+   individual structural components of the rubber hoses. This paper
+   presents fracture analysis of surface for a rubber steel reinforced hose
+   using the industrial computed tomography Zeiss Metrotom 1500. (C) 2015
+   Elsevier Ltd. All rights reserved.}},
+DOI = {{10.1016/j.engfailanal.2015.08.042}},
+ISSN = {{1350-6307}},
+EISSN = {{1873-1961}},
+ResearcherID-Numbers = {{Fedorko, Gabriel/B-7337-2011
+   Molnar, Vieroslav/J-4278-2012}},
+ORCID-Numbers = {{Fedorko, Gabriel/0000-0002-5187-5283
+   Molnar, Vieroslav/0000-0003-4182-4033}},
+Unique-ID = {{ISI:000364916800004}},
+}
+@article{Interfacial_interaction_and_peel_adhesion,
+Author = {Jha, A and Bhowmich, AK and Fujitsuka, R and Inoue, T},
+Title = {{Interfacial interaction and peel adhesion between polyamide and acrylate
+   rubber in thermoplastic elastomeric blends}},
+Journal = {{JOURNAL OF ADHESION SCIENCE AND TECHNOLOGY}},
+Year = {{1999}},
+Volume = {{13}},
+Number = {{6}},
+Pages = {{649-668}},
+DOI = {{10.1163/156856199X00910}},
+ISSN = {{0169-4243}},
+Unique-ID = {{ISI:000081049300001}},
+
+}
+
+@article{Andrejiova1,
+title = {Using logistic regression in tracing the significance of rubber–textile conveyor belt damage},
+journal = {Wear },
+volume = {318},
+number = {1–2},
+pages = {145 - 152},
+year = {2014},
+note = {},
+issn = {0043-1648},
+doi = {http://dx.doi.org/10.1016/j.wear.2014.06.026},
+url = {http://www.sciencedirect.com/science/article/pii/S0043164814002130},
+author = {Miriam Andrejiova and Anna Grincova and Daniela Marasova and Gabriel Fedorko and Vieroslav Molnar},
+keywords = {Rubber–textile conveyor belt},
+keywords = {Damage degrees},
+keywords = {Significant damage},
+keywords = {Logistic regression }
+}
+
+
+
+@article{ SaGolay,
+Author = {Schafer, Ronald W.},
+Title = {{What Is a Savitzky-Golay Filter?}},
+Journal = {{IEEE SIGNAL PROCESSING MAGAZINE}},
+Year = {{2011}},
+Volume = {{28}},
+Number = {{4}},
+Pages = {{111-117}},
+Month = {{JUL}},
+DOI = {{10.1109/MSP.2011.941097}},
+ISSN = {{1053-5888}},
+ResearcherID-Numbers = {{Magazine, Signal Processing/E-9947-2015}},
+Unique-ID = {{ISI:000291822000014}},
+}
+
+
+@article{2008AgedCarbonBlack ,
+Author = {Kaal, Joeri and Brodowski, Sonja and Baldock, Jeff A. and Nierop, Klaas
+   G. J. and Martinez Cortizas, Antonio},
+Title = {{Characterisation of aged black carbon using pyrolysis-GC/MS, thermally
+   assisted hydrolysis and methylation (THM), direct and cross-polarisation
+   C-13 nuclear magnetic resonance (DP/CP NMR) and the
+   benzenepolycarboxylic acid (BPCA) method}},
+Journal = {{ORGANIC GEOCHEMISTRY}},
+Year = {{2008}},
+Volume = {{39}},
+Number = {{10}},
+Pages = {{1415-1426}},
+Month = {{OCT}},
+DOI = {{10.1016/j.orggeochem.2008.06.011}},
+ISSN = {{0146-6380}},
+ResearcherID-Numbers = {{Baldock, Jeffrey/G-1362-2010
+   Chappell, Adrian/A-7058-2011
+   Martinez Cortizas, Antonio/M-6196-2015}},
+ORCID-Numbers = {{Chappell, Adrian/0000-0002-0694-7348
+   Martinez Cortizas, Antonio/0000-0003-0430-5760}},
+Unique-ID = {{ISI:000260285100004}},
+}
+
+
+@article{Qutip_Thesis,
+title = "QuTiP 2: A Python framework for the dynamics of open quantum systems ",
+journal = "Computer Physics Communications ",
+volume = "184",
+number = "4",
+pages = "1234 - 1240",
+year = "2013",
+note = "",
+issn = "0010-4655",
+doi = "http://dx.doi.org/10.1016/j.cpc.2012.11.019",
+url = "http://www.sciencedirect.com/science/article/pii/S0010465512003955",
+author = "J.R. Johansson and P.D. Nation and Franco Nori",
+keywords = "Open quantum systems",
+keywords = "Lindblad",
+keywords = "Bloch–Redfield",
+keywords = "Floquet–Markov",
+keywords = "Master equation",
+keywords = "Quantum Monte Carlo",
+keywords = "Python "
+}
+
+
+
+
+
+@article{ 2007Rubber-CarbonBlack,
+Author = {Hu, Weiguo and Ellul, Maria D. and Tsou, Andy H. and Datta, Sudhin},
+Title = {{Filler distribution and domain size of elastomer compounds by
+   solid-state NMR and AFM}},
+Journal = {{RUBBER CHEMISTRY AND TECHNOLOGY}},
+Year = {{2007}},
+Volume = {{80}},
+Number = {{1}},
+Pages = {{1-13}},
+Month = {{MAR-APR}},
+Note = {{Annual Spring Meeting of the
+   Rubber-Division-of-the-American-Chemical-Society, San Antonio, TX, MAY
+   16-18, 2005}},
+Organization = {{Amer Chem Soc, Rubber Div}},
+Abstract = {{Solid-state NMR methods were used to characterize the filler
+   distribution in rubber blends and domain size of thermoplastic
+   vulcanizates (TPV). Correlation between filler content and magic angle
+   spinning (MAS) C-13 and H-1 NMR signal linewidth was established, and
+   filler content in each component of the rubber blends was determined. In
+   IIR/BR and BIMS/BR blends, carbon black enriches in BR phase. Comparison
+   of the carbon black enrichment in both blends suggests that BIMS has a
+   slightly stronger interaction with fillers than does IIR. Results
+   obtained from AFM analysis were compared with NMR observations. Spin
+   diffusion NMR was demonstrated to be useful for quantifying the amount
+   of interfacial component in TPV. Its advantages - ease of quantification
+   and high sensitivity for smaller domains - make it a complementary
+   approach to microscopic techniques for elastomer morphology
+   characterization.}},
+DOI = {{10.5254/1.3548166}},
+ISSN = {{0035-9475}},
+Unique-ID = {{ISI:000249719900001}},
+}
+
+@article{Worley20141,
+title = "Simultaneous phase and scatter correction for \{NMR\} datasets ",
+journal = "Chemometrics and Intelligent Laboratory Systems ",
+volume = "131",
+number = "",
+pages = "1 - 6",
+year = "2014",
+note = "",
+issn = "0169-7439",
+doi = "http://dx.doi.org/10.1016/j.chemolab.2013.11.005",
+url = "http://www.sciencedirect.com/science/article/pii/S0169743913002153",
+author = "Bradley Worley and Robert Powers",
+keywords = "Phase-scatter correction",
+keywords = "MSC",
+keywords = "SNV",
+keywords = "NMR",
+keywords = "PCA",
+keywords = "PLS ",
+abstract = "Abstract Nuclear magnetic resonance (NMR) spectroscopy has proven invaluable in the diverse field of chemometrics due to its ability to deliver information-rich spectral datasets of complex mixtures for analysis by techniques such as principal component analysis (PCA). However, \{NMR\} datasets present a unique challenge during preprocessing due to differences in phase offsets between individual spectra, thus complicating the correction of random dilution factors that may also occur. We show that simultaneously correcting phase and dilution errors in \{NMR\} datasets representative of metabolomics data yields improved cluster quality in \{PCA\} scores space, even with significant initial phase errors in the data. "
+}
+
+
+@article{Chen2002164,
+title = "An efficient algorithm for automatic phase correction of \{NMR\} spectra based on entropy minimization ",
+journal = "Journal of Magnetic Resonance ",
+volume = "158",
+number = "1–2",
+pages = "164 - 168",
+year = "2002",
+note = "",
+issn = "1090-7807",
+doi = "http://dx.doi.org/10.1016/S1090-7807(02)00069-1",
+url = "http://www.sciencedirect.com/science/article/pii/S1090780702000691",
+author = "Li Chen and Zhiqiang Weng and LaiYoong Goh and Marc Garland",
+keywords = "Phase correction",
+keywords = "NMR spectra",
+keywords = "Entropy minimization",
+keywords = "Derivative ",
+abstract = "A new algorithm for automatic phase correction of \{NMR\} spectra based on entropy minimization is proposed. The optimal zero-order and first-order phase corrections for a \{NMR\} spectrum are determined by minimizing entropy. The objective function is constructed using a Shannon-type information entropy measure. Entropy is defined as the normalized derivative of the \{NMR\} spectral data. The algorithm has been successfully applied to experimental 1H \{NMR\} spectra. The results of automatic phase correction are found to be comparable to, or perhaps better than, manual phase correction. The advantages of this automatic phase correction algorithm include its simple mathematical basis and the straightforward, reproducible, and efficient optimization procedure. The algorithm is implemented in the Matlab program ACME—Automated phase Correction based on Minimization of Entropy. "
+}
+                  
+
+
+@thesis{Lanzl2002,
+           month = {March},
+           title = {Charakterisierung von Ruß-Kautschuk-Mischungen mittels dielektrischer Spektroskopie},
+          author = {Thomas Lanzl},
+            year = {2002},
+        keywords = {Impedanzspektroskopie , Ruß , Kautschuk , Gemisch , Leitfähigkeit , Dispersion ,  , permittivity , dielectric loss , conductivity , rubber-carbon black compounds , composite materials},
+             url = {http://epub.uni-regensburg.de/9907/},
+        abstract = {Die Zielsetzung der vorliegenden Arbeit besteht darin, die innere 
+Struktur von Ruß-Kautschuk-Mischungen mittels dielektrischer
+ Spektroskopie zu charakterisieren. Die genaue Kenntnis der 
+räumlichen Anordnung der F{\"u}llerpartikel soll dazu beitragen, 
+den Mechanismus der Verstärkung beim F{\"u}llstoff Ruß zu erklären.
+Die entscheidende Neuerung hierbei ist eine Modifikation der 
+{\"u}blichen dielektrischen Versuchsanordnung. Bei diesem Verfahren 
+wird die unbehandelte Probe zwischen zwei zusätzlichen verlustfreien 
+Isolierschichten in den Meßkondensator eingebracht. Dadurch wird im 
+Unterschied zur {\"u}blichen Methode die Reproduzierbarkeit von 
+Meßergebnissen gewährleistet. Durch eine eigens entwickelte 
+Modellfunktion läßt sich dieses modifizierte System vollständig 
+beschreiben. Eine Auswertung von Meßergebnissen anhand dieser 
+Modellfunktion liefert Parameter, die Informationen hinsichtlich 
+der inneren Struktur von Mischungen beinhalten. Ein Vergleich der 
+Ergebnisse f{\"u}r unterschiedliche Rußsorten zeigt, von welchen 
+Einflußgr{\"o}ßen die innere Struktur abhängt.
+},
+  institution =  {Uni Regensburg},
+}
+
+@Thesis{HonorsManiego,
+  author = 	 {Alison Maniego},
+  title = 	 {Characterisation of smart polymers for anti cancer drug delivery},
+  type = 	 {},
+
+  ALTyear = 	 {},
+  ALTdate = 	 {},
+  OPTkey = 	 {},
+  OPTsubtitle =  {},
+  OPTtitleaddon = {},
+  OPTlanguage =  {},
+  OPTnote = 	 {},
+  OPTlocation =  {},
+  OPTmonth = 	 {},
+  OPTisbn = 	 {},
+  OPTchapter = 	 {},
+  OPTpages = 	 {},
+  OPTpagetotal = {},
+  OPTaddendum =  {},
+  OPTpubstate =  {},
+  OPTdoi = 	 {},
+  OPTeprint = 	 {},
+  OPTeprintclass = {},
+  OPTeprinttype = {},
+  OPTurl = 	 {},
+  OPTurldate = 	 {},
+  OPTannote = 	 {}
+}
+
+
+
+@Article{NMRglue_thesis,
+author="Helmus, Jonathan J.
+and Jaroniec, Christopher P.",
+title="Nmrglue: an open source Python package for the analysis of multidimensional NMR data",
+journal="Journal of Biomolecular NMR",
+year="2013",
+volume="55",
+number="4",
+pages="355--367",
+abstract="Nmrglue, an open source Python package for working with multidimensional NMR data, is described. When used in combination with other Python scientific libraries, nmrglue provides a highly flexible and robust environment for spectral processing, analysis and visualization and includes a number of common utilities such as linear prediction, peak picking and lineshape fitting. The package also enables existing NMR software programs to be readily tied together, currently facilitating the reading, writing and conversion of data stored in Bruker, Agilent/Varian, NMRPipe, Sparky, SIMPSON, and Rowland NMR Toolkit file formats. In addition to standard applications, the versatility offered by nmrglue makes the package particularly suitable for tasks that include manipulating raw spectrometer data files, automated quantitative analysis of multidimensional NMR spectra with irregular lineshapes such as those frequently encountered in the context of biomacromolecular solid-state NMR, and rapid implementation and development of unconventional data processing methods such as covariance NMR and other non-Fourier approaches. Detailed documentation, install files and source code for nmrglue are freely available at                   http://nmrglue.com                                  . The source code can be redistributed and modified under the New BSD license.",
+issn="1573-5001",
+doi="10.1007/s10858-013-9718-x",
+url="http://dx.doi.org/10.1007/s10858-013-9718-x"
+}
+
+@article{ORGBABEL,
+   author = {Eric Schulte and Dan Davison and Thomas Dye and Carsten Dominik},
+   title = {A Multi-Language Computing Environment for Literate Programming and Reproducible Research},
+   journal = {Journal of Statistical Software},
+   volume = {46},
+   number = {1},
+   year = {2012},
+   keywords = {},
+   abstract = {We present a new computing environment for authoring mixed natural and computer language documents. In this environment a single hierarchically-organized plain text source file may contain a variety of elements such as code in arbitrary programming languages, raw data, links to external resources, project management data, working notes, and text for publication. Code fragments may be executed in situ with graphical, numerical and textual output captured or linked in the file. Export to LATEX, HTML, LATEX beamer, DocBook and other formats permits working reports, presentations and manuscripts for publication to be generated from the file. In addition, functioning pure code files can be automatically extracted from the file. This environment is implemented as an extension to the Emacs text editor and provides a rich set of features for authoring both prose and code, as well as sophisticated project management capabilities.},
+ issn = {1548-7660},
+ pages = {1--24},
+ doi = {10.18637/jss.v046.i03},
+   url = {https://www.jstatsoft.org/index.php/jss/article/view/v046i03},
+}
+
+
+@article{JägerCarbonBlack,
+title = "Spectral properties of carbon black ",
+journal = "Journal of Non-Crystalline Solids ",
+volume = "258",
+number = "1–3",
+pages = "161 - 179",
+year = "1999",
+note = "",
+issn = "0022-3093",
+doi = "http://dx.doi.org/10.1016/S0022-3093(99)00436-6",
+url = "http://www.sciencedirect.com/science/article/pii/S0022309399004366",
+author = "C. Jäger and Th. Henning and R. Schlögl and O. Spillecke",
+abstract = "The internal structure of carbon black particles considerably influences the optical behavior of the material, apart from the shape and agglomeration state of the primary particles. In this paper the correlation between internal structure and spectral behavior of carbon black is investigated experimentally. The carbon blacks were produced by resistive heating of graphite electrodes and condensation in a cooling gas atmosphere. The internal structure of the primary carbon black particles was investigated by high-resolution transmission electron microscopy, electron energy loss spectroscopy, 13C \{NMR\} spectroscopy, and Raman spectroscopy. The primary particles were found to consist of bent or plane structural subunits. The \{UV\} π−π* absorption feature of the produced carbon blacks varies in position between 196 and 265 nm depending on the state of bending of the graphene layers in the subunits of particles and/or the dimensions of the plane graphitic microcrystallites and the incorporation of hydrogen. The different curvature radii of the graphene layers or the sizes of microcrystallites can be summarized by an integral dimension like the ratio of sp2/sp3 hybridized carbon atoms. In the mid-infrared spectral region, the absolute value of the absorption coefficient κ is dominated by a continuous absorption due to free charge carriers which are also influenced by the ratio of sp2/sp3 hybridized carbon in the primary particles. The appearance of prominent bands is related to the existence of functional groups, like C–Hn, CO and/or C–O–C. "
+}
+
+
+
+
+@article{ Gaborieau2005,
+Author = {Marianne Gaborieau, M and Graf, R and Spiess, HW},
+Title = {{Versatility of the dipolar filter selection: From H-1 nuclear spin
+   diffusion experiment to the measurement of nuclear Overhauser effect in
+   homopolymer melts}},
+Journal = {{SOLID STATE NUCLEAR MAGNETIC RESONANCE}},
+Year = {{2005}},
+Volume = {{28}},
+Number = {{2-4}},
+Pages = {{160-172}},
+Month = {{SEP}},
+Abstract = {{Dipolar filters select H-1 magnetization according to local dipolar
+   dephasing, which corresponds to site mobility in systems with
+   heterogeneous molecular mobility. Combined with a conventional exchange
+   experiment, it is usually applied to polymeric samples exhibiting
+   structures on the nanometer length scale associated with a strong
+   dynamic contrast. There, the resulting H-1 nuclear spin diffusion
+   experiment yields the size of the structure. When the same experiment is
+   applied to homopolymer melts exhibiting a weak dynamic contrast and
+   dynamic heterogeneities on significant shorter length scales, the
+   recorded magnetization decay is in agreement with decays expected from a
+   heterogeneous nanostructure. However, dipolar filters actually can also
+   select mobile parts of the repeat unit, e.g. the end of the alkyl side
+   chains and the subsequent magnetization transfer then can occur via
+   cross relaxation due to non coherent zero-quantum transitions (nuclear
+   Overhauser effect, NOE). The difficulties of distinguishing these two
+   cases are examined and it is demonstrated that NOE experiments
+   exploiting magnetization selection via the dipolar filter allow
+   quantifying the local dynamics of the side chains. This opens new
+   possibilities for measurements of local dynamics in non isotopically
+   labeled homopolymer melts. (c) 2005 Elsevier Inc. All rights reserved.}},
+DOI = {{10.1016/j.ssnmr.2005.07.006}},
+ISSN = {{0926-2040}},
+ResearcherID-Numbers = {{Gaborieau, Marianne/C-1326-2008
+   Spiess, Hans Wolfgang/G-6777-2011}},
+ORCID-Numbers = {{Gaborieau, Marianne/0000-0002-9991-8123
+   Spiess, Hans Wolfgang/0000-0002-4779-654X}},
+Unique-ID = {{ISI:000234325100011}},
+
+}
+
+@article{Buhai2004175,
+title = "NMR acceleration mapping in percolation model objects ",
+journal = "Journal of Magnetic Resonance ",
+volume = "168",
+number = "1",
+pages = "175 - 185",
+year = "2004",
+note = "",
+issn = "1090-7807",
+doi = "http://dx.doi.org/10.1016/j.jmr.2004.02.013",
+url = "http://www.sciencedirect.com/science/article/pii/S1090780704000424",
+author = "Bogdan Buhai and Aidar Hakimov and Ioan Ardelean and Rainer Kimmich",
+keywords = "Acceleration",
+keywords = "NMR mapping",
+keywords = "Percolation",
+keywords = "Porous media "
+}
+

@@ -1,0 +1,224 @@
+#+LAST_MOBILE_CHANGE: 2016-03-07 13:25:13
+#+STARTUP: indent
+#+STARTUP: overview
+#+TAGS: UNIVERSITY(u) COMPUTER(c) HOME(h) MELISSA(m) WORK(w)
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+
+* SPOJ
+** TODO Sieve of Eratosthenes  [[http://www.spoj.com/problems/PRIME1/][SPOJ.com - Problem PRIME1]]   [[file:Spoj/eratos.py][File]]
+:PROPERTIES:
+:ID:       de98b492-5843-427f-bcfd-e5a81f2c4250
+:END:
+* Computer configuration                                           :COMPUTER:
+** TODO Build up a clean Emacs configuration system
+:PROPERTIES:
+:ID:       b949771b-b61c-431b-a0a7-07e7a9a95300
+:END:
+*** [[https://spwhitton.name/blog/entry/emacs-pkg-subtree/][Managing Emacs packages as git subtrees]]
+** TODO Enable ThinkPad sound keys
+:PROPERTIES:
+:ID:       95d11287-dc14-4b12-b918-4b1a61e58184
+:END:
+** TODO Learn to work with git
+:PROPERTIES:
+:ID:       b7a25cfc-a0cf-49f7-ae66-9e061b351ca6
+:END:
+- [[https://rogerdudler.github.io/git-guide/index.de.html][git - Der einfache Einstieg - kein Schnick-schnack!]]
+- [[http://www.git-scm.com/docs/gittutorial][Git - gittutorial Documentation]]
+- [[https://www.atlassian.com/git/tutorials/][Git Tutorials and Training | Atlassian Git Tutorial]]
+
+** TODO Read
+:PROPERTIES:
+:ID:       cd31459b-d05b-4b2d-bca3-dfcee7c40c71
+:END:
+[[http://www.geophysique.be/2014/10/30/emails-to-sms-on-a-foxbox/][Emails to SMS on a FoxBox | Géophysique.be]]
+[[https://jakevdp.github.io/mpl_tutorial/tutorial_pages/tut2.html][2. Object Oriented Interface — mpl-tutorial 0.1 documentation]]
+http://devblog.arnebrasseur.net/2014-08-amazing-lisp-vim
+** Configure
+*** TODO Build a more elaborate Latex Signature command
+    :PROPERTIES:
+    :ID:       c3b31356-0de0-4063-8fd1-6729d861d99e
+    :END:
+*** BUG set up mu4e-org
+    :PROPERTIES:
+    :ID:       ca1f01cd-ce86-4e19-b354-7ff71af6508f
+    :END:
+*** TODO Optimize encryption in offlineimap.py
+    :PROPERTIES:
+    :ID:       4870e02b-3ba9-47df-a120-4ec1c8f5fec6
+    :END:
+*** BUG mu4e capture
+    :PROPERTIES:
+    :ID:       cfa131d0-5ad9-48f3-98b7-8c3721d07b13
+    :END:
+ - State "BUG"        from              [2016-02-05 Fri 14:20] \\
+   No capturing of mu4e buffers
+*** BUG Configure pulseaudio
+    :PROPERTIES:
+    :ID:       5b5930eb-b264-4b02-b11b-3ef20cdf2225
+    :END:
+   [[file:~/.i3/config::exec%20pulseaudio%20-nC]]
+*** TESTING Added (add-hook 'after-init-hook #'global-flycheck-mode) to .emacs [2016-03-08 Tue]
+    :PROPERTIES:
+    :ID:       5efda7c4-229e-4732-a59b-c267ab80505b
+    :END:
+*** TESTING Installed elpy 
+    :PROPERTIES:
+    :ID:       60eec5de-4593-41af-94b7-167fa44277bf
+    :END:
+*** TESTING Added PDF tools
+    :PROPERTIES:
+    :ID:       004a3dad-c2f7-4968-a0af-784e6c6ecc90
+    :END:
+   [[file:~/.emacs::(pdf-tools-install)]]
+*** TESTING Org journal 
+:PROPERTIES:
+:ID:       cdbbfbba-14d4-4eff-aab2-384c5065f440
+:END:
+*** TODO Want to use pdf-tools with auctex
+:PROPERTIES:
+:ID:       c186da98-a9fe-45c3-b59f-8fd74408935a
+:END:
+ - Also good for synctex mode --> Synchronous view/compile
+** TESTING Installed helm-projectile [2016-03-14 Mon]
+:PROPERTIES:
+:ID:       d5fde254-efa1-4651-ba05-71abf50b4482
+:END:
+* Development                                                      :COMPUTER:
+** TODO Develop method for literate programming
+:PROPERTIES:
+:ID:       4b5c4a4b-04ab-4898-a250-51d8ae8424c5
+:END:
+- Interesting: Python tabulate
+*** TODO Prepare structure for bachelor thesis as an example
+:PROPERTIES:
+:ID:       e2ba4899-c976-41a0-83ac-e07c84eec32f
+:END:
+** TODO Learn Babel
+:PROPERTIES:
+:ID:       0cd60d59-db0f-4c48-afc3-6ece8b771f3a
+:END:
+*** Babel Test
+#+BEGIN_SRC python : session : results file
+import seaborn as sns
+#sns.set()
+
+# Load the example flights dataset and conver to long-form
+flights_long = sns.load_dataset("flights")
+flights = flights_long.pivot("month", "year", "passengers")
+
+# Draw a heatmap with the numeric values in each cell
+sns.heatmap(flights, annot=True, fmt="d", linewidths=.5)
+sns.plt.show()
+sns.plt.savefig("./plot.png")
+#+END_SRC python
+
+#+RESULTS:
+
+
+
+
+#+name: directories
+#+begin_src sh :results replace
+  cd ~ && du -sc * |grep -v total
+#+end_src
+
+#+RESULTS: directories
+|     3708 | 2012_13 UNHS Final Report.pdf                            |
+|      392 | Art                                                      |
+| 11320768 | Books                                                    |
+|      452 | CV_Meinel_english.docx                                   |
+|       28 | Desktop                                                  |
+|  1911020 | Development                                              |
+|     1624 | Documents                                                |
+|  1536828 | Downloads                                                |
+|  2692644 | Dropbox                                                  |
+|    14284 | Magazines                                                |
+|       64 | Mail                                                     |
+|  2612624 | Music                                                    |
+|       16 | News                                                     |
+|   886048 | Organisation                                             |
+|     2780 | Pictures                                                 |
+|       28 | Produkt_interaktiv.xlsx                                  |
+|   702448 | Publishing                                               |
+|      248 | PundMgrantsResearch projects2015 Masters projects-1.docx |
+|    22436 | R                                                        |
+|        4 | README.md                                                |
+|  2110864 | Universität                                              |
+|  2484044 | VirtualBox VMs                                           |
+|    50208 | Vorlesungen                                              |
+|      208 | Work                                                     |
+|        4 | addtolist.py                                             |
+|        4 | addtolist.py~                                            |
+|    18428 | agedu.dat                                                |
+|        0 | atl                                                      |
+|        8 | auto                                                     |
+|        4 | cfpw                                                     |
+|        4 | legend.txt                                               |
+|      348 | mail                                                     |
+|        4 | offlimrcbackup                                           |
+|       16 | pI2.xlsx                                                 |
+|        4 | readingbusinessbooks.org~                                |
+|       64 | seaborn-data                                             |
+|        4 | ssh_config                                               |
+|        4 | sshd_config                                              |
+|        4 | texput.log                                               |
+|       12 | wmii-config.rb                                           |
+
+
+
+#+name: directory-pie-chart(dirs = directories)
+#+begin_src R :session R-pie-example :file ../../images/babel/dirs.png
+  pie(dirs[,1], labels = dirs[,2])
+#+end_src
+
+#+begin_src python: results replace
+print("Hi")
+#+end_src
+
+
+#+begin_src ruby
+"This file was last evaluated on #{Date.today}"
+#+end_src
+
+#+begin_src R :colnames yes
+  words <- tolower(scan("dev.org", what="", na.strings=c("|",":")))
+  t(sort(table(words[nchar(words) > 3]), decreasing=TRUE)[1:10])
+#+end_src
+
+#+RESULTS:
+| todo | #+begin_src | #+end_src | emacs | **** | with | load | python | #+results: | source |
+|------+-------------+-----------+-------+------+------+------+--------+------------+--------|
+|   24 |           6 |         6 |     5 |    4 |    4 |    3 |      3 |          3 |      3 |
+
+#+begin_src python :results output
+print "Hello, world!"
+#+end_src python
+
+#+RESULTS:
+: Hello, world!
+
+** TODO Read and archive these links
+:PROPERTIES:
+:ID:       a04c8939-217b-4250-af22-011fef3d0af8
+:END:
+- [[https://www.google.de/search?q=open+source+for+enterprise&ie=utf-8&oe=utf-8&gws_rd=cr&ei=BYNZVvHwL4nsUqTul6AL][open source for enterprise - Google-Suche]]
+- [[http://sourceforge.net/directory/enterprise][Enterprise Software]]
+- [[https://www.linux.com/news/software/applications/789241--5-new-enterprise-open-source-projects-to-watch][5 New Enterprise Open Source Projects to Watch | Linux.com]]
+- [[http://shop.oreilly.com/product/9780596101190.do][Open Source for the Enterprise - O'Reilly Media]]
+** TODO Network planning algorithm
+:PROPERTIES:
+:ID:       b2eb47fb-feba-40e9-a71b-8764e717145e
+:END:
+** TODO Org mode to Ganttchart with Tikz
+:PROPERTIES:
+:ID:       50933a3c-7c1a-4cc7-b3af-22ddb26a6a5b
+:END:
+
+
+
+** TODO Automated risk assessment 
+:PROPERTIES:
+:ID:       7d0f213b-5041-47d7-b0d3-ce4a8572466f
+:END:

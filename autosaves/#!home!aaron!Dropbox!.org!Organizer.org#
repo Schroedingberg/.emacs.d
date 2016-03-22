@@ -1,0 +1,317 @@
+#+LAST_MOBILE_CHANGE: 2016-03-21 13:52:50
+#+STARTUP: indent
+#+STARTUP: overview
+#+TAGS: UNIVERSITY(u) MELISSA(m) WORK(w) EDUCATION(e) ORGANISATIONAL(o) LEISURE(l) HEALTHANDBODY(h) FINANCE(f)
+The tag configuration is still being tested. It might be necessary to further optimize this.
+#+LATEX_HEADER: \usepackage[]{geometry}
+
+
+
+
+* Repeating tasks
+** TODO Workout <2016-03-23 Wed 08:00 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2016-03-22 Tue 14:00]
+:ID:       a1d36937-feb3-4754-ae44-3bb7fce3a034
+:END:
+- State "CANCELED"   from "TODO"       [2016-03-22 Tue 14:00]
+- State "CANCELED"   from "TODO"       [2016-03-21 Mon 13:32]
+- State "DONE"       from "TODO"       [2016-03-20 Sun 13:49]
+- State "CANCELED"   from "TODO"       [2016-03-19 Sat 23:12]
+- State "CANCELED"   from "TODO"       [2016-03-19 Sat 23:12]
+- State "DONE"       from "TODO"       [2016-03-17 Thu 23:21]
+- State "CANCELED"   from "TODO"       [2016-03-17 Thu 10:04]
+- State "DONE"       from "TODO"       [2016-03-14 Mon 16:32]
+- State "CANCELED"   from "TODO"       [2016-03-13 Sun 21:59]
+- State "CANCELED"   from "TODO"       [2016-03-13 Sun 21:59]
+- State "CANCELED"   from "TODO"       [2016-03-13 Sun 21:59]
+- State "DONE"       from "TODO"       [2016-03-11 Fri 15:07]
+- State "CANCELED"   from "TODO"       [2016-03-11 Fri 10:38]
+- State "DONE"       from "TODO"       [2016-03-09 Wed 12:29]
+- State "CANCELED"   from "TODO"       [2016-03-09 Wed 12:29]
+- State "CANCELED"   from "TODO"       [2016-03-07 Mon 21:53]
+- State "DONE"       from "TODO"       [2016-03-06 Sun 18:09]
+- State "DONE"       from "TODO"       [2016-03-05 Sat 09:48]
+- State "DONE"       from "TODO"       [2016-03-05 Sat 09:48]
+:PROPERTIES:
+:LAST_REPEAT: [2016-03-05 Sat 09:48]
+:END:
+:LOGBOOK:
+CLOCK: [2016-03-04 Fri 08:57]--[2016-03-04 Fri 10:37] =>  1:40
+:END:
+- State "DONE"       from "TODO"       [2016-03-03 Thu 22:43]
+- State "DONE"       from "TODO"       [2016-03-02 Wed 10:05]
+- State "DONE"       from "TODO"       [2016-03-01 Tue 14:47]
+- State "DONE"       from "TODO"       [2016-03-01 Tue 14:46]
+- State "DONE"       from "TODO"       [2016-03-01 Tue 14:46]
+- State "DONE"       from "TODO"       [2016-03-01 Tue 14:46]
+- State "CANCELED"   from "TODO"       [2016-02-26 Fri 22:33]
+- State "DONE"       from "TODO"       [2016-02-26 Fri 12:46]
+- State "DONE"       from "TODO"       [2016-02-25 Thu 17:18]
+- State "DONE"       from "TODO"       [2016-02-23 Tue 11:18]
+- State "DONE"       from "TODO"       [2016-02-22 Mon 11:10]
+- State "DONE"       from "TODO"       [2016-02-21 Sun 11:16]
+- State "DONE"       from "TODO"       [2016-02-20 Sat 21:08]
+- State "DONE"       from "TODO"       [2016-02-19 Fri 10:51]
+- State "DONE"       from "TODO"       [2016-02-17 Wed 10:55]
+- State "DONE"       from "TODO"       [2016-02-17 Wed 10:55]
+- State "DONE"       from "TODO"       [2016-02-17 Wed 10:55]
+- State "DONE"       from "TODO"       [2016-02-10 Wed 22:49]
+- State "DONE"       from "TODO"       [2016-02-10 Wed 22:48]
+- State "DONE"       from "TODO"       [2016-02-04 Thu 22:58]
+-p State "DONE"       from "TODO"       [2016-02-04 Thu 11:51]
+:PROPERTIES:
+:LAST_REPEAT: [2016-01-31 Sun 17:24] 
+Trained at Marions/Patrices place. Nice training to get slowly used to it again, but no free weights and
+very low angle ranges.
+:END:
+- State "DONE"       from "TODO"       [2016-01-31 Sun 17:24]  
+** TODO Org-mode/Emacs Management <2016-03-22 Tue 20:00 +1d> 
+:PROPERTIES:
+:LAST_REPEAT: [2016-03-22 Tue 18:02]
+:ID:       d9394d0c-8b7e-4753-8399-8d6f51f4b81b
+:END:
+- State "DONE"       from "TODO"       [2016-03-22 Tue 18:02]
+- State "DONE"       from "TODO"       [2016-03-22 Tue 18:02]
+- State "DONE"       from "TODO"       [2016-03-20 Sun 13:49]
+- State "DONE"       from "TODO"       [2016-03-19 Sat 23:12]
+- State "DONE"       from "TODO"       [2016-03-18 Fri 11:24]
+- State "DONE"       from "TODO"       [2016-03-17 Thu 10:05]
+- State "DONE"       from "TODO"       [2016-03-15 Tue 23:15]
+- State "DONE"       from "TODO"       [2016-03-15 Tue 01:28]
+- State "DONE"       from "TODO"       [2016-03-13 Sun 22:01]
+- State "DONE"       from "TODO"       [2016-03-13 Sun 22:01]
+- State "DONE"       from "TODO"       [2016-03-13 Sun 17:46]
+- State "DONE"       from "TODO"       [2016-03-11 Fri 10:40]
+- State "DONE"       from "TODO"       [2016-03-11 Fri 10:40]
+- State "DONE"       from "TODO"       [2016-03-08 Tue 19:13]
+- State "DONE"       from "TODO"       [2016-03-08 Tue 10:20]
+- State "DONE"       from "TODO"       [2016-03-08 Tue 10:19]
+- State "DONE"       from "TODO"       [2016-03-06 Sun 18:08]
+- State "DONE"       from "TODO"       [2016-03-05 Sat 09:48]
+:PROPERTIES:
+:LAST_REPEAT: [2016-03-05 Sat 09:48]
+:END:
+- State "DONE"       from "TODO"       [2016-03-03 Thu 23:01]
+:LOGBOOK:
+CLOCK: [2016-03-21 Mon 21:12]--[2016-03-21 Mon 21:12] =>  0:00
+CLOCK: [2016-03-21 Mon 13:55]--[2016-03-21 Mon 14:05] =>  0:10
+CLOCK: [2016-03-21 Mon 13:55]--[2016-03-21 Mon 13:55] =>  0:00
+CLOCK: [2016-03-18 Fri 15:53]--[2016-03-18 Fri 17:03] =>  1:10
+CLOCK: [2016-03-18 Fri 15:16]--[2016-03-18 Fri 15:53] =>  0:37
+CLOCK: [2016-03-18 Fri 13:39]--[2016-03-18 Fri 14:19] =>  0:40
+CLOCK: [2016-03-18 Fri 12:04]--[2016-03-18 Fri 12:05] =>  0:01
+CLOCK: [2016-03-18 Fri 11:50]--[2016-03-18 Fri 11:50] =>  0:00
+CLOCK: [2016-03-18 Fri 11:10]--[2016-03-18 Fri 11:18] =>  0:08
+CLOCK: [2016-03-18 Fri 11:02]--[2016-03-18 Fri 11:10] =>  0:08
+CLOCK: [2016-03-18 Fri 10:37]--[2016-03-18 Fri 10:53] =>  0:16
+CLOCK: [2016-03-17 Thu 23:32]--[2016-03-17 Thu 23:34] =>  0:02
+CLOCK: [2016-03-17 Thu 15:16]--[2016-03-17 Thu 15:32] =>  0:16
+CLOCK: [2016-03-17 Thu 15:10]--[2016-03-17 Thu 15:11] =>  0:01
+CLOCK: [2016-03-17 Thu 15:03]--[2016-03-17 Thu 15:03] =>  0:00
+CLOCK: [2016-03-17 Thu 14:54]--[2016-03-17 Thu 15:03] =>  0:09
+CLOCK: [2016-03-17 Thu 14:20]--[2016-03-17 Thu 14:54] =>  0:34
+CLOCK: [2016-03-17 Thu 10:40]--[2016-03-17 Thu 10:47] =>  0:07
+CLOCK: [2016-03-17 Thu 10:05]--[2016-03-17 Thu 10:40] =>  0:35
+CLOCK: [2016-03-17 Thu 00:24]--[2016-03-17 Thu 00:33] =>  0:09
+CLOCK: [2016-03-16 Wed 22:23]--[2016-03-16 Wed 22:53] =>  0:30
+CLOCK: [2016-03-16 Wed 22:21]--[2016-03-16 Wed 22:23] =>  0:02
+CLOCK: [2016-03-16 Wed 22:16]--[2016-03-16 Wed 22:21] =>  0:05
+CLOCK: [2016-03-16 Wed 13:37]--[2016-03-16 Wed 13:46] =>  0:09
+CLOCK: [2016-03-16 Wed 12:48]--[2016-03-16 Wed 12:49] =>  0:01
+CLOCK: [2016-03-16 Wed 12:39]--[2016-03-16 Wed 12:48] =>  0:09
+CLOCK: [2016-03-16 Wed 00:08]--[2016-03-16 Wed 00:10] =>  0:02
+CLOCK: [2016-03-15 Tue 23:15]--[2016-03-15 Tue 23:35] =>  0:20
+CLOCK: [2016-03-15 Tue 11:57]--[2016-03-15 Tue 12:19] =>  0:22
+CLOCK: [2016-03-15 Tue 11:47]--[2016-03-15 Tue 11:53] =>  0:06
+CLOCK: [2016-03-13 Sun 21:04]--[2016-03-13 Sun 21:34] =>  0:30
+CLOCK: [2016-03-13 Sun 10:50]--[2016-03-13 Sun 10:54] =>  0:04
+CLOCK: [2016-03-12 Sat 00:00]--[2016-03-12 Sat 00:40] =>  0:40
+CLOCK: [2016-03-11 Fri 10:48]--[2016-03-11 Fri 10:57] =>  0:09
+CLOCK: [2016-03-11 Fri 10:43]--[2016-03-11 Fri 10:44] =>  0:01
+CLOCK: [2016-03-11 Fri 10:38]--[2016-03-11 Fri 10:38] =>  0:00
+CLOCK: [2016-03-10 Thu 23:02]--[2016-03-10 Thu 23:07] =>  0:05
+CLOCK: [2016-03-10 Thu 22:29]--[2016-03-10 Thu 23:02] =>  0:33
+CLOCK: [2016-03-10 Thu 21:41]--[2016-03-10 Thu 21:42] =>  0:01
+CLOCK: [2016-03-10 Thu 21:36]--[2016-03-10 Thu 21:41] =>  0:05
+CLOCK: [2016-03-10 Thu 14:56]--[2016-03-10 Thu 14:58] =>  0:02
+CLOCK: [2016-03-09 Wed 15:02]--[2016-03-09 Wed 15:03] =>  0:01
+CLOCK: [2016-03-09 Wed 12:55]--[2016-03-09 Wed 13:03] =>  0:08
+CLOCK: [2016-03-09 Wed 12:34]--[2016-03-09 Wed 12:55] =>  0:21
+CLOCK: [2016-03-08 Tue 17:27]--[2016-03-08 Tue 17:46] =>  0:19
+CLOCK: [2016-03-08 Tue 17:11]--[2016-03-08 Tue 17:14] =>  0:03
+CLOCK: [2016-03-08 Tue 17:06]--[2016-03-08 Tue 17:11] =>  0:05
+CLOCK: [2016-03-08 Tue 16:54]--[2016-03-08 Tue 17:00] =>  0:06
+CLOCK: [2016-03-07 Mon 13:41]--[2016-03-07 Mon 13:42] =>  0:01
+CLOCK: [2016-03-07 Mon 13:35]--[2016-03-07 Mon 13:41] =>  0:06
+CLOCK: [2016-03-07 Mon 13:07]--[2016-03-07 Mon 13:26] =>  0:19
+CLOCK: [2016-03-07 Mon 12:25]--[2016-03-07 Mon 12:50] =>  0:25
+CLOCK: [2016-03-07 Mon 11:58]--[2016-03-07 Mon 12:25] =>  0:27
+CLOCK: [2016-03-07 Mon 11:56]--[2016-03-07 Mon 11:57] =>  0:01
+CLOCK: [2016-03-07 Mon 11:54]--[2016-03-07 Mon 11:56] =>  0:02
+CLOCK: [2016-03-07 Mon 11:53]--[2016-03-07 Mon 11:54] =>  0:01
+CLOCK: [2016-03-07 Mon 11:49]--[2016-03-07 Mon 11:49] =>  0:00
+CLOCK: [2016-03-05 Sat 22:25]--[2016-03-05 Sat 22:58] =>  0:33
+CLOCK: [2016-03-05 Sat 22:25]--[2016-03-05 Sat 22:25] =>  0:00
+CLOCK: [2016-03-04 Fri 18:58]--[2016-03-04 Fri 19:17] =>  0:19
+CLOCK: [2016-03-04 Fri 18:49]--[2016-03-04 Fri 18:54] =>  0:05
+CLOCK: [2016-03-04 Fri 18:40]--[2016-03-04 Fri 18:43] =>  0:03
+CLOCK: [2016-03-03 Thu 22:45]--[2016-03-03 Thu 23:01] =>  0:16
+:END:
+** TODO Tidy up <2016-03-25 Fri 21:00 +1w>
+:PROPERTIES:
+:ID:       905c6e2d-b9fc-4304-9e5a-7a64b85e62f9
+:LAST_REPEAT: [2016-03-20 Sun 13:49]
+:END:
+- State "CANCELED"   from "TODO"       [2016-03-20 Sun 13:49]
+- State "DONE"       from "TODO"       [2016-03-11 Fri 10:39]
+:LOGBOOK:
+CLOCK: [2016-03-16 Wed 20:33]--[2016-03-16 Wed 22:16] =>  1:43
+CLOCK: [2016-03-10 Thu 20:54]--[2016-03-10 Thu 21:36] =>  0:42
+:END:
+* Private
+
+** TODO Set up Banking [1/2] <2016-01-25 Mon>
+:PROPERTIES:
+:ID:       6ea2435f-aaaf-49d0-9498-405dfcb0eafc
+:END:
+- [X] Transfer money
+- [ ] Activate PhotoTan
+** Leisure                                                         :LEISURE:
+*** TODO Make photobook
+:PROPERTIES:
+:ID:       1f02bba6-77df-495b-bc27-5604477bfc74
+:END:
+
+*** Music
+**** LilyPond and Fomus
+Cool software for score typesetting and music programming
+**** Play and sing "When the eagle cries"
+**** Bands:
+- Solefald
+- Solstafir
+- 3:33
+*** Writing
+**** TODO Write a poem
+:PROPERTIES:
+:ID:       c5a9d6e3-f71c-429a-85a3-c86f7de3e7c4
+:END:
+*** TODO Contact shooting range
+:PROPERTIES:
+:ID:       2a7c03d3-1313-470d-80d6-aaeec6b5fe8a
+:END:
+*** Art
+**** Paint red alien picture
+**** Sybilla Maria Merian
+**** Presents
+:PRESENTS:
+- Build adventure game
+- Build olfactorial system (e.g. RasPi controlled scent alarm clock)
+- Dress with fountain pen
+- Smart band
+- [[https://www.zomato.com/sydney/cafe-svensson-cbd/info#tab][Cafe Svensson, CBD, Sydney - Urbanspoon/Zomato]]
+:END:
+
+
+
+
+
+**** Matthias Tretter
+
+* Business
+* Org                                                        :ORGANISATIONAL:
+
+** TODO Restructure orgmode<2016-04-15 Fri>
+:PROPERTIES:
+:ID:       fcc3f8bd-7c68-4477-a0c3-e1cdfc3221d3
+:END:
+- [ ] Implement a system e.g. GTD
+- [ ] Decide what to do with the tag function
+- [ ] Set up portability to other systems 
+
+** Links
+http://orgmode.org/worg/org-tutorials/
+http://www.totherme.org/configs/org-stuff.html#orgheadline2
+[[http://sachachua.com/blog/2015/03/getting-helm-org-refile-clock-create-tasks/][Getting Helm and org-refile to clock in or create tasks - sacha chua :: living an awesome life]]
+[[http://pages.sachachua.com/.emacs.d/Sacha.html][Sacha Chua's Emacs configuration]]
+[[http://sachachua.com/blog/2014/01/tips-learning-org-mode-emacs/][Some tips for learning Org Mode for Emacs - sacha chua :: living an awesome life]]
+[[http://orgmode.org/worg/org-contrib/babel/intro.html#source-code-blocks][Babel: Introduction]]
+[[http://www.suenkler.info/docs/emacs-orgmode/#toc-der-sinn-einer-guten-notiz-und-aufgabenverwaltung][Hendrik Sünkler | Aufgabenverwaltung im Emacs Org mode]]
+[[http://thehelpfulhacker.net/2014/07/19/a-dashboard-for-your-life-a-minimal-goal-tracker-using-org-mode-go-and-git/][A Dashboard for your Life - a minimal goal tracker using org-mode, go and git · The Helpful Hacker]]
+[[http://sachachua.com/blog/2014/01/tips-learning-org-mode-emacs/][Some tips for learning Org Mode for Emacs - sacha chua :: living an awesome life]]
+[[http://irreal.org/blog/?p=4758][The First Rule for Using Org | Irreal]]
+[[https://blog.fugue.co/2015-11-11-guide-to-emacs.html][A CEO's Guide to Emacs | Fugue]]
+[[https://www.reddit.com/r/emacs/comments/3tlwzl/tips_on_restarting_my_config/][Tips on restarting my config? : emacs]]
+[[http://orgmode.org/manual/Multiple-sets-in-one-file.html#Multiple-sets-in-one-file][Multiple sets in one file - The Org Manual]]
+[[https://www.reddit.com/r/emacs/comments/3tc4sv/what_ways_do_you_use_orgmode/][What ways do you use org-mode? : emacs]]
+[[http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html#sec-3][How I use Emacs and Org-mode to implement GTD]]
+[[https://www.reddit.com/r/emacs/comments/3tv7pj/emacs_work/][Emacs @ work? : emacs]]
+http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html#sec-3
+[[https://www.youtube.com/watch?v%3D1-dUkyn_fZA][Org and python in reproducible research]]
+http://sachachua.com/blog/2007/12/a-day-in-a-life-with-org/
+http://orgmode.org/worg/org-tutorials/weaving-a-budget.html
+http://juanreyero.com/article/emacs/org-teams.html
+http://orgmode.org/worg/exporters/beamer/ox-beamer.html
+http://git-annex.branchable.com/sync/
+http://orgmode.org/worg/exporters/beamer/ox-beamer.html
+http://orgmode.org/worg/org-tutorials/org-effectiveness.html
+[[http://orgmode.org/worg/org-tutorials/tracking-habits.html][Tracking Habits with Org-mode]]
+[[http://orgmode.org/worg/org-tutorials/org-appearance.html][Org appearance]]
+[[http://orgmode.org/worg/agenda-optimization.html][Agenda speedup and optimization]]
+[[http://orgmode.org/worg/org-tutorials/org-custom-agenda-commands.html][Custom Agenda Commands]]
+[[http://members.optusnet.com.au/~charles57/GTD/remember.html][Remember Mode Tutorial]]
+[[http://sachachua.com/blog/2008/01/tagging-in-org-plus-bonus-code-for-timeclocks-and-tags/][Tagging in Org - plus bonus code for timeclocks and tags! - sacha chua :: living an awesome life]]
+[[http://sachachua.com/blog/2007/12/clocking-time-with-emacs-org/][Clocking Time with Emacs Org - sacha chua :: living an awesome life]]
+https://www.reddit.com/r/emacs/comments/3t8zqh/emacs_and_email_pt_2/
+[[http://puntoblogspot.blogspot.de/2015/11/mu4e-and-gmail-multiple-accounts.html][puntoblogspot: Mu4e and gmail (multiple accounts)]]
+[[https://www.reddit.com/r/emacs/comments/3t5vil/how_to_make_an_estimate_outline_with_orgmode/][How to make an Estimate outline with org-mode? : emacs]]
+[[http://www.hollenback.net/index.php/EmacsOrgTimestamps][HollenbackDotNet - Emacs Org Timestamps]]
+[[http://kitchingroup.cheme.cmu.edu/blog/2014/08/08/What-we-are-using-org-mode-for/][The Kitchin Research Group]]  
+
+[[http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][Emacs org-mode examples and cookbook]]
+
+
+[[http://www.devalot.com/articles/2008/07/project-planning][Behind the code: project planning - Devalot]]
+
+
+
+
+
+
+
+** TODO Add new Documentclasses to org-latex-classes (require 'ox-latex)
+:PROPERTIES:
+:ID:       d4905e88-c762-476c-99f3-c0ac35933f5a
+:END:
+  [2016-01-14 Thu]
+  [[file:~/Dropbox/Ordner/Notizen/Notizen.org]]
+  
+
+* Tasks
+
+** TODO Go to bookstore in Newtown near Sydney University
+:PROPERTIES:
+:ID:       f0ab19d7-fe8b-4b5d-93c8-160bf49b1734
+:END:
+<2016-05-09>
+** TODO Make something for Valerie <2016-03-30 Wed 19:00>
+:PROPERTIES:
+:ID:       5df36651-5444-4dbb-a7bf-99df06cfb4b7
+:END:
+** TODO Download Book Peter Larkin (Raman and IR) <2016-03-22 Tue 17:00> 
+** TODO Make new Raman appointment <2016-03-28 Mon>
+** TODO Ask Joel about NMR <2016-03-25 Fri>
+  
+  [[file:~/Dropbox/polyamides/Presentations/Aaron%20second%20presentation%20to%20Imatech%20March%202016/Source/Presentation_to_Imatech__2016-03-21.pdf][file:~/Dropbox/polyamides/Presentations/Aaron second presentation to Imatech March 2016/Source/Presentation_to_Imatech__2016-03-21.pdf]]
+
+** TODO [#B] Write to people in Germany
+<2016-03-20 Su.>
+* Configure
+** FIXED Mu4e destroys outlook corporate xml trails <2016-03-21 Mon>  
+
+I now think that it was rather me answering to the first mail in a thread. So user error :D
+** TODO Elisp function to add resources to Bibliography <2016-03-25 Fri> 
+HelmBib should be incorporated in the process 
+** TODO AucTeX shortcuts for changes package
+For fast collaborative LaTeX editing
+  [[file:~/Dropbox/polyamides/Presentations/Aaron%20second%20presentation%20to%20Imatech%20March%202016/Source/Presentation_to_Imatech__2016-03-21.tex::\deleted%5Bid=Aaron%5D{%20\item%20$^1H$%20NMR%20spectra%20of%20all%20samples%20in%20rotors%20and%20the%20other%20carbon%20black%20(Nano%2027%20and%205303)}]]

@@ -1,0 +1,297 @@
+\documentclass[xcolor=table]{beamer}
+\usepackage{blindtext}
+\usepackage{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{todonotes}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+
+\usepackage{eurosym}
+
+
+\usepackage[english]{babel}
+\usepackage{fancyhdr,amsmath,float,amssymb,textcomp}
+
+\usepackage[T1]{fontenc}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage{booktabs}
+\usepackage{ifthen}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{color}
+
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{todonotes}
+\usepackage[caption = false]{subfig}
+\usepackage{graphicx}
+\usepackage{tikz,pgf}
+%\usepackage{fontspec}
+\usepackage{pgfplots}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage[per=fraction]{siunitx}
+\usepackage{etoc,tabu,tabulary, epsfig}
+\usepackage[audience=team]{beameraudience}
+%\usepackage{datatool} 
+\usepackage{transparent,tcolorbox}
+\usepackage{trackchanges}
+\usepackage{pgfgantt}
+\usepackage{smartdiagram}
+\usepackage{pdfpages}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{mindmap,trees,shadows,calc,matrix,decorations.pathmorphing, arrows,shapes}
+\hypersetup{pdfstartview={Fit}} % fits the presentation to the window when first displayed
+
+
+
+%%%%%%%%%%%%% THEME DEFINITION %%%%%%%%%%%%%%%%%%%%
+%At the moment this theme only compiles with XeTeX
+\usetheme{metropolis}
+%\usecolortheme{monarca}
+%\usecolortheme{dove}
+\usecolortheme{rose}
+%\usecolortheme{seahorse}
+%\usefonttheme{}
+%\useoutertheme[]{infolines}
+\useinnertheme{default}
+\beamertemplatenavigationsymbolsempty
+\setbeamercovered{dynamic}
+\setbeamertemplate{caption}{\insertcaption}
+\setbeamertemplate{caption label separator}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{./Figures/Charts/Flowchart2.tex}
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+
+% }
+
+%\input{./Figures/Tex_preambles.tex}
+\title{Analysis of industrial adhesive}
+\subtitle{First results of NMR measurements}
+%In terms of authorship, the order is rather:Aaron, Joel, Tim, Ric, Patrice, Marion
+\author[Rebmann]{\inst{1}
+Aaron Rebmann
+\and 
+\inst{2}
+Joel Thevarajah 
+\and 
+\inst{4}
+Timothy Murphy
+ \and
+\and
+\inst{4}
+ Richard Wuhrer
+\and
+\inst{2,3}
+ Patrice Castignolles
+\inst{2,3}
+Marion Gaborieau
+}
+\institute{
+% Add numbers to Authors in order to know who belongs to what
+%the addresses are in the wrong order, attributing the results to the wrong school and some are incomplete. You need to take into account the comments we have done on the abstract for the symposiunm. 
+\inst{1}
+School of Chemistry \& Biology\\
+Fresenius University Idstein, Germany \includegraphics[scale = 0.15]{Fresenius_Logo.png}
+\and
+\inst{2}
+School of Science \& Health\\
+Western Sydney University, Parramatta, Australia (WSU) \includegraphics[scale = 0.15]{WSU_Logo.png}
+\and
+\inst{3}
+Molecular Medicine Research Group\includegraphics[scale = 0.15]{WSU_Logo.png} \includegraphics[scale = 0.15]{MMRG_transparent.png}% Is also UWS, define an acronym and append it here
+\\
+WSU
+\and
+\inst{4}
+Advanced material characterisation facility
+%\and
+%\inst{5}
+%Imatech
+}
+\date{\today}
+
+
+%\input{./Figures/Charts/treetoc.tex}
+
+\graphicspath{{/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/}{/home/aaron/Publishing/Bachelor_Thesis/Logos/}} % Location of the graphics files
+
+\definecolor{fancyorange}{RGB}{222,50,50}
+\definecolor{blue}{RGB}{20,20,150}
+\begin{document}
+\frame{\titlepage}
+\section{Introduction}
+\begin{frame}{NMR spectroscopy}
+  \begin{columns}[T]
+    
+\column{0.5\linewidth}
+  \begin{block}<1>{What can you use it for?}
+      \begin{itemize}
+      \item To analyse a number of nuclei, most commonly proton ($^1H$) and carbon ($^{13}C$)
+      \item Analysis can be undertaken in both solution and solid
+      \item Can be used to identify and analyse the structure of a sample, different parts of the sample will generally give different signals
+      \end{itemize}
+    \end{block}
+\column{0.5\linewidth}
+  \begin{block}{Solid state NMR}
+      \begin{itemize}
+      \item Powders/granules packed in a rotor
+      \item Can be used for samples that are hard to dissolve (e.g. polymers)
+      \item Can provide information on mobility of molecules, e.g. if there are small molecules in the sample or how stiff/soft
+        the sample is 
+
+
+      \end{itemize}
+
+    \end{block}
+  \end{columns}
+\end{frame}
+\begin{frame}
+  \frametitle{Peak width}
+
+\end{frame}
+
+
+\begin{frame}{Types of experiments used }
+      \begin{block}{$^1H$ NMR}
+        Short experiment (under 5 min)      
+        Information regarding small molecules and rigidity of sample
+    \end{block}
+
+    \begin{block}{$^{13}C$ NMR CP (cross polarization)}
+      Gives more information (can be done in a couple of hours depending on sample)
+Information regarding different chemical shifts and allows identification of different functional groups of the sample
+    \end{block}
+
+    \begin{block}{$^{13}C$ NMR SPE (single pulse excitation)}
+Similar to CP experiment however more sensitive to small molecules (usually requires a day or more of measuring depending on sample)
+
+Experiments undertaken depend on type of sample however, CP is generally used in preference to SPE because it is shorter
+      
+    \end{block}
+\end{frame}
+
+\section{Previous results}
+\label{sec:joel}
+\setbeamercolor{background canvas}{bg=}
+\setboolean{@twoside}{false}
+\foreach \i in {4,...,11}{
+\begin{frame}
+  \includepdf[pages=\i]{./joel.pdf}
+\end{frame}
+}
+
+\section{New results}
+%\label{sec:aaron}
+\begin{frame}{Unirez}
+ \begin{columns}[T]
+  \column{0.3\textwidth}
+   \begin{itemize}
+   \item Carbon spectrum of Unirez
+   \item There are at least \alert{seven} peaks visible here
+   \item There could be more
+   \item There are sharp peaks and broad peaks
+      \end{itemize}
+   \column{0.8\textwidth}
+   \begin{figure}[H]
+     \includegraphics[scale = 0.25]{UnirezC}
+   \end{figure}
+ \end{columns}
+\end{frame}
+
+\begin{frame}{Dynapurge}
+  \begin{columns}[T]
+    \column{0.3\linewidth}
+    \begin{itemize}
+    \item Carbon spectrum of Dynapurge 
+    \item Has peaks only at positions of Unirez peaks
+    \item<2> It is the same with the proton spectrum
+    \item<2> There is no chance of seeing Dynapurge in the rubber
+    \end{itemize}
+    \column{0.8\linewidth}
+    \begin{figure}[h]
+      \only<1>{      \includegraphics[scale = 0.25]{CarbonOverlay}}
+      \only<2>{      \includegraphics[scale = 0.25]{Hoverlay}}
+\caption{    \begin{alertblock}<2>{For future measurements}
+      Which Dynapurge is it?
+    \end{alertblock}
+}
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+% you should not present the results in a chronological fashion but in a logical fashion.In your case, Marion an I  think the best outline is:- presenting all 1H NMR results (rubber by rubber, comparing with the relevant additives as you go)- presenting all 13C NMR results in the same order as for the 1H NMR. 
+\begin{frame}{Twaron powder}
+  \begin{columns}[T]
+    \column{0.5\linewidth}
+    \begin{itemize}
+    \item For the Twaron powder, the proton spectrum has a better resolution
+    \item For this, further NMR measurements at higher temperature are planned
+    \item This will probably lead to even sharper peaks and thus better resolution
+    \item This will allow identification in the rubber 
+    \end{itemize}
+    \column{0.8\linewidth}
+    \begin{figure}[h]
+
+      \includegraphics[scale = 0.25]{Hoverlay}
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{P 18}
+  \begin{block}{Our problem child}
+    We could not pack a rotor with P18.
+    We could not melt it, cut it, grind it,...
+  \end{block}
+  \begin{alertblock}{We need help}
+    Can you tell us how it is usually processed?
+  \end{alertblock}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Carbon black}
+  \begin{columns}[T]
+    \column{0.3\linewidth}
+    \begin{itemize}
+    \item Carbon spectra of carbon black did not show any signal
+    \item Proton spectra work well
+    \item We would like to do more of these at higher temperatures to get more signal
+    \end{itemize}
+
+    \column{0.8\linewidth}
+    \begin{figure}[h]
+
+      \includegraphics[scale = 0.25]{Powcarbon}
+    \end{figure}
+  \end{columns}
+\end{frame}
+\begin{frame}
+    \frametitle{Raman measurements}
+    \huge To be added
+  \end{frame}
+
+\begin{frame}
+  \frametitle{Plans for the future}
+  \begin{itemize}
+  \item Proton spectra at different temperatures
+  \item For this, more rotors are required, can you help us with that?
+  \end{itemize}
+\end{frame}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

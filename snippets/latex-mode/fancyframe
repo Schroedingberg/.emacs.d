@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: fancyframe
+# key: fancyframe
+# --
+\begin{frame}
+  \begin{columns}
+    \column{0.5\linewidth}
+    \begin{itemize}
+    \item 
+    \end{itemize}
+    \column{0.5\linewidth}
+    \begin{figure}[h]
+      
+      \caption{A nice figure}
+    \end{figure}
+  \end{columns}
+\end{frame}

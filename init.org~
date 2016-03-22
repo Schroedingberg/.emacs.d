@@ -1,8 +1,8 @@
-
+#+Tags: APPEARANCE (a) 
 
 
 * Source of inspiration for this file: [[https://github.com/larstvei/dot-emacs/blob/master/init.org][dot-emacs/init.org at master · larstvei/dot-emacs]]
-* TODO Migrate uncatogorized or custom set preferences <2016-03-19 Sat>
+* TODO Migrate uncategorized or custom set preferences <2016-03-19 Sat>
   :LOGBOOK:
   CLOCK: [2016-03-18 Fri 11:00]--[2016-03-18 Fri 11:02] =>  0:02
   :END:
@@ -28,7 +28,6 @@
  '(diary-entry-marker (quote font-lock-variable-name-face))
  '(doc-view-continuous t)
  '(electric-pair-mode nil)
- '(elfeed-feeds (quote ("http://blog.revolutionanalytics.com/atom.xml")))
  '(elpy-rpc-python-command "python")
  '(emms-mode-line-icon-image-cache
    (quote n
@@ -143,6 +142,11 @@ static char *gnus-pointer[] = {
    (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
    (add-to-list 'load-path "~/.emacs.d/lisp/moe-theme.el/")
    (require 'moe-theme)
+   ;; Show highlighted buffer-id as decoration. (Default: nil)
+   ;; Choose a color for mode-line.(Default: blue)
+    (moe-theme-set-color 'black)
+    (setq moe-theme-highlight-buffer-id t)
+
    (moe-light)
    #+end_src
 
@@ -153,10 +157,12 @@ static char *gnus-pointer[] = {
    (add-to-list 'load-path "~/.emacs.d/lisp/powerline")
    (require 'powerline)
    (powerline-default-theme)
+
+
    #+END_SRC
 
    #+RESULTS:
-   | %e | (:eval (let* ((active (powerline-selected-window-active)) (mode-line (if active (quote mode-line) (quote mode-line-inactive))) (face1 (if active (quote powerline-active1) (quote powerline-inactive1))) (face2 (if active (quote powerline-active2) (quote powerline-inactive2))) (separator-left (intern (format powerline-%s-%s (powerline-current-separator) (car powerline-default-separator-dir)))) (separator-right (intern (format powerline-%s-%s (powerline-current-separator) (cdr powerline-default-separator-dir)))) (lhs (list (powerline-raw %* nil (quote l)) (when powerline-display-buffer-size (powerline-buffer-size nil (quote l))) (when powerline-display-mule-info (powerline-raw mode-line-mule-info nil (quote l))) (powerline-buffer-id nil (quote l)) (when (and (boundp (quote which-func-mode)) which-func-mode) (powerline-raw which-func-format nil (quote l))) (powerline-raw  ) (funcall separator-left mode-line face1) (when (and (boundp (quote erc-track-minor-mode)) erc-track-minor-mode) (powerline-raw erc-modified-channels-object face1 (quote l))) (powerline-major-mode face1 (quote l)) (powerline-process face1) (powerline-minor-modes face1 (quote l)) (powerline-narrow face1 (quote l)) (powerline-raw   face1) (funcall separator-left face1 face2) (powerline-vc face2 (quote r)) (when (bound-and-true-p nyan-mode) (powerline-raw (list (nyan-create)) face2 (quote l))))) (rhs (list (powerline-raw global-mode-string face2 (quote r)) (funcall separator-right face2 face1) (unless window-system (powerline-raw (char-to-string 57505) face1 (quote l))) (powerline-raw %4l face1 (quote l)) (powerline-raw : face1 (quote l)) (powerline-raw %3c face1 (quote r)) (funcall separator-right face1 mode-line) (powerline-raw  ) (powerline-raw %6p nil (quote r)) (when powerline-display-hud (powerline-hud face2 face1))))) (concat (powerline-render lhs) (powerline-fill face2 (powerline-width rhs)) (powerline-render rhs)))) |
+   : t
 
 * Package management
   Settings for emacs package management
@@ -251,9 +257,9 @@ static char *gnus-pointer[] = {
 	 - Software: Topspin\n
 	 - Standard used: %^{prompt} in rotor %^{prompt}\n
 	 - Rotary frequency: %^{prompt} \\si{\kilo\hertz} %^{prompt|MAS| }\n
-	 - - 90° $^1H$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
+	 - - 90 $^1H$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
 	 SR $^1H$ = %^{prompt} \\si{\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
-	 - - 90° $^{13}C$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
+	 - - 90 $^{13}C$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
 	 SR $^{13}C$ = %^{prompt} \\si{\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
 	 - Comment: %^{prompt}
 	 \n
@@ -334,8 +340,29 @@ static char *gnus-pointer[] = {
   #+end_src
 
   #+RESULTS:
-  | #[nil \300\301!\205         \301\302!\207 [fboundp auto-dim-other-buffers-mode t] 2] | global-company-mode | debian-ispell-set-startup-menu | x-wm-set-size-hint | #[0 \302\303\304\305        \300@\306N\300A\203 \307\202 \310\311\312\300A\313#%\314#\207 [(void-variable p) user-init-file display-warning initialization format An error occurred while loading `%s': |
 
+
+* LaTeX
+#+begin_src emacs-lisp :tangle yes
+
+;;This is mainly for making beamer frames appear in the reftex tox
+(setq reftex-section-levels '(("part" . 0)
+                  ("chapter" . 1)
+                  ("section" . 2)
+                  ("subsection" . 3)
+                  ("subsubsection" . 4)
+                  ("paragraph" . 5)
+                  ("subparagraph" . 6)
+                  ("frametitle" . 7)
+                  ("addchap" . -1)
+                  ("addsec" . -2)))
+
+(setq TeX-fold-mode t)
+
+#+end_src
+
+#+RESULTS:
+: t
 
 * Helm
   Settings for Helm usage
@@ -640,7 +667,25 @@ static char *gnus-pointer[] = {
   #+RESULTS:
   : t
 
+* Browsing
+#+begin_src emacs-lisp :tangle yes
+(setq elfeed-feeds '(
+"http://blog.revolutionanalytics.com/atom.xml"
+        "http://www.terminally-incoherent.com/blog/feed/"))
 
+#+end_src
+
+#+RESULTS:
+| [[http://blog.revolutionanalytics.com/atom.xml]] | [[http://www.terminally-incoherent.com/blog/feed/]] |
+
+* Navigation
+  #+begin_src emacs-lisp :tangle yes
+(win-switch-setup-keys-ijkl "\C-xo")
+(setq win-switch-idle-time 2)
+  #+end_src
+
+  #+RESULTS:
+  : 2
 
 * Dotemacs hook
   A hooked function that tangles and compiles the init.org after saving.
@@ -657,12 +702,15 @@ static char *gnus-pointer[] = {
 ;  (byte-compile-file (concat user-emacs-directory "init.el")
 
 
+
   (add-hook 'after-save-hook 'tangle-init)
-  (set-language-environment "UTF-8")
+;;  (set-language-environment "UTF-8")
   #+end_src
 
   #+RESULTS:
-  : t
+  | tangle-init |
+
+
 
 
 
@@ -679,7 +727,7 @@ static char *gnus-pointer[] = {
 (setq backup-directory-alist
       `((".*" . ,emacs-autosave-directory))
       auto-save-file-name-transforms
-      `((".*" ,emacs-autosave-directory t)))p
+      `((".*" ,emacs-autosave-directory t)))
   #+end_src
 * Temporary place for all the stuff from the init that comes after the specific stuff
   #+begin_src emacs-lisp :tangle yes
