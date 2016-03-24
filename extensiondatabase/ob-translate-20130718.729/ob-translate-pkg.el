@@ -1,1 +1,0 @@
-(define-package "ob-translate" "20130718.729" "Translation of text blocks in org-mode." '((google-translate "0.4") (org "8")) :url "https://github.com/krisajenkins/ob-translate" :keywords '("org" "babel" "translate" "translation"))

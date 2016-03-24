@@ -1,5 +1,0 @@
-;; -*- mode: Emacs-Lisp; coding: utf-8; -*-
-;;; file-format: 7
-["Patrice" "Castignolles" nil nil ("University of Western Sydney") nil nil ("P.Castignolles@westernsydney.edu.au") ((creation-date . "2016-01-18 21:26:25 +0000") (timestamp . "2016-01-18 21:26:25 +0000")) nil]
-["Marion" "Gaborieau" nil nil ("University of Western Sydney") nil nil ("M.Gaborieau@westernsydney.edu.au") ((creation-date . "2016-01-18 21:34:47 +0000") (timestamp . "2016-01-18 21:34:47 +0000")) nil]
-["Melissa" "Meinel" nil nil ("Fresenius") nil nil ("meinel.melissa@stud.hs-fresenius.de") ((creation-date . "2016-01-18 21:35:39 +0000") (timestamp . "2016-01-18 21:35:39 +0000")) nil]

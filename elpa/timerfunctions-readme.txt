@@ -1,1 +1,0 @@
-See also: midnight.el (part of Emacs), timer.el

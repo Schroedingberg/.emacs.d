@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/Publishing/Bachelor_Thesis/" "~/Dropbox/polyamides/" "~/Dropbox/.org/" "~/Development/" "~/Books/dft-book/" "~/.emacs.d/lisp/moe-theme.el/" "~/.emacs.d/lisp/powerline/")
