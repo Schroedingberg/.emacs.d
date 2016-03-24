@@ -1,0 +1,4 @@
+* Aaron´s .emacs.d
+My emacs configuration.
+Feel free to take what you need from this emacs configuration
+More doc is coming, this so far only for me, in order to provide a certain level of security in case I blow up my emacs again.
