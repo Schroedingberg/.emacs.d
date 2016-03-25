@@ -4,6 +4,10 @@
 * Source of inspiration for this file: [[https://github.com/larstvei/dot-emacs/blob/master/init.org][dot-emacs/init.org at master · larstvei/dot-emacs]]
 * TODO Migrate uncategorized or custom set preferences <2016-03-19 Sat>
   :LOGBOOK:
+  CLOCK: [2016-03-24 Thu 20:41]--[2016-03-24 Thu 20:41] =>  0:00
+  CLOCK: [2016-03-24 Thu 20:17]--[2016-03-24 Thu 20:29] =>  0:12
+  CLOCK: [2016-03-24 Thu 20:10]--[2016-03-24 Thu 20:17] =>  0:07
+  CLOCK: [2016-03-24 Thu 20:03]--[2016-03-24 Thu 20:08] =>  0:05
   CLOCK: [2016-03-18 Fri 11:00]--[2016-03-18 Fri 11:02] =>  0:02
   :END:
 
@@ -115,10 +119,31 @@ static char *gnus-pointer[] = {
 
   #+RESULTS:
   | /home/aaron/.emacs.d/elpa/alect-themes-20150920.1124/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160316.1835/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160311.739/ | /home/aaron/.emacs.d/lisp/moe-theme.el/ | ~/.emacs.d/lisp/moe-theme.el/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
+* Sane defaults
+  #+begin_src emacs-lisp :tangle yes
+  (setq auto-revert-interval 1            ; Refresh buffers fast
+      custom-file (make-temp-file "")   ; Discard customization's
+      default-input-method "TeX"        ; Use TeX when toggling input method
+      echo-keystrokes 0.1               ; Show keystrokes asap
+      inhibit-startup-message t         ; No splash screen please
+      initial-scratch-message nil       ; Clean scratch buffer
+      recentf-max-saved-items 100       ; Show more recent files
+      ring-bell-function 'ignore        ; Quiet
+;      sentence-end-double-space nil
+)    ; No double space
 
 
 
-  
+  (setq-default fill-column 79                    ; Maximum line width
+              truncate-lines t                  ; Don't fold lines
+;              split-width-threshold 100         ; Split verticly by default
+	      ) ; Auto-fill-mode everywhere
+
+  #+end_src
+
+  #+RESULTS:
+  : 100
+
 * Appearance
 ** Theme
    #+begin_src emacs-lisp :tangle yes
@@ -146,6 +171,19 @@ static char *gnus-pointer[] = {
 
    #+RESULTS:
    : t
+
+** Font
+   #+begin_src emacs-lisp :tangle yes
+   (setq-default prettify-symbols-alist '(("lambda" . ?λ)
+                                       ("delta" . ?Δ)
+                                       ("gamma" . ?Γ)
+                                       ("phi" . ?φ)
+                                       ("psi" . ?ψ)))
+   #+end_src
+
+   #+RESULTS:
+   : ((lambda . 955) (delta . 916) (gamma . 915) (phi . 966) (psi . 968))
+
 
 * Package management
   Settings for emacs package management
@@ -236,7 +274,7 @@ static char *gnus-pointer[] = {
 	 %^{prompt}\n 
 	 \** Setup\n
 	 - Instrument: Bruker DPX 200 Spectrometer \n
-	 - Probehead size: %^{prompt} \\si{\milli\metre}\n 
+	 - Probehead size: 4 \\si{\milli\metre}\n 
 	 - Software: Topspin\n
 	 - Standard used: %^{prompt} in rotor %^{prompt}\n
 	 - Rotary frequency: %^{prompt} \\si{\kilo\hertz} %^{prompt|MAS| }\n
@@ -268,7 +306,7 @@ static char *gnus-pointer[] = {
 
 	 ;; Aktuelle Zeile in der Agenda hervorheben
 	 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1 )))
-	 ;(setq org-agenda-include-diary t)
+	 (setq org-agenda-include-diary t)
 
 	 ;; Latex Export Settings
 	 ;;Babel
@@ -303,7 +341,25 @@ static char *gnus-pointer[] = {
   #+end_src
 
   #+RESULTS:
+#+begin_src emacs-lisp :tangle no
+  (defun org-latex-format-headline-colored-keywords-function
+  (todo todo-type priority text tags info)
+  (concat
+   (cond ((string= todo "TODO")(and todo (format "{\\color{red}\\bfseries\\sffamily %s} " todo)))
+       ((string= todo "DONE")(and todo (format "{\\color{green}\\bfseries\\sffamily %s} " todo))))
+   (and priority (format "\\framebox{\\#%c} " priority))
+   text
+   (and tags
+	(format "\\hfill{}\\textsc{%s}"
+		(mapconcat (lambda (tag) (org-latex-plain-text tag info))
+			   tags ":")))))
 
+(setq org-latex-format-headline-function 'org-latex-format-headline-colored-keywords-function)
+
+  #+end_src
+
+#+RESULTS:
+: org-latex-format-headline-colored-keywords-function
 
 
 * Completion
@@ -317,18 +373,25 @@ static char *gnus-pointer[] = {
  (add-hook 'python-mode-hook 'jedi:setup)
  (setq jedi:complete-on-dot t)                 ; optional
 ;; Company
-(add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'after-init-hook 'global-company-mode) 
 ;(company-auctex-init)
-
+(setq company-idle-delay 0
+      company-echo-delay 0
+      company-dabbrev-downcase nil
+      company-minimum-prefix-length 2
+      company-selection-wrap-around t
+      company-transformers '(company-sort-by-occurrence
+                             company-sort-by-backend-importance))
   #+end_src
 
   #+RESULTS:
+  | company-sort-by-occurrence | company-sort-by-backend-importance |
 
 
 * LaTeX
 #+begin_src emacs-lisp :tangle yes
 ;; Set XeTex as default engine
-;(setq-default TeX-engine "xetex")
+(setq-default TeX-engine "xetex")
 ;(setq-default TeX-engine-set "Xetex")
 ;;This is mainly for making beamer frames appear in the reftex tox
 (setq reftex-section-levels '(("part" . 0)
@@ -498,9 +561,10 @@ For fast collaborative LaTeX editing
 ;; don't keep message buffers around
 (setq message-kill-buffer-on-exit t)
 ;; set update interval (testing, there will be trouble with the credentials)
-(setq mu4e-update-interval 60)
+(setq mu4e-update-interval 20)
+
 ;; HTML rendering settings
-;(setq mu4e-html2text-command "html2text")
+(setq mu4e-html2text-command "html2text")
 (setq mu4e-view-prefer-html t)
 ;; attachments go here
 (setq mu4e-attachment-dir "~/Downloads")
@@ -521,18 +585,29 @@ For fast collaborative LaTeX editing
        ((HSF . ("rebmann.aaron@stud.hs-fresenius.de"
                  "mail.hs-fresenius.de"
                  587
-                nil
+		 nil
                  nil nil nil nil))
         (Gmail . ("aaronrebmann@gmail.com"
-                   "smtp.gmail.com"
+		  "smtp.gmail.com"
                    587
                    nil
                    starttls
-                   nil nil nil)))))
+                   nil nil nil))
+	(WSU .("A.Rebmann@westernsydney.edu.au"
+	"mail.hs-fresenius.de"
+	       587
+	       nil
+	       nil nil nil nil
+	       )
+	     )
+	)
+       )
+      )
 
 (setq smtpmail-multi-associations
       (quote
        (("aaronrebmann@gmail.com" Gmail)
+	("rebmann.aaron@stud.hs-fresenius.de" WSU)
         ("rebmann.aaron@stud.hs-fresenius.de" HSF))))
 
 (setq smtpmail-multi-default-account (quote gmail))
@@ -602,7 +677,12 @@ For fast collaborative LaTeX editing
 
    #+end_src
 ** TODO Mu4e capturing with Org
-#+begin_src emacs-lisp :tangle yes
+#+begin_src emacs-lisp :tangle no
+(setq from
+   (let ((first (car (mu4e-message-field-at-point :from))))
+     (if (car first)
+       (format "%s <%s>" (car first) (cdr first))
+       (cdr first))))
 (defun org-mu4e-store-link ()
 "Store a link to a mu4e query or message."
 (cond
@@ -641,7 +721,7 @@ link))
 #+end_src
 
 #+RESULTS:
-| org-mu4e-store-link | org-rmail-store-link | org-mhe-store-link | org-irc-store-link | org-info-store-link | org-gnus-store-link | org-docview-store-link | org-bibtex-store-link | org-bbdb-store-link | org-w3m-store-link |
+| org-rmail-store-link | org-mhe-store-link | org-irc-store-link | org-info-store-link | org-gnus-store-link | org-docview-store-link | org-bibtex-store-link | org-bbdb-store-link | org-w3m-store-link | org-mu4e-store-link |
 
 * Dired
   Settings for Dired
@@ -712,10 +792,12 @@ link))
 | [[http://blog.revolutionanalytics.com/atom.xml]] | [[http://www.terminally-incoherent.com/blog/feed/]] |
 
 * Navigation
-  #+begin_src emacs-lisp :tangle yes
-(win-switch-setup-keys-ijkl "\C-xo")
-(setq win-switch-idle-time 2)
-  #+end_src
+
+** Window switching
+   #+begin_src emacs-lisp :tangle yes
+   (win-switch-setup-keys-ijkl "\C-xo")
+   (setq win-switch-idle-time 2)
+   #+end_src
 
   #+RESULTS:
   : 2
@@ -746,7 +828,21 @@ link))
 
 
 
+* Modes
+  #+begin_src emacs-lisp :tangle yes
+(dolist
 
+    (mode
+     '(projectile-global-mode
+       recentf-mode
+       global-company-mode
+       golden-ratio-mode
+       )
+     )
+  )
+  #+end_src
+
+  #+RESULTS:
 * Filesystem behavior
   #+begin_src emacs-lisp :tangle yes
   (defvar emacs-autosave-directory
