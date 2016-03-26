@@ -85,7 +85,7 @@ static char *gnus-pointer[] = {
  '(mu4e-view-prefer-html t)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/.org/Organizer.org" "~/Dropbox/.org/from-mobile.org" "~/Dropbox/.org/Birthdays.org" "~/Books/edu.org" "~/Publishing/Bachelor_Thesis/Thesis.org" "~/Development/dev.org")))
+    ("~/Dropbox/.org/Organizer.org" "~/Dropbox/.org/from-mobile.org" "~/Dropbox/.org/Birthdays.org" "~/Books/edu.org" "~/Publishing/Bachelor_Thesis/Thesis.org" "~/Development/dev.org" "~/Dropbox/polyamides/Samples/priorities.org")))
  '(org-clock-idle-time 10)
  '(org-clock-persist t)
  '(org-directory "~")
@@ -118,7 +118,7 @@ static char *gnus-pointer[] = {
   #+end_src
 
   #+RESULTS:
-  | /home/aaron/.emacs.d/elpa/alect-themes-20150920.1124/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160316.1835/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160311.739/ | /home/aaron/.emacs.d/lisp/moe-theme.el/ | ~/.emacs.d/lisp/moe-theme.el/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
+  | /home/aaron/.emacs.d/elpa/alect-themes-20150920.1124/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160322.640/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160311.739/ | /home/aaron/.emacs.d/lisp/moe-theme.el/ | ~/.emacs.d/lisp/moe-theme.el/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
 * Sane defaults
   #+begin_src emacs-lisp :tangle yes
   (setq auto-revert-interval 1            ; Refresh buffers fast
@@ -274,14 +274,14 @@ static char *gnus-pointer[] = {
 	 %^{prompt}\n 
 	 \** Setup\n
 	 - Instrument: Bruker DPX 200 Spectrometer \n
-	 - Probehead size: 4 \\si{\milli\metre}\n 
+	 - Probehead size: 4 \\si{\\milli\\metre}\n 
 	 - Software: Topspin\n
 	 - Standard used: %^{prompt} in rotor %^{prompt}\n
-	 - Rotary frequency: %^{prompt} \\si{\kilo\hertz} %^{prompt|MAS| }\n
-	 - - 90 $^1H$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
-	 SR $^1H$ = %^{prompt} \\si{\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
-	 - - 90 $^{13}C$: P$_1$ = %^{prompt} \\si{\micro\\second}, PL$_1$ = %^{prompt} \\si{\decibel}\n
-	 SR $^{13}C$ = %^{prompt} \\si{\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
+	 - Rotary frequency: %^{prompt} \\si{\\kilo\\hertz} %^{prompt|MAS| }\n
+	 - - 90 $^1H$: P$_1$ = %^{prompt} \\si{\\micro\\second}, PL$_1$ = %^{prompt} \\si{\\decibel}\n
+	 SR $^1H$ = %^{prompt} \\si{\\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
+	 - - 90 $^{13}C$: P$_1$ = %^{prompt} \\si{\\micro\\second}, PL$_1$ = %^{prompt} \\si{\\decibel}\n
+	 SR $^{13}C$ = %^{prompt} \\si{\\hertz} (for %^{prompt} ppm, in Setup %^{prompt|2|3|4|5|6})\n
 	 - Comment: %^{prompt}
 	 \n
 
@@ -346,6 +346,9 @@ static char *gnus-pointer[] = {
   (todo todo-type priority text tags info)
   (concat
    (cond ((string= todo "TODO")(and todo (format "{\\color{red}\\bfseries\\sffamily %s} " todo)))
+	 ((string= todo "PREPARE")(and todo (format "{\\color{red}\\bfseries\\sffamily %s} " todo)))
+	 ((string= todo "MEASURE")(and todo (format "{\\color{red}\\bfseries\\sffamily %s} " todo)))
+	 ((string= todo "FINISHED")(and todo (format "{\\color{green}\\bfseries\\sffamily %s} " todo)))
        ((string= todo "DONE")(and todo (format "{\\color{green}\\bfseries\\sffamily %s} " todo))))
    (and priority (format "\\framebox{\\#%c} " priority))
    text
@@ -593,21 +596,15 @@ For fast collaborative LaTeX editing
                    nil
                    starttls
                    nil nil nil))
-	(WSU .("A.Rebmann@westernsydney.edu.au"
-	"mail.hs-fresenius.de"
-	       587
-	       nil
-	       nil nil nil nil
-	       )
-	     )
-	)
+
+	
        )
-      )
+      ))
 
 (setq smtpmail-multi-associations
       (quote
        (("aaronrebmann@gmail.com" Gmail)
-	("rebmann.aaron@stud.hs-fresenius.de" WSU)
+
         ("rebmann.aaron@stud.hs-fresenius.de" HSF))))
 
 (setq smtpmail-multi-default-account (quote gmail))
