@@ -3,3 +3,9 @@
 
 # Packaging
 .cask
+#All
+*
+#But
+!init.org
+!.gitignore
+!README.org
