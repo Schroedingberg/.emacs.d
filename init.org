@@ -22,8 +22,8 @@
  ;; If there is more than one, they won't work right.
  '(TeX-parse-self t t)
  '(TeX-view-program-list (quote (("pdf-tools" ("pdf-tools") ""))))
- '(achievements-display-when-earned t)
  '(achievements-mode t)
+ '(achievements-display-when-earned t)
  '(bibtex-dialect (quote biblatex))
  '(csv-separators (quote ("," ";")))
  '(custom-safe-themes
@@ -108,7 +108,7 @@ static char *gnus-pointer[] = {
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auto-dim-other-buffers-face ((t (:background "gray93")))))
+ '(auto-dim-other-buffers-face ((t (:background "black")))))
 (add-to-list 'custom-theme-load-path "/home/aaron/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/lisp/" )
 (add-to-list 'custom-theme-load-path "home/aaron/.emacs.d/elpa")
@@ -152,13 +152,18 @@ static char *gnus-pointer[] = {
    (require 'moe-theme)
    ;; Show highlighted buffer-id as decoration. (Default: nil)
    ;; Choose a color for mode-line.(Default: blue)
-    (moe-theme-set-color 'black)
-    (setq moe-theme-highlight-buffer-id t)
+    (moe-theme-set-color 'red)
+;    (setq moe-theme-highlight-buffer-id t)
 
-   (moe-light)
+   (moe-dark)
+  (setq moe-theme-highlight-buffer-id nil)
+  (setq show-paren-style 'expression)
+
+
    #+end_src
 
    #+RESULTS:
+   : expression
 
 ** Powerline
    #+BEGIN_SRC emacs-lisp :tangle yes
@@ -170,7 +175,7 @@ static char *gnus-pointer[] = {
    #+END_SRC
 
    #+RESULTS:
-   : t
+   | %e | (:eval (let* ((active (powerline-selected-window-active)) (mode-line (if active (quote mode-line) (quote mode-line-inactive))) (face1 (if active (quote powerline-active1) (quote powerline-inactive1))) (face2 (if active (quote powerline-active2) (quote powerline-inactive2))) (separator-left (intern (format powerline-%s-%s (powerline-current-separator) (car powerline-default-separator-dir)))) (separator-right (intern (format powerline-%s-%s (powerline-current-separator) (cdr powerline-default-separator-dir)))) (lhs (list (powerline-raw %* nil (quote l)) (when powerline-display-buffer-size (powerline-buffer-size nil (quote l))) (when powerline-display-mule-info (powerline-raw mode-line-mule-info nil (quote l))) (powerline-buffer-id nil (quote l)) (when (and (boundp (quote which-func-mode)) which-func-mode) (powerline-raw which-func-format nil (quote l))) (powerline-raw  ) (funcall separator-left mode-line face1) (when (and (boundp (quote erc-track-minor-mode)) erc-track-minor-mode) (powerline-raw erc-modified-channels-object face1 (quote l))) (powerline-major-mode face1 (quote l)) (powerline-process face1) (powerline-minor-modes face1 (quote l)) (powerline-narrow face1 (quote l)) (powerline-raw   face1) (funcall separator-left face1 face2) (powerline-vc face2 (quote r)) (when (bound-and-true-p nyan-mode) (powerline-raw (list (nyan-create)) face2 (quote l))))) (rhs (list (powerline-raw global-mode-string face2 (quote r)) (funcall separator-right face2 face1) (unless window-system (powerline-raw (char-to-string 57505) face1 (quote l))) (powerline-raw %4l face1 (quote l)) (powerline-raw : face1 (quote l)) (powerline-raw %3c face1 (quote r)) (funcall separator-right face1 mode-line) (powerline-raw  ) (powerline-raw %6p nil (quote r)) (when powerline-display-hud (powerline-hud face2 face1))))) (concat (powerline-render lhs) (powerline-fill face2 (powerline-width rhs)) (powerline-render rhs)))) |
 
 ** Font
    #+begin_src emacs-lisp :tangle yes
@@ -210,38 +215,91 @@ static char *gnus-pointer[] = {
 
 * Org-mode
   #+begin_src emacs-lisp :tangle yes
-  ;; ;; Custom Org-settings
-  ;; ;(require 'org-ac)
-  (setq org-mobile-directory "~/Dropbox/.org/MobileOrg")
-  (setq org-src-fontify-natively t)
-  (setq org-src-preserve-indentation t)
-  (setq org-enforce-todo-dependencies t)
-  (setq org-enforce-todo-checkbox-dependencies t)
-  ;; (setq org-beamer-mode t)
-  (define-key global-map "\C-cl" 'org-store-link)
-  (define-key global-map "\C-ca" 'org-agenda)
-  (global-set-key "\C-cc" 'org-capture)
-  (global-set-key "\C-cb" 'org-iswitchb)
-  (global-set-key "\C-cq" 'org-dashboard-display)
-  ;(global-set-key "\C-c\C-x\C-a" 'org-ar
-  (setq org-hide-leading-stars 'hidestars)
-  ;; (setq org-log-done t)
-  (setq org-return-follows-link t)
-  (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-  ;;Org Refiling settings
-  ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
-  (setq org-refile-targets (quote ((nil :maxlevel . 9)
-  (org-agenda-files :maxlevel . 9))))
-  (setq org-completion-use-ido nil)
-  (setq org-refile-use-outline-path (quote file))
-  ;(setq org-outline-path-complete-in-steps t)
+;; ;; Custom Org-settings
+;; ;(require 'org-ac)
+(setq org-mobile-directory "~/Dropbox/.org/MobileOrg")
+(setq org-src-fontify-natively t)
+(setq org-src-preserve-indentation t)
+(setq org-enforce-todo-dependencies t)
+(setq org-enforce-todo-checkbox-dependencies t)
+;; (setq org-beamer-mode t)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-xg" 'magit-status)
+(global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cq" 'org-dashboard-display)
+;(global-set-key "\C-c\C-x\C-a" 'org-ar
+(setq org-hide-leading-stars 'hidestars)
+;; (setq org-log-done t)
+(setq org-return-follows-link t)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+;;Org Refiling settings
+; Targets include this file and any file contributing to the agenda - up to 9 levels deep
+(setq org-refile-targets (quote ((nil :maxlevel . 9)
+(org-agenda-files :maxlevel . 9))))
+(setq org-completion-use-ido nil)
+(setq org-refile-use-outline-path (quote file))
+;(setq org-outline-path-complete-in-steps t)
+
+
+       ;; Org Agenda settings
+       ;; Give my window view back to me when I am finished with agenda stuff
+       (setq org-agenda-restore-windows-after-quit t)
+       ;; ;; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
+       (setq org-agenda-skip-deadline-if-done t)
+       (setq org-agenda-skip-scheduled-if-done t)
+       (setq org-agenda-skip-timestamp-if-deadline-is-shown t)
+       (setq org-agenda-skip-timestamp-if-done t)
+       (setq org-deadline-warning-days 14)
+
+       ;; Aktuelle Zeile in der Agenda hervorheben
+       (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1 )))
+       (setq org-agenda-include-diary t)
+
+       ;; Latex Export Settings
+       ;;Babel
+       (org-babel-do-load-languages
+	'org-babel-load-languages
+	(quote
+	((emacs-lisp . t)
+	(ditaa . t)
+	(python . t)
+	(latex . t)
+	(ipython .t)
+	(dot . t))))
+
+       (require 'ob-ipython)
+       (setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+       ;;; display/update images in the buffer after I evaluate
+       (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+       ;;Time settings
+       (setq org-clock-persist 'history)
+       ;; Mobile org settings
+       ;; (add-hook 
+       ;;   'after-save-hook 
+       ;;   (lambda () 
+       ;;      (if (string= buffer-file-name "~/Dropbox/.org/Organizer.org") 
+       ;; 	 (org-mobile-push)
+       ;;        (org-mobile-pull)
+       ;;      )
+       ;;   ))
+       ;; mail integration
+       ;;store link to message if in header view, not to header query
+       (setq org-mu4e-link-query-in-headers-mode nil)
+  #+end_src
+
+  #+RESULTS:
+
+** Keywords for todo function
+#+begin_src emacs-lisp :tangle yes
   ;;Org TODO settings
   (setq org-todo-keywords
   '((sequence "TODO(t)" "|" "DONE(d)")
   (sequence "STARTED(s)" "WAITING(w)" "|" "DELEGATED(g)")
   (sequence "APPT(a)" "|" "ATTENDED(1)")
   (sequence "BUG(b@)" "TESTING(i)""|" "FIXED(f)")
-  (sequence "|" "CANCELED(c)")))
+  (sequence "|" "CANCELED(c)")  ))
   ;; ;; Farben anpassen
 (setq org-todo-keyword-faces
       '(("STARTED"  . (:foreground "#b70101" :weight bold))
@@ -251,7 +309,7 @@ static char *gnus-pointer[] = {
 	("WAITING"  . (:foreground "orange" :weight bold))
 	("DELEGATED"  . (:foreground "forestgreen" :weight bold))
 	("CANCELED"  . shadow)
-	
+
 	))
 ;; ;; Capture settings
  (setq org-default-notes-file "~/Dropbox/.org/Organizer.org")
@@ -294,54 +352,13 @@ static char *gnus-pointer[] = {
 	 )
 	 )
 
+#+end_src
 
-	 ;; Org Agenda settings
 
-	 ;; ;; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
-	 (setq org-agenda-skip-deadline-if-done t)
-	 (setq org-agenda-skip-scheduled-if-done t)
-	 (setq org-agenda-skip-timestamp-if-deadline-is-shown t)
-	 (setq org-agenda-skip-timestamp-if-done t)
-	 (setq org-deadline-warning-days 7)
 
-	 ;; Aktuelle Zeile in der Agenda hervorheben
-	 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1 )))
-	 (setq org-agenda-include-diary t)
-
-	 ;; Latex Export Settings
-	 ;;Babel
-	 (org-babel-do-load-languages
-	  'org-babel-load-languages
-	  (quote
-	  ((emacs-lisp . t)
-	  (ditaa . t)
-	  (python . t)
-	  (latex . t)
-	  (ipython .t)
-	  (dot . t))))
-
-	 (require 'ob-ipython)
-	 (setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
-	 ;;; display/update images in the buffer after I evaluate
-	 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
-	 ;;Time settings
-	 (setq org-clock-persist 'history)
-	 ;; Mobile org settings
-	 ;; (add-hook 
-	 ;;   'after-save-hook 
-	 ;;   (lambda () 
-	 ;;      (if (string= buffer-file-name "~/Dropbox/.org/Organizer.org") 
-	 ;; 	 (org-mobile-push)
-	 ;;        (org-mobile-pull)
-	 ;;      )
-	 ;;   ))
-	 ;; mail integration
-	 ;;store link to message if in header view, not to header query
-	 (setq org-mu4e-link-query-in-headers-mode nil)
-  #+end_src
 
   #+RESULTS:
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp :tangle yes
   (defun org-latex-format-headline-colored-keywords-function
   (todo todo-type priority text tags info)
   (concat
@@ -364,6 +381,15 @@ static char *gnus-pointer[] = {
 #+RESULTS:
 : org-latex-format-headline-colored-keywords-function
 
+** Weather in Agenda
+#+begin_src emacs-lisp :tangle yes
+(add-to-list 'load-path "~/.emacs.d/lisp/google-weather.el")
+(require 'google-weather)
+(require 'org-google-weather)
+#+end_src
+
+#+RESULTS:
+: org-google-weather
 
 * Completion
   Settings for Completion
@@ -394,8 +420,12 @@ static char *gnus-pointer[] = {
 * LaTeX
 #+begin_src emacs-lisp :tangle yes
 ;; Set XeTex as default engine
-(setq-default TeX-engine "xetex")
-;(setq-default TeX-engine-set "Xetex")
+;(add-hook 'latex-mode-hook 
+;			     'TeX-engine-set)
+	 
+
+
+
 ;;This is mainly for making beamer frames appear in the reftex tox
 (setq reftex-section-levels '(("part" . 0)
                   ("chapter" . 1)
@@ -781,6 +811,7 @@ link))
 "http://blog.revolutionanalytics.com/atom.xml"
         "http://www.terminally-incoherent.com/blog/feed/"
 	"http://www.offlineimap.org/feed.xml"
+	"http://www.alexbelger.com/feed/"
 ))
 
 #+end_src
@@ -834,6 +865,7 @@ link))
        recentf-mode
        global-company-mode
        golden-ratio-mode
+       rainbow-mode
        )
      )
   )
