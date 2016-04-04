@@ -223,6 +223,7 @@ static char *gnus-pointer[] = {
 (setq org-enforce-todo-dependencies t)
 (setq org-enforce-todo-checkbox-dependencies t)
 ;; (setq org-beamer-mode t)
+(global-set-key [XF86Launch1] 'helm-list-elisp-packages)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
@@ -460,7 +461,10 @@ For fast collaborative LaTeX editing
     (("Web of Science" . "http://apps.webofknowledge.com/UA_GeneralSearch_input.do?product=UA&search_mode=GeneralSearch&SID=W215oyisE87u2y7A5lr&preferencesSaved=")
      ("Google Scholar" . "https://scholar.google.co.uk/scholar?q=%s")
      ("Pubmed" . "https://www.ncbi.nlm.nih.gov/pubmed/?term=%s")
-     ("arXiv" . helm-bibtex-arxiv)
+     ("arXiv" . biblio-arxiv-lookup)
+     ("Hal" . biblio-hal-lookup)
+     ("CrossRef" . biblio-crossref-lookup)
+     ("DBLP" . biblio-dblp-lookup)
      ("Bodleian Library" . "http://solo.bodleian.ox.ac.uk/primo_library/libweb/action/search.do?vl(freeText0)=%s&fn=search&tab=all")
      ("Library of Congress" . "https://www.loc.gov/search/?q=%s&all=true&st=list")
      ("Deutsche Nationalbibliothek" . "https://portal.dnb.de/opac.htm?query=%s")
@@ -812,12 +816,14 @@ link))
         "http://www.terminally-incoherent.com/blog/feed/"
 	"http://www.offlineimap.org/feed.xml"
 	"http://www.alexbelger.com/feed/"
+	"http://planet.emacsen.org/atom.xml"
+	"http://emacs-fu.blogspot.com/feeds/posts/default/-/new"
 ))
 
 #+end_src
 
 #+RESULTS:
-| [[http://blog.revolutionanalytics.com/atom.xml]] | [[http://www.terminally-incoherent.com/blog/feed/]] |
+| [[http://blog.revolutionanalytics.com/atom.xml]] | [[http://www.terminally-incoherent.com/blog/feed/]] | [[http://www.offlineimap.org/feed.xml]] | [[http://www.alexbelger.com/feed/]] | [[http://planet.emacsen.org/atom.xml]] | [[http://emacs-fu.blogspot.com/feeds/posts/default/-/new]] |
 
 * Navigation
 
@@ -892,6 +898,7 @@ link))
 
 
 
+
 ;; Experimental approach to always reuse dired buffers
 ;(add-hook 'dired-mode-hook
 ;	  #'diredp-up-directory-reuse-dir-buffer)
@@ -924,16 +931,6 @@ link))
 (scroll-bar-mode 0)
 
 
-
-(global-set-key [f12] 'undo-tree-visualize)
-
-(global-set-key "\C-xu" 'undo)
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
-(global-set-key "\C-c\C-k" 'kill-region)
-
-(global-set-key [f4] 'call-last-kbd-macro)
-(global-set-key [f5] 'helm-execute-kmacro)
 ;; Python settings
 
 ;; (autoload 'python-mode "python-mode" "Python Mode." t)
@@ -964,4 +961,16 @@ link))
   #+end_src
 
   #+RESULTS:
+* Keybindings
+#+begin_src emacs-lisp :tangle yes
+(global-set-key [f12] 'undo-tree-visualize)
 
+(global-set-key "\C-xu" 'undo)
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-c\C-k" 'kill-region)
+(global-set-key "\C-hb" 'helm-descbinds)
+(global-set-key [f4] 'call-last-kbd-macro)
+(global-set-key [f5] 'helm-execute-kmacro)
+
+#+end_src
