@@ -219,6 +219,7 @@ static char *gnus-pointer[] = {
 ;; ;(require 'org-ac)
 (setq org-mobile-directory "~/Dropbox/.org/MobileOrg")
 (setq org-src-fontify-natively t)
+(setq org-src-tab-acts-natively t)
 (setq org-src-preserve-indentation t)
 (setq org-enforce-todo-dependencies t)
 (setq org-enforce-todo-checkbox-dependencies t)
@@ -417,7 +418,6 @@ static char *gnus-pointer[] = {
   #+RESULTS:
   | company-sort-by-occurrence | company-sort-by-backend-importance |
 
-
 * LaTeX
 #+begin_src emacs-lisp :tangle yes
 ;; Set XeTex as default engine
@@ -598,7 +598,7 @@ For fast collaborative LaTeX editing
 ;; don't keep message buffers around
 (setq message-kill-buffer-on-exit t)
 ;; set update interval (testing, there will be trouble with the credentials)
-(setq mu4e-update-interval 20)
+;(setq mu4e-update-interval 20)
 
 ;; HTML rendering settings
 (setq mu4e-html2text-command "html2text")
@@ -753,6 +753,24 @@ link))
 
 #+RESULTS:
 | org-rmail-store-link | org-mhe-store-link | org-irc-store-link | org-info-store-link | org-gnus-store-link | org-docview-store-link | org-bibtex-store-link | org-bbdb-store-link | org-w3m-store-link | org-mu4e-store-link |
+** TODO Mu4e alert <2016-04-05 Tue>
+#+BEGIN_SRC emacs-lisp :tangle yes
+(setq mu4e-alert-interesting-mail-query
+      (concat
+       "flag:unread"
+       " AND NOT flag:trashed"
+       " AND maildir:"
+       "/HSF/INBOX/"
+
+       ))
+(mu4e-alert-set-default-style 'notifications)
+(add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
+(add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
+
+#+END_SRC
+
+#+RESULTS:
+| #[0 \305\211\235\203 \306"\301\307!\210\210        \205(  |
 
 * Dired
   Settings for Dired
@@ -818,12 +836,15 @@ link))
 	"http://www.alexbelger.com/feed/"
 	"http://planet.emacsen.org/atom.xml"
 	"http://emacs-fu.blogspot.com/feeds/posts/default/-/new"
+	"https://github.com/blog.atom"
+	"http://mytrxworkouts.net/feed/"
 ))
-
+(setq-default elfeed-search-filter "@1-week-ago +unread ")
+(setq browse-url-browser-function 'eww-browse-url)
 #+end_src
 
 #+RESULTS:
-| [[http://blog.revolutionanalytics.com/atom.xml]] | [[http://www.terminally-incoherent.com/blog/feed/]] | [[http://www.offlineimap.org/feed.xml]] | [[http://www.alexbelger.com/feed/]] | [[http://planet.emacsen.org/atom.xml]] | [[http://emacs-fu.blogspot.com/feeds/posts/default/-/new]] |
+: eww-browse-url
 
 * Navigation
 
@@ -941,13 +962,10 @@ link))
 
 ;(smartparens-mode t)
 ;; Skype settings
-;;(setq skype--my-user-handle "your skype account")
+(require 'skype)
+(setq skype--my-user-handle "rebmann.aaron@stud.hs-fresenius.de")
 ;; Activate global modes that I like for convenience after everything else is loaded
 ;; These should probably be wrapped into hooks
-
-
-
-
 
 (elpy-enable)
 (elpy-use-ipython)
