@@ -2,19 +2,19 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Mon Apr  4 12:36:52 2016
+;; Created Wed Apr 27 22:01:17 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.4.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22273 54084 626475 190000) (desktop . "206") "aaron@AaronsThinkPad.armkm.net" nil nil ((((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#c6c6c6") (background-color . "#303030") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background . "grey75") (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (display-type . color) (background-mode . dark) (cursor-color . "#c6c6c6") (visibility) (powerline-cache) (frameset--id . "7707-31C5-93CF-ED4F") (frameset--mini t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 34) (width . 56) (left . 0) (top . 0)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 522) (pixel-height . 594) (total-width . 58) (total-height . 33) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins nil) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#c6c6c6") (background-color . "#303030") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background . "grey75") (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#c6c6c6") (sticky) (environment) (powerline-cache) (frameset--id . "D47B-80B9-9ACC-64FD") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (visibility . t) (display . ":0") (explicit-name) (height . 42) (width . 140) (left . 0) (top . 30)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 1278) (pixel-height . 750) (total-width . 142) (total-height . 41) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.org" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 35102) (start . 9205))))])
+(setq desktop-saved-frameset [frameset 1 (22304 43533 392712 384000) (desktop . "206") "aaron@AaronsThinkPad.armkm.net" nil nil ((((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#5f5f5f") (background-color . "#fdfde7") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background . "grey75") (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . light) (cursor-color . "#5f5f5f") (environment) (powerline-cache) (frameset--id . "B455-08D1-26CD-74C9") (frameset--mini t . t) (height . 43) (width . 140) (modeline . t) (minibuffer . t) (unsplittable) (left . 0) (top . 18) (icon-name) (visibility . t) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 1280) (pixel-height . 764) (total-width . 142) (total-height . 42) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.org" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 31189) (start . 31001))))])
 (setq desktop-missing-file-warning nil)
-(setq tags-file-name nil)
-(setq tags-table-list nil)
-(setq search-ring '("key" "elfeed" "newc" "boele" "carbon black" "keys" "widget" "relo" "widt" "aaron" "futur" "dele" "final" "compos" "inst" "sho"))
-(setq regexp-search-ring '("TAB" "adhe" "dired-narr" "undefined" "^ess" "^\\."))
-(setq register-alist '((3 . " target group \nand a suitable product is executed\ntaking the social thought \"Electricity\nfor all\" into account. This means\nthat especially electricity novices\nshall be addressed . Therefore an inspection\nof financial possibilities is\nperformed to make a start. Table \\ref{tab:IncomeClasses}\nshows the distribution of household income classes\nby residence and region. While in\nurban areas only 29.3 \\% earn\nless than 200.000 UGX a month, in\nrural areas the amount \nis comparably high with 54.4 \\% .\\\\\n\nWith the aid of the income distribution\nand the data describing the usage\nof electricity as lighting fuel a\nlimit can be approximated that shows\nwhich income classes can absolutely\nafford a grid connection.\nFor this the assumption must be made\nthat at first the people with\nthe highest income are supplied with\nelectricity.\nThis is best explained with a\nterritory as an example.\nIn urban areas averagely 40.5 \\% of\nthe households use electricity as lighting\nfuel. 16.9 \\% of the households earn\nmore than 1,000,000 UGX a month.\nAs it is assumed that at first the people with the highest income are\nsupplied with electricity\n40.5 \\% -16.9 \\% = 23.6 \\% remain \nfor the other income classes.\nIn urban areas 21.0 \\% have a monthly income between 500,000 and\n1,000,000 UGX (income class b) so that merely 23.6 \\% - 21.0 \\% = 2.6\n\\% remain for further income classes. With 2.6 \\%  the 19.2 \\% of\nhouseholds with a monthly income between 300,000 and 500,000 (income class c) can not be satisfied. From this follows that the initially described limit is located in this income class. It is important to note that this limit is only a value indicating in which income class people assuredly have electricity access. This doesnt mean that there is no possibility that in urban areas e.g. also people from the income class between 200,000 and 300,000 UGX a month (income class d)\nhave electricity access and instead less from income class b.\nThe results of this analysis are depicted in \\ref{fig: IncomeElectricity}.\nThe columns represent the income distribution while the black bars mark the limits determined by the energy usage. Since the electricity usage is considered starting with the highest income class the value e.g. for\nurban areas is delineated at 100 \\% - 40.5 \\% = 59.5 \\%.\nIn central, western and eastern Uganda the limit is located in income class b, in northern Uganda even directly at the point of intersection to income class a. Remarkable is again the difference between rural and urban areas.\nWhile the limit in overall Uganda likewise is located in income class b, it is in income class a in rural areas and in income class c in urban areas.\nBy the difference between rural and urban areas it is again confirmed, that\nthe distance to power stations and the range of the electric grid have a strong impact on the usage of electricity. A distinct correlation between \nthe number of household with grid connection and the income can not be found.\\\\\nKampala again stands out here. The limit is located in income class d which means that it is assured that in Kampala people with a monthly income between 300,000 and 500,000 UGX can afford a grid connection.\\\\\n\nA glance at the possession of houses delivers the explanation for this.\nIn overall Uganda averagely 78.2 \\% of households own a house. In Kampala on the other hand this quantity only amounts 24 \\%. This leads to the conclusion, that many people live in apartments here, which most likely have a grid connection by default.\nThe analysis entails, that income class a is irrelevant for further consideration because it is assumed, that households with monthly income of more than 1,000,000 UGX can afford an electrical grid connection, provided it is desirable. Further can be assumed, that many people below a monthly income of 500,000 UGX have difficulties with financing electricity supply or have different financial priorities.\\\\\n\nIf furthermore shall be considered, that the majority of households should be addressed with a product, the actual average income must regarded. The average monthly income in 2012/13 was 227,")))
-(setq file-name-history '("~/Dropbox/polyamides/data/NMR/Aaron/processed/rubber_1_integrals.csv" "~/Publishing/Bachelor_Thesis/Thesis/Thesis.tex" "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.git/COMMIT_EDITMSG" "~/Publishing/Bachelor_Thesis/Figures/IR_plots/heatmap_ir.py" "~/Publishing/Bachelor_Thesis/Figures/NMR_plots/Output/powcarbon13C.eps" "~/Dropbox/polyamides/data/NMR/Aaron/directly_from_bruker/PowCarbon21.csv" "~/Dropbox/polyamides/data/NMR/Aaron/directly_from_bruker/test.txt" "~/Publishing/Bachelor_Thesis/Figures/NMR_plots/evaluate_methods.py" "~/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/dbpush.sh" "~/.emacs.d/init.org" "~/.conkerorrc/conkerorrc/conkerorrc/60default_webjump.js" "~/.conkerorrc/conkerorrc/conkerorrc/22default-zoom.js" "~/.conkerorrc/conkerorrc/conkerorrc/21scrollbar.js" "~/.conkerorrc/init.js" "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.git/COMMIT_EDITMSG" "~/Dropbox/polyamides/Presentations/NMR symposium April 2016/2016-04-03-poster.pdf" "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.git/COMMIT_EDITMSG" "~/Publishing/Bachelor_Thesis/Figures/IR_plots/irplot.py" "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.git/COMMIT_EDITMSG" "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.git/COMMIT_EDITMSG" "~/Dropbox/polyamides/data/NMR/Aaron/13C/powcarbon13c.csv" "~/Dropbox/polyamides/data/NMR/Aaron/13C/powcarbon13c.xlsx" "/home/aaron/.emacs.d/.git/COMMIT_EDITMSG" "~/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.gitignore" "~/Publishing/Bachelor_Thesis/Figures/IR_plots/Output/posterFTIR.eps" "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.git/COMMIT_EDITMSG" "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.git/COMMIT_EDITMSG" "~/Dropbox/polyamides/Presentations/NMR symposium April 2016/2016-04-02b -Poster.pdf" "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/.git/COMMIT_EDITMSG" "~/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/beamerthemeI6pd2.sty"))
+(setq tags-file-name "/home/aaron/Development/Github/Write_yourself_a_scheme/TAGS")
+(setq tags-table-list '("/home/aaron/Development/Github/Write_yourself_a_scheme/TAGS"))
+(setq search-ring '("dired" "en" "graph" "ft" "figure" "bool" "direc" "captio" "tex" "hyper" "zip" "Ts" "s" "joe" "nmr_format" "bib"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/init.org" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/Output/298.2 K.eps" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/glossary.tex" "/home/aaron/.dropbox-alt/Dropbox/z Wir vier/" "/home/aaron/Development/Github/scikit-spectra/.git/COMMIT_EDITMSG" "/home/aaron/Development/Github/textemplates/.git/COMMIT_EDITMSG" "/home/aaron/Development/Github/textemplates/Figure/subfigure.tex" "~/Publishing/BCS/report/MasterDoc.tex" "/home/aaron/Dropbox/.org/.git/COMMIT_EDITMSG" "/home/aaron/Development/Github/scikit-spectra/skspec/core/spectra.py" "~/Development/Github/scikit-spectra/skspec/config.py" "/home/aaron/Development/Github/scikit-spectra/skspec/config.py" "~/.dropbox-alt/.dropbox-dist/dropboxd" "~/Dropbox/Ordner/slideshow.pdf" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/Output/unirez_temperature_slides.eps" "~/Dropbox/polyamides/data/NMR/Aaron/to_pickle/25-04-2016/Unirez-4-1.csv" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/serialize.py" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/Output/100DEG.eps" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/Output/50DEG.eps" "~/Dropbox/polyamides/data/NMR/Aaron/to_pickle/25-04-2016/75deg.csv" "~/Dropbox/polyamides/data/NMR/Aaron/to_pickle/25-04-2016/50deg.csv" "~/Dropbox/polyamides/data/NMR/Aaron/to_pickle/25-04-2016/25deg.csv" "~/Dropbox/polyamides/data/NMR/Aaron/to_pickle/25-04-2016/100deg.csv" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/Output/rubbafix_bottom_temperature_slides.eps" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/Output/348.2 K.eps" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/Output/323.2 K.eps" "~/Dropbox/polyamides/data/NMR/Aaron/to_pickle/25-04-2016/Rubbafix_pellet_P18B-4-1.csv" "~/Dropbox/polyamides/data/NMR/Aaron/to_pickle/25-04-2016/PowCarbon-1-1.csv" "~/Dropbox/polyamides/Presentations/Aaron second presentation to Imatech March 2016/Source/Presentation_to_Imatech__2016-03-21.tex" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Presentation/Team_meeting/slideshow.tex"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
@@ -22,565 +22,334 @@
   "init.org"
   'org-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
-  35102
-  '(33619 nil)
+  31189
+  '(31152 nil)
   nil
   nil
-  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+  '((buffer-file-coding-system . no-conversion) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Dropbox/.org/Organizer.org"
-  "Organizer.org"
-  'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode org-indent-mode)
-  4063
-  '(11465 nil)
   nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+  "calc2latex"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  302
+  '(nil nil)
+  t
+  '("/home/aaron/Development/calc2latex/")
+  nil)
 
 (desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/evaluate_methods.py"
-  "evaluate_methods.py"
-  'python-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-complete-mode)
-  366
-  '(332 nil)
   nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Thesis/Thesis.tex"
-  "Thesis.tex"
-  'latex-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode reftex-mode)
-  2160
-  '(410 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (TeX-master . t)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/nmrplot.py"
-  "nmrplot.py"
-  'python-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-complete-mode)
-  347
-  '(325 nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Labbook.org"
-  "Labbook.org"
-  'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  17303
-  '(955 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Thesis.org"
-  "Thesis.org"
-  'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  32997
-  '(23527 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+  "Development"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode projectile-mode achievements-mode auto-dim-other-buffers-mode dired-narrow-mode)
+  126
+  '(nil nil)
+  t
+  '("/home/aaron/Development/")
+  nil)
 
 (desktop-create-buffer 206
   "/home/aaron/Development/dev.org"
   "dev.org"
   'org-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode org-indent-mode org-beamer-mode)
-  1050
-  '(1 nil)
+  1
+  '(nil nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  nil
-  "Presentations"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  729
+  "/home/aaron/Dropbox/.org/Organizer.org"
+  "Organizer.org"
+  'org-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode org-indent-mode)
+  5780
   '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/Presentations/")
-  nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Dropbox/polyamides/Samples/priorities.org"
-  "priorities.org"
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis.org"
+  "Thesis.org"
   'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  257
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
+  30891
+  '(41575 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/Output/323.2 K.eps"
+  "323.2 K.eps"
+  'doc-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  t
+  '((page . 1) (slice))
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/Thesis.tex"
+  "Thesis.tex"
+  'latex-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
+  9973
+  '(9801 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (TeX-master . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/general_section.tex"
+  "general_section.tex"
+  'latex-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
+  5437
+  '(3663 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (TeX-master . "Thesis")))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/intro.tex"
+  "intro.tex"
+  'latex-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
+  1955
+  '(1955 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (TeX-master . "Thesis")))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Presentation/Team_meeting/slideshow.tex"
+  "slideshow.tex"
+  'latex-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode reftex-mode linum-mode)
+  11755
+  '(10130 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (TeX-master . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/protonplot.py"
+  "protonplot.py"
+  'python-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode flymake-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode linum-mode auto-complete-mode)
+  2680
+  '(2308 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/.org/Journal.org"
+  "Journal.org"
+  'org-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
+  15316
   '(nil nil)
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/NMR_Symposium.tex"
-  "NMR_Symposium.tex"
+  "/home/aaron/Dropbox/polyamides/Presentations/Aaron second presentation to Imatech March 2016/Source/Presentation_to_Imatech__2016-03-21.tex"
+  "Presentation_to_Imatech__2016-03-21.tex"
   'latex-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode undo-tree-mode)
-  13270
-  '(980 nil)
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
+  4034
+  '(6697 nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t) (TeX-master . t)))
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (TeX-master . t)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/topspinplot.py"
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/topspinplot.py"
   "topspinplot.py"
   'python-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-complete-mode)
-  1224
-  '(885 nil)
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode flymake-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode auto-complete-mode)
+  1412
+  '(nil nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/home/aaron/.conkerorrc/init.js"
-  "init.js"
-  'js-mode
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/NMR_plots/nmrplot.py"
+  "nmrplot.py"
+  'python-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode flymake-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode auto-complete-mode)
+  666
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "Thesis"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  712
+  '(nil nil)
+  t
+  '("/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Labbook.org"
+  "Labbook.org"
+  'org-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
+  7307
+  '(6212 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/.xmobarrc"
+  ".xmobarrc"
+  'fundamental-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  924
+  '(118 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/.org/from-mobile.org"
+  "from-mobile.org"
+  'org-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
+  21
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Figures/IR_plots/irplot.py"
+  "irplot.py"
+  'python-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode flymake-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode auto-complete-mode)
+  1679
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/.org/Food.org"
+  "Food.org"
+  'org-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
+  876
+  '(348 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Presentation/metropolistheme.pdf"
+  "metropolistheme.pdf"
+  'pdf-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  60902
+  '(1 nil)
+  t
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  "/home/aaron/tmp.sh"
+  "tmp.sh"
+  'sh-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  1161
+  1
   '(nil nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  nil
-  ".conkerorrc"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  276
-  '(nil nil)
-  t
-  '("/home/aaron/.conkerorrc/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "conkerorrc"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  298
-  '(nil nil)
-  t
-  '("/home/aaron/.conkerorrc/conkerorrc/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "conkerorrc"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1361
-  '(nil nil)
-  t
-  '("/home/aaron/.conkerorrc/conkerorrc/conkerorrc/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "data"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  336
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "aaron"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1773
-  '(nil nil)
-  t
-  '("/home/aaron/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Dropbox"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1837
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Ordner"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  82
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/Ordner/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/beamerthemeI6pd2.sty"
-  "beamerthemeI6pd2.sty"
-  'latex-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
-  3269
-  '(1 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (TeX-master . "poster-surf")))
-
-(desktop-create-buffer 206
-  nil
-  "NMR_plots"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  708
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Poster"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  292
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Poster/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/custom_data_analysis.py"
-  "custom_data_analysis.py"
-  'python-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-complete-mode)
-  286
+  "/home/aaron/Books/edu.org"
+  "edu.org"
+  'org-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode org-indent-mode org-beamer-mode)
+  81
   '(nil nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Thesis/glossary.tex"
-  "glossary.tex"
-  'plain-tex-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  305
-  '(nil nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  nil
-  "qtile-examples"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1065
-  '(nil nil)
-  t
-  '("/home/aaron/.config/qtile/qtile-examples/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/.config/qtile/qtile-examples/emdete/README.md"
-  "README.md"
-  'markdown-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
-  854
-  '(nil nil)
-  nil
-  nil
-  '((tab-width . 4) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  nil
-  "emdete"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  299
-  '(nil nil)
-  t
-  '("/home/aaron/.config/qtile/qtile-examples/emdete/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/.config/qtile/qtile-examples/arkchar.py"
-  "arkchar.py"
-  'python-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode auto-complete-mode)
-  8772
-  '(8275 nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/aaron/.i3/config"
-  "config"
-  'conf-space-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  4167
-  '(1313 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  nil
-  ".i3"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  211
-  '(nil nil)
-  t
-  '("/home/aaron/.i3/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "d"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  592
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/d/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "raw"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  797
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Unirez"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  300
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Unirez/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "2"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  581
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Unirez/2/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "pdata"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  257
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Unirez/2/pdata/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  266
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Unirez/2/pdata/1/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  581
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Unirez/1/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  361
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Unirez/1/pdata/1/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Rubber_1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  3278
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Rubber_1/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "4"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  541
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Rubber_1/4/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  368
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/Rubber_1/4/pdata/1/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "PowCarbon"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  260
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/PowCarbon/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  602
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/PowCarbon/1/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "pdata"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  260
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/PowCarbon/1/pdata/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  364
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/data/NMR/Aaron/raw/PowCarbon/1/pdata/1/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "NMRGLUE_EXPERIMENTAL_SCRIPTS"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  246
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/NMRGLUE_EXPERIMENTAL_SCRIPTS/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Presentation/FTIR_slides.tex"
-  "FTIR_slides.tex"
-  'latex-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode reftex-mode)
-  1133
-  '(1109 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (TeX-master . t)))
-
-(desktop-create-buffer 206
-  "/home/aaron/texmf/tex/latex/beamerfontthememetropolis.sty"
-  "beamerfontthememetropolis.sty"
-  'latex-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode reftex-mode)
-  1572
-  '(131 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Dropbox/.org/Journal.org"
-  "Journal.org"
+  "/home/aaron/Dropbox/polyamides/Samples/priorities.org"
+  "priorities.org"
   'org-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  35
-  '(8735 nil)
+  1505
+  '(2664 nil)
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Development/dev.org_archive"
-  "dev.org_archive"
-  'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  11239
-  '(nil nil)
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Simulations/sampling.py"
+  "sampling.py"
+  'python-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode flymake-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-complete-mode)
+  320
+  '(320 nil)
   nil
   nil
-  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Dropbox/polyamides/Presentations/Aaron second presentation to Imatech March 2016/Presentation_to_Imatech__2016-03-26.pdf"
-  "Presentation_to_Imatech__2016-03-26.pdf"
+  nil
+  "Write_yourself_a_scheme"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  261
+  '(nil nil)
+  t
+  '("/home/aaron/Development/Github/Write_yourself_a_scheme/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "Mathematics"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  443
+  '(nil nil)
+  t
+  '("/home/aaron/Books/Mathematics/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  ".xmonad"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  226
+  '(nil nil)
+  t
+  '("/home/aaron/.xmonad/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Presentations/NMR symposium April 2016/2016-04-06-poster.pdf"
+  "2016-04-06-poster.pdf"
   'pdf-view-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
   1
@@ -590,235 +359,81 @@
   '((buffer-file-coding-system . no-conversion)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Dropbox/polyamides/Literature/2000-Antistatic_in_Polyolefines_Dudler.pdf"
-  "2000-Antistatic_in_Polyolefines_Dudler.pdf"
-  'pdf-view-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1
+  nil
+  "Downloads"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode pandoc-mode)
+  804
   '(nil nil)
   t
-  nil
-  '((buffer-file-coding-system . no-conversion)))
+  '("/home/aaron/Downloads/")
+  nil)
 
 (desktop-create-buffer 206
   nil
   "Github"
   'dired-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  177
+  1001
   '(nil nil)
   t
   '("/home/aaron/Development/Github/")
   nil)
 
 (desktop-create-buffer 206
-  nil
-  "Source"
-  'dired-mode
+  "/home/aaron/Dropbox/polyamides/Literature/2007-Percolation_threshold_of_conducting_polymer.pdf"
+  "2007-Percolation_threshold_of_conducting_polymer.pdf"
+  'pdf-view-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1257
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/Presentations/Aaron second presentation to Imatech March 2016/Source/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Polymer samples"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  249
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/Polymer samples/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Presentation/joel_powcarbonH.png"
-  "joel_powcarbonH.png"
-  'fundamental-mode
-  '(helm-mode image-minor-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
   1
   '(nil nil)
+  t
   nil
-  nil
-  '((buffer-file-coding-system . no-conversion) (truncate-lines . t)))
+  '((buffer-file-coding-system . no-conversion)))
 
 (desktop-create-buffer 206
   "/home/aaron/Dropbox/.org/Birthdays.org"
   "Birthdays.org"
   'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  172
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
-
-(desktop-create-buffer 206
-  nil
-  "dft-book"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  230
-  '(nil nil)
-  t
-  '("/home/aaron/Books/dft-book/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Books/dft-book/dft.bib"
-  "dft.bib"
-  'bibtex-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
   1
   '(nil nil)
   nil
   nil
-  '((buffer-file-coding-system . utf-8-unix) (TeX-master . t)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/dump/conference_poster_2.tex"
-  "conference_poster_2.tex"
-  'latex-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
-  667
-  '(1428 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (TeX-master . t)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Presentation/FTIR_slides.log"
-  "FTIR_slides.log"
-  'fundamental-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode reftex-mode)
-  89927
-  '(nil nil)
-  t
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . no-conversion) (case-fold-search . t)))
-
-(desktop-create-buffer 206
-  nil
-  "elpa"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  18156
-  '(nil nil)
-  t
-  '("/home/aaron/.emacs.d/elpa/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Dropbox/.org/Organizer.org_archive"
-  "Organizer.org_archive"
-  'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  53236
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
-
-(desktop-create-buffer 206
-  nil
-  "Publications"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  188
-  '(188 nil)
-  t
-  '("/home/aaron/.dropbox-alt/Dropbox/Macromolecular characterization Group/Publications/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Presentation/Rubber1Proton.png"
-  "Rubber1Proton.png"
-  'fundamental-mode
-  '(helm-mode image-minor-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . no-conversion) (truncate-lines . t)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Presentation/peakwidth.png"
-  "peakwidth.png"
-  'fundamental-mode
-  '(helm-mode image-minor-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1
-  '(9 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . no-conversion) (truncate-lines . t)))
-
-(desktop-create-buffer 206
-  nil
-  "1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  267
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Data/NMR/Rubber new DRX 300/1/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Rubber new DRX 300"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  262
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Data/NMR/Rubber new DRX 300/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "DPX200"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  288
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/NMRGLUE_EXPERIMENTAL_SCRIPTS/DPX200/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "1"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  616
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Figures/NMR_plots/NMRGLUE_EXPERIMENTAL_SCRIPTS/DPX200/1/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Dropbox/.org/from-mobile.org"
-  "from-mobile.org"
-  'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  1
-  '(nil nil)
-  nil
-  nil
   '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/mol.png"
-  "mol.png"
-  'fundamental-mode
-  '(helm-mode image-minor-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Simulations/nmr_measurement.py"
+  "nmr_measurement.py"
+  'python-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode elpy-mode eldoc-mode flymake-mode highlight-indentation-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-complete-mode)
+  398
+  '(381 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Simulations/businesscase_pandas.pdf"
+  "businesscase_pandas.pdf"
+  'pdf-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
   1
   '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Poster/NMR_Symposium/beamerthemeI6pd2.sty"
+  "beamerthemeI6pd2.sty"
+  'latex-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
+  3435
+  '(1 nil)
   nil
   nil
-  '((buffer-file-coding-system . no-conversion) (truncate-lines . t)))
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t) (TeX-master . "poster-surf")))
 
 (desktop-create-buffer 206
   "/home/aaron/diary"
@@ -832,11 +447,88 @@
   '((buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Thesis.org_archive"
+  "/home/aaron/Dropbox/polyamides/Literature/2007Rubber-CarbonBlack.pdf"
+  "2007Rubber-CarbonBlack.pdf"
+  'pdf-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Books/Physics/ExploringQuantumTunneling.pdf"
+  "ExploringQuantumTunneling.pdf"
+  'pdf-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/Kamera-Uploads/2016-03-21 23.22.32.jpg"
+  "2016-03-21 23.22.32.jpg"
+  'image-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . no-conversion) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Literature/essamey.pdf"
+  "essamey.pdf"
+  'pdf-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/Thesis.log"
+  "Thesis.log"
+  'fundamental-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
+  127
+  '(nil nil)
+  t
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Literature/Gaborieau2005.pdf"
+  "Gaborieau2005.pdf"
+  'pdf-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode auto-revert-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/.org/Organizer.org_archive"
+  "Organizer.org_archive"
+  'org-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
+  55520
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis.org_archive"
   "Thesis.org_archive"
   'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  21091
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode)
+  21337
   '(nil nil)
   nil
   nil
@@ -844,199 +536,56 @@
 
 (desktop-create-buffer 206
   nil
-  "Samples"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  357
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/Samples/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Aaron second presentation to Imatech March 2016"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  348
-  '(nil nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/Presentations/Aaron second presentation to Imatech March 2016/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Figures"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  401
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Figures/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Data"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  344
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Data/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "NMR"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  300
-  '(nil nil)
-  t
-  '("/home/aaron/Publishing/Bachelor_Thesis/Data/NMR/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Literature"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  843
-  '(1 nil)
-  t
-  '("/home/aaron/Dropbox/polyamides/Literature/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Downloads"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  664
-  '(nil nil)
-  t
-  '("/home/aaron/Downloads/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/Publishing/Bachelor_Thesis/Poster/NMR_Symposium/NMR_Symposium.log"
-  "NMR_Symposium.log"
-  'fundamental-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode auto-revert-mode reftex-mode)
-  82005
-  '(nil nil)
-  t
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/aaron/Books/edu.org"
-  "edu.org"
-  'org-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode org-indent-mode org-beamer-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
-
-(desktop-create-buffer 206
-  nil
-  "seaborn-data"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  173
-  '(nil nil)
-  t
-  '("/home/aaron/seaborn-data/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/.dropbox-alt/Dropbox/Macromolecular characterization Group/Presentations - both oral and posters/2015-12 Pacifichem/151204_CEOfBC Posters.pdf"
-  "151204_CEOfBC Posters.pdf"
-  'pdf-view-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1
-  '(nil nil)
-  t
-  nil
-  '((buffer-file-coding-system . no-conversion)))
-
-(desktop-create-buffer 206
-  nil
-  "/"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  650
-  '(nil nil)
-  t
-  '("/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "media"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  369
-  '(nil nil)
-  t
-  '("/media/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "usb0"
-  'dired-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  156
-  '(nil nil)
-  t
-  '("/media/usb0/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/aaron/.emacs.d/elpa/org-20160328/org-loaddefs.el"
-  "org-loaddefs.el"
-  'emacs-lisp-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  88603
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/tmp/mu-1000/6b29baf3.pdf"
-  "6b29baf3.pdf"
-  'pdf-view-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  1
-  '(nil nil)
-  t
-  nil
-  '((buffer-file-coding-system . no-conversion)))
-
-(desktop-create-buffer 206
-  nil
   "*info*"
   'Info-mode
   '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
-  227
-  '(nil nil)
+  11654
+  '(1 nil)
   t
-  '("dir" "Top" nil)
+  '("dir" "Top" ((history ("dir" "Top" 16945) ("dir" "Top" 1878))))
   '((tab-width . 8) (case-fold-search . t)))
 
 (desktop-create-buffer 206
-  nil
-  "*elfeed-search*"
-  'elfeed-search-mode
-  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode smartparens-mode projectile-mode achievements-mode flycheck-mode auto-dim-other-buffers-mode)
-  70
+  "/tmp/mu-1000/53be4c2f.pdf"
+  "53be4c2f.pdf"
+  'pdf-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
   '(nil nil)
   t
-  "@6-months-ago +unread"
-  '((truncate-lines . t)))
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  "/tmp/mu-1000/21dbb6da.pdf"
+  "21dbb6da.pdf"
+  'pdf-view-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode company-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  nil
+  "aaron"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  2773
+  '(nil nil)
+  t
+  '("/home/aaron/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  ".emacs.d"
+  'dired-mode
+  '(helm-mode yas-minor-mode TeX-PDF-mode projectile-mode achievements-mode auto-dim-other-buffers-mode)
+  1202
+  '(nil nil)
+  t
+  '("/home/aaron/.emacs.d/")
+  nil)
 
