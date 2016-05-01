@@ -85,6 +85,9 @@ static char *gnus-pointer[] = {
     ("~/Dropbox/.org/Food.org" "~/Dropbox/.org/Organizer.org" "~/Dropbox/.org/from-mobile.org" "~/Dropbox/.org/Birthdays.org" "~/Books/edu.org" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis.org" "~/Development/dev.org" "~/Dropbox/polyamides/Samples/priorities.org")))
  '(org-clock-idle-time 10)
  '(org-clock-persist t)
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
  '(org-directory "~")
  '(org-latex-packages-alist (quote (("" "tabu" t))))
  '(org-mobile-inbox-for-pull "~/Dropbox/.org/from-mobile.org")
@@ -209,6 +212,7 @@ static char *gnus-pointer[] = {
   #+begin_src emacs-lisp :tangle yes
 ;; ;; Custom Org-settings
 ;; ;(require 'org-ac)
+
 (setq org-mobile-directory "~/Dropbox/.org/MobileOrg")
 (setq org-src-fontify-natively t)
 (setq org-src-tab-acts-natively t)
@@ -319,14 +323,14 @@ static char *gnus-pointer[] = {
 	 )
 	("b" "Birthday" entry (file+headline "~/Dropbox/.org/Birthdays.org" "New Birthdays")
 	 "* APPT %?\n %i\n")
-	("l" "Labbook" entry (file+datetree "~/Dropbox/Bachelor_Thesis/Labbook.org")
+	("l" "Labbook" entry (file+datetree "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Labbook.org")
 	 "* %?\nEntered on %U\n  %i\n  %a \n
 ,#+BEGIN_SRC latex
 \\newpage
 ,#+END_SRC
 
 ")
-	("N" "NMR-Labbook" entry (file+datetree "~/Dropbox/Bachelor_Thesis/Labbook.org")
+	("N" "NMR-Labbook" entry (file+datetree "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Labbook.org")
 	 "* %?%^{prompt} \n
 	 \** Aim\n
 
@@ -973,7 +977,15 @@ link))
       `((".*" . ,emacs-autosave-directory))
       auto-save-file-name-transforms
       `((".*" ,emacs-autosave-directory t)))
+
+
+
+
   #+end_src
+
+  #+RESULTS:
+  | .* | ~/.emacs.d/autosaves/ | t |
+
 * Temporary place for all the stuff from the init that comes after the specific stuff
   #+begin_src emacs-lisp :tangle yes
 ;(toggle-diredp-find-file-reuse-dir 1)
