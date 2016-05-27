@@ -18,7 +18,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-parse-self t t)
- '(TeX-view-program-list (quote (("pdf-tools" ("pdf-tools") ""))))
+; '(TeX-view-program-list (quote (("pdf-tools" ("pdf-tools") ""))))
  '(achievements-mode t)
  '(achievements-display-when-earned t)
  '(bibtex-dialect (quote biblatex))
@@ -108,8 +108,9 @@ static char *gnus-pointer[] = {
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-;; '(auto-dim-other-buffers-face ((t (:background "black")))))
- '(auto-dim-other-buffers-face ((t (:background "LightGray")))))
+ '(auto-dim-other-buffers-face ((t (:background "#11110F")))))
+;'(auto-dim-other-buffers-face ((t (:background "#Bebebe")))))
+
 (add-to-list 'custom-theme-load-path "/home/aaron/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/lisp/" )
 (add-to-list 'custom-theme-load-path "home/aaron/.emacs.d/elpa")
@@ -119,7 +120,7 @@ static char *gnus-pointer[] = {
   #+end_src
 
   #+RESULTS:
-  | /home/aaron/.emacs.d/elpa/alect-themes-20160414.114/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160416.1606/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160412.428/ | /home/aaron/.emacs.d/lisp/moe-theme.el/ | ~/.emacs.d/lisp/moe-theme.el/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
+  | /home/aaron/.emacs.d/elpa/alect-themes-20160414.114/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160501.1650/ | /home/aaron/.emacs.d/elpa/apropospriate-theme-20160212.930/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/hc-zenburn-theme-20150928.933/ | /home/aaron/.emacs.d/elpa/monokai-theme-20160515.1404/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160412.428/ | /home/aaron/.emacs.d/elpa/ubuntu-theme-20150805.806/ | /home/aaron/.emacs.d/elpa/zenburn-theme-20160501.749/ | /home/aaron/.emacs.d/ | ~/.emacs.d/lisp/moe-theme.el/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
 * Sane defaults
   #+begin_src emacs-lisp :tangle yes
   (setq auto-revert-interval 1            ; Refresh buffers fast
@@ -133,54 +134,16 @@ static char *gnus-pointer[] = {
 ;      sentence-end-double-space nil
 )    ; No double space
 
-
+(put 'narrow-to-region 'disabled nil)
 
   (setq-default fill-column 79                    ; Maximum line width
-              truncate-lines t                  ; Don't fold lines
-;              split-width-threshold 100         ; Split verticly by default
+              ;              split-width-threshold 100         ; Split verticly by default
 	      ) ; Auto-fill-mode everywhere
 
   #+end_src
 
   #+RESULTS:
-  : 100
-
-* Appearance
-** Theme
-   #+begin_src emacs-lisp :tangle yes
-   (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
-   (add-to-list 'load-path "~/.emacs.d/lisp/moe-theme.el/")
-   (require 'moe-theme)
-   ;; Show highlighted buffer-id as decoration. (Default: nil)
-   ;; Choose a color for mode-line.(Default: blue)
-    (moe-theme-set-color 'green)
-;    (setq moe-theme-highlight-buffer-id t)
-
-   (moe-light)
-  (setq moe-theme-highlight-buffer-id nil)
-  (setq show-paren-style 'expression)
-
-
-   #+end_src
-
-   #+RESULTS:
-   : expression
-
-** Powerline
-   #+BEGIN_SRC emacs-lisp :tangle yes
-(add-to-list 'load-path "~/.emacs.d/lisp/powerline")
-(require 'powerline)
-(powerline-default-theme)
-
-
-;; Diminish modeline clutter
-;(require 'diminish)
-;(diminish 'wrap-region-mode)
-;(diminish 'yas-minor-mode)
-
-   #+END_SRC
-
-   #+RESULTS:
+  : 79
 
 
 
@@ -209,7 +172,7 @@ static char *gnus-pointer[] = {
   : t
 
 * Org-mode
-  #+begin_src emacs-lisp :tangle yes
+#+begin_src emacs-lisp :tangle yes
 ;; ;; Custom Org-settings
 ;; ;(require 'org-ac)
 
@@ -227,65 +190,67 @@ static char *gnus-pointer[] = {
 (global-set-key "\C-xg" 'magit-status)
 (global-set-key "\C-cb" 'org-iswitchb)
 (global-set-key "\C-cq" 'org-dashboard-display)
-;(global-set-key "\C-c\C-x\C-a" 'org-ar
+(global-set-key (kbd "C-c !") 'org-time-stamp-inactive)
+					;(global-set-key "\C-c\C-x\C-a" 'org-ar
 (setq org-hide-leading-stars 'hidestars)
+(setq org-fontify-whole-heading-line t)
 ;; (setq org-log-done t)
 (setq org-return-follows-link t)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 ;;Org Refiling settings
-; Targets include this file and any file contributing to the agenda - up to 9 levels deep
+					; Targets include this file and any file contributing to the agenda - up to 9 levels deep
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
-(org-agenda-files :maxlevel . 9))))
+				 (org-agenda-files :maxlevel . 9))))
 (setq org-completion-use-ido nil)
 (setq org-refile-use-outline-path (quote file))
-;(setq org-outline-path-complete-in-steps t)
+					;(setq org-outline-path-complete-in-steps t)
 
 
-       ;; Org Agenda settings
-       ;; Give my window view back to me when I am finished with agenda stuff
-       (setq org-agenda-restore-windows-after-quit t)
-       ;; ;; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
-       (setq org-agenda-skip-deadline-if-done t)
-       (setq org-agenda-skip-scheduled-if-done t)
-       (setq org-agenda-skip-timestamp-if-deadline-is-shown t)
-       (setq org-agenda-skip-timestamp-if-done t)
-       (setq org-deadline-warning-days 14)
+;; Org Agenda settings
+;; Give my window view back to me when I am finished with agenda stuff
+(setq org-agenda-restore-windows-after-quit t)
+;; ;; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
+(setq org-agenda-skip-deadline-if-done t)
+(setq org-agenda-skip-scheduled-if-done t)
+(setq org-agenda-skip-timestamp-if-deadline-is-shown t)
+(setq org-agenda-skip-timestamp-if-done t)
+(setq org-deadline-warning-days 14)
 
-       ;; Aktuelle Zeile in der Agenda hervorheben
-       (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1 )))
-       (setq org-agenda-include-diary t)
+;; Aktuelle Zeile in der Agenda hervorheben
+(add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1 )))
+(setq org-agenda-include-diary t)
 
-       ;; Latex Export Settings
-       ;;Babel
-       (org-babel-do-load-languages
-	'org-babel-load-languages
-	(quote
-	((emacs-lisp . t)
-	(ditaa . t)
-	(python . t)
-	(latex . t)
-	(ipython .t)
-	(ledger . t)
-	(dot . t))))
+;; Latex Export Settings
+;;Babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ (quote
+  ((emacs-lisp . t)
+   (ditaa . t)
+   (python . t)
+   (latex . t)
+   (ipython .t)
+   (ledger . t)
+   (dot . t))))
 
-       (require 'ob-ipython)
-       (setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+(require 'ob-ipython)
+(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
        ;;; display/update images in the buffer after I evaluate
-       (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
-       ;;Time settings
-       (setq org-clock-persist 'history)
-       ;; Mobile org settings
-       ;; (add-hook 
-       ;;   'after-save-hook 
-       ;;   (lambda () 
-       ;;      (if (string= buffer-file-name "~/Dropbox/.org/Organizer.org") 
-       ;; 	 (org-mobile-push)
-       ;;        (org-mobile-pull)
-       ;;      )
-       ;;   ))
-       ;; mail integration
-       ;;store link to message if in header view, not to header query
-       (setq org-mu4e-link-query-in-headers-mode nil)
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+;;Time settings
+(setq org-clock-persist 'history)
+;; Mobile org settings
+;; (add-hook 
+;;   'after-save-hook 
+;;   (lambda () 
+;;      (if (string= buffer-file-name "~/Dropbox/.org/Organizer.org") 
+;; 	 (org-mobile-push)
+;;        (org-mobile-pull)
+;;      )
+;;   ))
+;; mail integration
+;;store link to message if in header view, not to header query
+(setq org-mu4e-link-query-in-headers-mode nil)
   #+end_src
 
   #+RESULTS:
@@ -332,23 +297,19 @@ static char *gnus-pointer[] = {
 ")
 	("N" "NMR-Labbook" entry (file+datetree "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Labbook.org")
 	 "* %?%^{prompt} \n
-	 \** Aim\n
+\** Aim\n
 
-	 \** Setup\n
+\** Setup\n
 	 - Instrument: Bruker DPX 200 Spectrometer \n
 	 - Probehead size: 4 \\si{\\milli\\metre}\n 
 	 - Software: Topspin\n
-	 - Standard used: Adamantane in rotor \n
+	 - Standard used: Adamantane in rotor 102\n
 	 - Spinning frequency: 10 \\si{\\kilo\\hertz} MAS\n
-	 - - 90 $^1H$: P$_1$ = \\si{\\micro\\second}, PL$_1$ =  \\si{\\decibel}\n
-	 SR $^1H$ =  \\si{\\hertz} (for  ppm, in Setup )\n
-	 - - 90 $^{13}C$: P$_1$ =  \\si{\\micro\\second}, PL$_1$ =  \\si{\\decibel}\n
-	 SR $^{13}C$ =  \\si{\\hertz} (for ppm, in Setup)\n
-	 - Comment: 
-	 \n
-
-
-
+	 - - 90 $^1H$: P$_1$ = 5\\si{\\micro\\second}, PL$_1$ =  \\si{\\decibel}\n
+	 SR $^1H$ =  \\si{\\hertz} (for 1.64 ppm, in Setup 2)\n
+	 - - 90 $^{13}C$: P$_1$ = 5 \\si{\\micro\\second}, PL$_1$ =  \\si{\\decibel}\n
+	 SR $^{13}C$ =  \\si{\\hertz} (for 38.484 ppm, in Setup 2)\n
+	 
 	 Entered on %U\n  %i\n
 ,#+BEGIN_SRC latex
 \\newpage
@@ -462,9 +423,7 @@ static char *gnus-pointer[] = {
 ;; Set XeTex as default engine
 ;(add-hook 'latex-mode-hook 
 ;			     'TeX-engine-set)
-	 
-
-
+ (auctex-latexmk-setup)	 
 
 ;;This is mainly for making beamer frames appear in the reftex tox
 (setq reftex-section-levels '(("part" . 0)
@@ -479,16 +438,58 @@ static char *gnus-pointer[] = {
                   ("addsec" . -2)))
 
 (setq TeX-fold-mode t)
+(add-to-list 'TeX-view-program-selection
+             '(output-pdf "Zathura"))
+
+
+(add-to-list
+ 'TeX-command-list
+ '("Asymptote"
+   "asy %d-[0-9].asy"
+   TeX-run-command
+   nil
+   t
+   :help "Compile all the asy files generated by the LaTeX compile run"
+   )
+ )
 
 #+end_src
 
 #+RESULTS:
-: t
+| LatexMk       | latexmk %(-PDF)%S%(mode) %(file-line-error) %t                         | TeX-run-latexmk             | nil | (plain-tex-mode latex-mode doctex-mode)    | :help | Run LatexMk                                                  |          |                   |
+| LatexMk       | latexmk %(-PDF)%S%(mode) %(file-line-error) %t                         | TeX-run-latexmk             | nil | (plain-tex-mode latex-mode doctex-mode)    | :help | Run LatexMk                                                  |          |                   |
+| Asymptote     | asy %d-[0-9].asy                                                       | TeX-run-command             | nil | t                                          | :help | Compile all the asy files generated by the LaTeX compile run |          |                   |
+| LatexMk       | latexmk %(-PDF)%S%(mode) %(file-line-error) %t                         | TeX-run-latexmk             | nil | (plain-tex-mode latex-mode doctex-mode)    | :help | Run LatexMk                                                  |          |                   |
+| TeX           | %(PDF)%(tex) %(file-line-error) %(extraopts) %`%S%(PDFout)%(mode)%' %t | TeX-run-TeX                 | nil | (plain-tex-mode ams-tex-mode texinfo-mode) | :help | Run plain TeX                                                |          |                   |
+| LaTeX         | %`%l%(mode)%' %t                                                       | TeX-run-TeX                 | nil | (latex-mode doctex-mode)                   | :help | Run LaTeX                                                    |          |                   |
+| Makeinfo      | makeinfo %(extraopts) %t                                               | TeX-run-compile             | nil | (texinfo-mode)                             | :help | Run Makeinfo with Info output                                |          |                   |
+| Makeinfo HTML | makeinfo %(extraopts) --html %t                                        | TeX-run-compile             | nil | (texinfo-mode)                             | :help | Run Makeinfo with HTML output                                |          |                   |
+| AmSTeX        | amstex %(PDFout) %(extraopts) %`%S%(mode)%' %t                         | TeX-run-TeX                 | nil | (ams-tex-mode)                             | :help | Run AMSTeX                                                   |          |                   |
+| ConTeXt       | %(cntxcom) --once --texutil %(extraopts) %(execopts)%t                 | TeX-run-TeX                 | nil | (context-mode)                             | :help | Run ConTeXt once                                             |          |                   |
+| ConTeXt Full  | %(cntxcom) %(extraopts) %(execopts)%t                                  | TeX-run-TeX                 | nil | (context-mode)                             | :help | Run ConTeXt until completion                                 |          |                   |
+| BibTeX        | bibtex %s                                                              | TeX-run-BibTeX              | nil | t                                          | :help | Run BibTeX                                                   |          |                   |
+| Biber         | biber %s                                                               | TeX-run-Biber               | nil | t                                          | :help | Run Biber                                                    |          |                   |
+| View          | %V                                                                     | TeX-run-discard-or-function | t   | t                                          | :help | Run Viewer                                                   |          |                   |
+| Print         | %p                                                                     | TeX-run-command             | t   | t                                          | :help | Print the file                                               |          |                   |
+| Queue         | %q                                                                     | TeX-run-background          | nil | t                                          | :help | View the printer queue                                       | :visible | TeX-queue-command |
+| File          | %(o?)dvips %d -o %f                                                    | TeX-run-dvips               | t   | t                                          | :help | Generate PostScript file                                     |          |                   |
+| Dvips         | %(o?)dvips %d -o %f                                                    | TeX-run-dvips               | nil | t                                          | :help | Convert DVI file to PostScript                               |          |                   |
+| Ps2pdf        | ps2pdf %f                                                              | TeX-run-ps2pdf              | nil | t                                          | :help | Convert PostScript file to PDF                               |          |                   |
+| Index         | makeindex %s                                                           | TeX-run-index               | nil | t                                          | :help | Run makeindex to create index file                           |          |                   |
+| Xindy         | texindy %s                                                             | TeX-run-command             | nil | t                                          | :help | Run xindy to create index file                               |          |                   |
+| Check         | lacheck %s                                                             | TeX-run-compile             | nil | (latex-mode)                               | :help | Check LaTeX file for correctness                             |          |                   |
+| ChkTeX        | chktex -v6 %s                                                          | TeX-run-compile             | nil | (latex-mode)                               | :help | Check LaTeX file for common mistakes                         |          |                   |
+| Spell         | (TeX-ispell-document "")                                               | TeX-run-function            | nil | t                                          | :help | Spell-check the document                                     |          |                   |
+| Clean         | TeX-clean                                                              | TeX-run-function            | nil | t                                          | :help | Delete generated intermediate files                          |          |                   |
+| Clean All     | (TeX-clean t)                                                          | TeX-run-function            | nil | t                                          | :help | Delete generated intermediate and output files               |          |                   |
+| Other         |                                                                        | TeX-run-command             | t   | t                                          | :help | Run an arbitrary command                                     |          |                   |
 
 ** Ebib settings
    #+BEGIN_SRC elisp :tangle yes
 (setq ebib-bibtex-dialect 'biblatex)
 
+
+;(setq ebib-search-)
    #+END_SRC
 
    #+RESULTS:
@@ -510,6 +511,7 @@ For fast collaborative LaTeX editing
   Settings for Helm usage
   #+begin_src emacs-lisp :tangle yes
 (custom-set-variables
+ '(ebib-bib-search-dirs (quote ("" "~/Books/")))
 '(helm-autoresize-mode t)
  '(helm-bibtex-fallback-options
    (quote
@@ -530,9 +532,12 @@ For fast collaborative LaTeX editing
  '(helm-el-package-initial-filter (quote all))
  '(helm-mode t)
  '(helm-mode-fuzzy-match t) )
-
+  
   ;; ;; No asking for typing complete "yes" or "no"
   (fset 'yes-or-no-p 'y-or-n-p)
+  (setq confirm-nonexistent-file-or-buffer nil)
+  (tooltip-mode -1)
+  (setq tooltip-use-echo-area t)
   ;; ;; Switch of beep sound
   (setq visible-bell t)
   ;; ;; Global shortcuts
@@ -620,6 +625,18 @@ For fast collaborative LaTeX editing
      (mu4e-drafts-folder "/Gmail/Drafts")
      (mu4e-trash-folder  "/Gmail/Trash")
      (mu4e-refile-folder "/Gmail/Archive")
+
+     )
+
+
+
+     
+  ("Yahoo"
+    (user-mail-address  "disagreewithyourattitude@yahoo.de")
+     (mu4e-sent-folder   "/Yahoo/Sent")
+     (mu4e-drafts-folder "/Yahoo/Drafts")
+     (mu4e-trash-folder  "/Yahoo/Trash")
+     (mu4e-refile-folder "/Yahoo/Archive")
 
      )
   )
@@ -757,11 +774,23 @@ For fast collaborative LaTeX editing
 	     '("maildir:/HSF/INBOX Patrice"    "WSU-Project"    ?2)
 	     )
 (add-to-list 'mu4e-bookmarks
-	     '("date:1d..now "    "Yesterday until today"    ?y)
+	     '("date:1d..now maildir:/HSF/INBOX maildir:/Gmail/INBOX"    "Yesterday until today"    ?y)
 	     )
 
 
    #+end_src
+
+   #+RESULTS:
+   | date:1d..now maildir:/HSF/INBOX maildir:/Gmail/INBOX | Yesterday until today | 121 |
+   | maildir:/HSF/INBOX Patrice                           | WSU-Project           |  50 |
+   | maildir:/Gmail/INBOX                                 | Gmail                 | 103 |
+   | maildir:/HSF/INBOX                                   | HSF                   |  49 |
+   | size:5M..500M                                        | Big messages          |  98 |
+   | flag:unread AND NOT flag:trashed                     | Unread messages       | 117 |
+   | date:today..now                                      | Today's messages      | 116 |
+   | date:7d..now                                         | Last 7 days           | 119 |
+   | mime:image/*                                         | Messages with images  | 112 |
+
 ** TODO Mu4e capturing with Org
 #+begin_src emacs-lisp :tangle no
 (setq from
@@ -819,7 +848,7 @@ link))
        " AND NOT flag:trashed"
        " AND NOT maildir: Gmail"
        ))
-(mu4e-alert-set-default-style 'notifications)
+;(mu4e-alert-set-default-style 'notifications)
 (add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
 
 
@@ -827,6 +856,7 @@ link))
 
 #+RESULTS:
 | #[0 \305\211\235\203 \306"\301\307!\210\210        \205(  |
+|                                                                       |
 
 * Dired
   Settings for Dired
@@ -860,16 +890,7 @@ link))
   #+end_src
 
   #+RESULTS:
-  | \.zip\' | .zip | unzip      |
-  | \.gz\'  |      | gunzip     |
-  | \.tgz\' | .tar | gunzip     |
-  | \.Z\'   |      | uncompress |
-  | \.z\'   |      | gunzip     |
-  | \.dz\'  |      | dictunzip  |
-  | \.tbz\' | .tar | bunzip2    |
-  | \.bz2\' |      | bunzip2    |
-  | \.xz\'  |      | unxz       |
-  | \.tar\' | .tgz | nil        |
+  : Reusing Dired buffers is now ON
 
 * Yasnippet
   Yasnippet settings
@@ -899,6 +920,13 @@ link))
 	"http://lebensverrueckt.haktar.org/feed.xml"
 	"https://www.bruker.com/rss.xml"
 	"http://dragly.org/feed/"
+	"http://texblog.net/feed/"
+	"http://emacsworld.blogspot.com/feeds/posts/default"
+	"http://pbelmans.wordpress.com/category/latex/feed"
+	"http://texhacks.blogspot.com/feeds/posts/default"
+	"http://pit-claudel.fr/clement/blog/feed"
+	"http://chrisalbon.com/feeds/all.rss.xml"
+	"http://www.metal-hammer.de/feed/"
 ))
 (setq-default elfeed-search-filter "@1-week-ago +unread ")
 ;(setq browse-url-browser-function 'conkeror)
@@ -1017,7 +1045,7 @@ link))
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 
-(desktop-save-mode 1)
+;(desktop-save-mode 1)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -1042,18 +1070,23 @@ link))
 
 (elpy-enable)
 (elpy-use-ipython)
-(smartparens-global-mode)
+
 (projectile-global-mode)
 (achievements-mode)
 ;(server-start)
 ;;PDF tools 
-(pdf-tools-install)
 
+(pdf-tools-install)
+(require 'openwith)
+(openwith-mode t)
+(setq openwith-associations '(("\\.pdf\\'" "zathura" (file))))
   #+end_src
 
   #+RESULTS:
+  | \.pdf\' | zathura | (file) |
 * Keybindings
 #+begin_src emacs-lisp :tangle yes
+(undo-tree-mode)
 (global-set-key [f12] 'undo-tree-visualize)
 
 (global-set-key "\C-xu" 'undo)
@@ -1064,7 +1097,14 @@ link))
 (global-set-key [f4] 'call-last-kbd-macro)
 (global-set-key [f5] 'helm-execute-kmacro)
 (global-set-key (kbd "C-x o") 'switch-window)
+;; Leave parentheses that have been inserted by smartparens
+(global-set-key (kbd "C-+") 'sp-up-sexp)
+(setq next-line-add-newlines t)
 #+end_src
+
+#+RESULTS:
+: t
+
 * Haskell
 #+BEGIN_SRC emacs-lisp :tangle yes
      (add-hook 'haskell-mode-hook
@@ -1081,5 +1121,162 @@ link))
 #+END_SRC
 
 #+RESULTS:
-: haskell-compile
+* Smartparens
+#+BEGIN_SRC emacs-lisp :tangle yes
+
+(smartparens-global-mode)
+(show-smartparens-global-mode t)
+(global-set-key (kbd "C-c s p") 'sp-splice-sexp)
+(sp-local-pair 'latex-mode "$" "$");; Latex inline math
+
+(sp-local-pair 'latex-mode "\\left(" "\\right)")
+(sp-local-pair 'latex-mode "\\left[" "\\right]")
+(defun parentex ()
+  "In latex mode, prompt for input and insert leftright (self adjusting) parentheses"
+  (interactive)
+  
+
+
+  )
+(sp-local-pair 'latex-mode "\\left(" "\\right)" :insert "C-b l" :trigger "\\l(")
+#+END_SRC
+#+RESULTS:
+| LaTeX-mode | (:open \left[ :close \right] :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) | (:open \left( :close \right) :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add))              |                                                                                                                                    |                                                               |                                                             |                                                             |                                                             |                                                             |                                                             |                                                             |
+| latex-mode | (:open \left[ :close \right] :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) | (:open \left( :close \right) :trigger \l( :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) | (:open $ :close $ :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) |                                                               |                                                             |                                                             |                                                             |                                                             |                                                             |                                                             |
+| t          | (:open \\( :close \\) :actions (insert wrap autoskip navigate))                                                                               | (:open \{ :close \} :actions (insert wrap autoskip navigate))                                                                                              | (:open \( :close \) :actions (insert wrap autoskip navigate))                                                                      | (:open \" :close \" :actions (insert wrap autoskip navigate)) | (:open " :close " :actions (insert wrap autoskip navigate)) | (:open ' :close ' :actions (insert wrap autoskip navigate)) | (:open ( :close ) :actions (insert wrap autoskip navigate)) | (:open [ :close ] :actions (insert wrap autoskip navigate)) | (:open { :close } :actions (insert wrap autoskip navigate)) | (:open ` :close ` :actions (insert wrap autoskip navigate)) |
+* External software
+#+BEGIN_SRC emacs-lisp :tangle yes
+
+#+END_SRC
+* SLIME
+#+BEGIN_SRC emacs-lisp :tangle yes
+(setq inferior-lisp-program "/usr/bin/sbcl")
+
+
+#+END_SRC
+
+#+RESULTS:
+: slime-compile-defun
+* CSV
+#+BEGIN_SRC emacs-lisp :tangle yes
+(add-hook 'csv-mode-hook (lambda () (font-lock-mode -1)(company-mode -1)))
+
+
+
+#+END_SRC
+
+#+RESULTS:
+| lambda | nil | (font-lock-mode -1) | (company-mode -1) |
+
+* Appearance
+** Theme
+  - [ ] Change highlight-tail mode to adapt to theme colors
+   #+begin_src emacs-lisp :tangle yes
+(add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
+					;  (load-theme 'leuven)
+
+(set-default-font "Monospace 14")
+(setq show-paren-style 'expression)
+(load-theme 'monokai)
+ ;; (setq highlight-tail-colors '(("#92E7F7" . 0)
+ ;; 			       ("#74DBCD" . 25)
+ ;; 			       ("#D3FBF6" . 40)
+ ;; 			       ("#FFAC4A" . 66)))
+			       ;; ("#86C30D" .)
+			       ;; ("#BBEF53" .)
+			       ;; ("#35331D" .)
+			       ;; ("#7B7962" .)
+
+
+
+			       ;; ("#FA518D" . 13)
+			       ;; ("#FE8CF4" . 34)
+			       ;; ("#C9ACFF" . 89)))
+
+(highlight-tail-mode)
+(highlight-tail-reload)
+                               ;; ("#bc2525" . 25)
+ 			       ;; ("#551a8b" . 35)
+                               ;; ("#696969" . 66)))
+
+(beacon-mode)
+;;			     (highlight-tail-reload)
+
+
+
+
+
+
+
+
+
+
+
+   #+end_src
+
+   #+RESULTS:
+   : t
+
+
+
+** Powerline
+   #+BEGIN_SRC emacs-lisp :tangle yes
+  (add-to-list 'load-path "~/.emacs.d/lisp/powerline")
+  (require 'powerline)
+ (powerline-default-theme)
+
+;;  (powerline-alternate-right)
+
+  ;; (add-to-list 'calendar-mode-line-format
+  ;;              '(let ((day (nth 1 date))
+  ;;                     (month (nth 0 date))
+  ;;                     (year (nth 2 date)))
+  ;;                 (format-time-string "Week of year: %V"
+  ;;                                     (encode-time 1 1 1 day month year))))
+
+  ;; Diminish modeline clutter
+  ;(require 'diminish)
+  ;(diminish 'wrap-region-mode)
+  ;(diminish 'yas-minor-mode)
+
+   #+END_SRC
+
+   #+RESULTS:
+   | %e | (:eval (let* ((active (powerline-selected-window-active)) (mode-line (if active (quote mode-line) (quote mode-line-inactive))) (face1 (if active (quote powerline-active1) (quote powerline-inactive1))) (face2 (if active (quote powerline-active2) (quote powerline-inactive2))) (separator-left (intern (format powerline-%s-%s (powerline-current-separator) (car powerline-default-separator-dir)))) (separator-right (intern (format powerline-%s-%s (powerline-current-separator) (cdr powerline-default-separator-dir)))) (lhs (list (powerline-raw %* nil (quote l)) (when powerline-display-buffer-size (powerline-buffer-size nil (quote l))) (when powerline-display-mule-info (powerline-raw mode-line-mule-info nil (quote l))) (powerline-buffer-id nil (quote l)) (when (and (boundp (quote which-func-mode)) which-func-mode) (powerline-raw which-func-format nil (quote l))) (powerline-raw  ) (funcall separator-left mode-line face1) (when (and (boundp (quote erc-track-minor-mode)) erc-track-minor-mode) (powerline-raw erc-modified-channels-object face1 (quote l))) (powerline-major-mode face1 (quote l)) (powerline-process face1) (powerline-minor-modes face1 (quote l)) (powerline-narrow face1 (quote l)) (powerline-raw   face1) (funcall separator-left face1 face2) (powerline-vc face2 (quote r)) (when (bound-and-true-p nyan-mode) (powerline-raw (list (nyan-create)) face2 (quote l))))) (rhs (list (powerline-raw global-mode-string face2 (quote r)) (funcall separator-right face2 face1) (unless window-system (powerline-raw (char-to-string 57505) face1 (quote l))) (powerline-raw %4l face1 (quote l)) (powerline-raw : face1 (quote l)) (powerline-raw %3c face1 (quote r)) (funcall separator-right face1 mode-line) (powerline-raw  ) (powerline-raw %6p nil (quote r)) (when powerline-display-hud (powerline-hud face2 face1))))) (concat (powerline-render lhs) (powerline-fill face2 (powerline-width rhs)) (powerline-render rhs)))) |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
