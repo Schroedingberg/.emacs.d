@@ -153,18 +153,13 @@ static char *gnus-pointer[] = {
   #+begin_src emacs-lisp :tangle yes
   ;; ;; Package management
   (require 'package)
-  ;(add-to-list 'package-archives
-  ;;	     '("marmalade" . "http://marmalade-repo.org/packages/")
+
   (add-to-list 'package-archives
   '("melpa" . "http://melpa.org/packages/"))
-  ; (when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  ;  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+
+
   (package-initialize)
-  ;; ;(ac-config-default)
-  ;; (eval-after-load "package"
-  ;;   '(add-to-list 'package-archives
-  ;;		'("user42" . "http://download.tuxfamily.org/user42/elpa/packages/")))
+
 
   #+end_src
 
@@ -372,6 +367,7 @@ static char *gnus-pointer[] = {
     I use this, because it support the beamer theme I always use (https://github.com/matze/mtheme) and offers more possibilities.
     I might write a function that lets you select interactively one day.
     ox-latex.el contains already a list of different compilation sequences that are nicely tagged, so this should be pretty easy.
+    - [ ] Modify the latex packages that are loaded (especially inputenc)
     #+BEGIN_SRC emacs-lisp :tangle yes 
 (setq org-latex-pdf-process
    (quote
@@ -624,6 +620,7 @@ For fast collaborative LaTeX editing
   ;;'(send-mail-function sendemail)
 ;;(setq mail-user-agent 'mu4e-user-agent)
 ;; Mu4e settings
+(mu4e-maildirs-extension)
 (add-to-list 'load-path "~/.emacs.d/lisp/mu4e-multi")  ;; if it's not already in `load-path'
 (require 'mu4e-multi)
 ;;(mu4e-maildirs-extension)
@@ -807,6 +804,7 @@ For fast collaborative LaTeX editing
    #+end_src
 
    #+RESULTS:
+   | date:now maildir:/HSF/INBOX maildir:/Gmail/INBOX     | Today's messages      | 116 |
    | date:1d..now maildir:/HSF/INBOX maildir:/Gmail/INBOX | Yesterday until today | 121 |
    | maildir:/HSF/INBOX Patrice                           | WSU-Project           |  50 |
    | maildir:/Gmail/INBOX                                 | Gmail                 | 103 |
@@ -1154,7 +1152,6 @@ link))
 (show-smartparens-global-mode t)
 (global-set-key (kbd "C-c s p") 'sp-splice-sexp)
 (sp-local-pair 'latex-mode "$" "$");; Latex inline math
-
 (sp-local-pair 'latex-mode "\\left(" "\\right)")
 (sp-local-pair 'latex-mode "\\left[" "\\right]")
 (defun parentex ()
@@ -1164,12 +1161,13 @@ link))
 
 
   )
-(sp-local-pair 'latex-mode "\\left(" "\\right)" :insert "C-b l" :trigger "\\l(")
+(sp-local-pair 'latex-mode "\\left(" "\\right)" :insert "C-b l" :trigger "\\l(") 
+(sp-local-pair 'eshell "#<" ">" :trigger "#<" )
 #+END_SRC
 #+RESULTS:
-| LaTeX-mode | (:open \left[ :close \right] :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) | (:open \left( :close \right) :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add))              |                                                                                                                                    |                                                               |                                                             |                                                             |                                                             |                                                             |                                                             |                                                             |
-| latex-mode | (:open \left[ :close \right] :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) | (:open \left( :close \right) :trigger \l( :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) | (:open $ :close $ :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) |                                                               |                                                             |                                                             |                                                             |                                                             |                                                             |                                                             |
-| t          | (:open \\( :close \\) :actions (insert wrap autoskip navigate))                                                                               | (:open \{ :close \} :actions (insert wrap autoskip navigate))                                                                                              | (:open \( :close \) :actions (insert wrap autoskip navigate))                                                                      | (:open \" :close \" :actions (insert wrap autoskip navigate)) | (:open " :close " :actions (insert wrap autoskip navigate)) | (:open ' :close ' :actions (insert wrap autoskip navigate)) | (:open ( :close ) :actions (insert wrap autoskip navigate)) | (:open [ :close ] :actions (insert wrap autoskip navigate)) | (:open { :close } :actions (insert wrap autoskip navigate)) | (:open ` :close ` :actions (insert wrap autoskip navigate)) |
+| eshell     | (:open #< :close > :trigger #< :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) |                                                                                                                                                            |                                                                                                                                    |                                                               |                                                             |                                                             |                                                             |                                                             |                                                             |                                                             |
+| latex-mode | (:open \left[ :close \right] :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add))   | (:open \left( :close \right) :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add) :trigger \l() | (:open $ :close $ :actions (wrap insert autoskip navigate) :when (:add) :unless (:add) :pre-handlers (:add) :post-handlers (:add)) |                                                               |                                                             |                                                             |                                                             |                                                             |                                                             |                                                             |
+| t          | (:open \\( :close \\) :actions (insert wrap autoskip navigate))                                                                                 | (:open \{ :close \} :actions (insert wrap autoskip navigate))                                                                                              | (:open \( :close \) :actions (insert wrap autoskip navigate))                                                                      | (:open \" :close \" :actions (insert wrap autoskip navigate)) | (:open " :close " :actions (insert wrap autoskip navigate)) | (:open ' :close ' :actions (insert wrap autoskip navigate)) | (:open ( :close ) :actions (insert wrap autoskip navigate)) | (:open [ :close ] :actions (insert wrap autoskip navigate)) | (:open { :close } :actions (insert wrap autoskip navigate)) | (:open ` :close ` :actions (insert wrap autoskip navigate)) |
 * External software
 #+BEGIN_SRC emacs-lisp :tangle yes
 
