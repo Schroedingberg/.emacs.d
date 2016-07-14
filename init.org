@@ -1,5 +1,5 @@
 #+Tags: APPEARANCE (a) 
-* TODO Migrate uncategorized or custom set preferences <2016-03-19 Sat>
+* Migrate uncategorized or custom set preferences 
   :LOGBOOK:
   CLOCK: [2016-03-24 Thu 20:41]--[2016-03-24 Thu 20:41] =>  0:00
   CLOCK: [2016-03-24 Thu 20:17]--[2016-03-24 Thu 20:29] =>  0:12
@@ -82,7 +82,13 @@ static char *gnus-pointer[] = {
  '(mu4e-view-prefer-html t)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/.org/Food.org" "~/Dropbox/.org/Organizer.org" "~/Dropbox/.org/from-mobile.org" "~/Dropbox/.org/Birthdays.org" "~/Books/edu.org" "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis.org" "~/Development/dev.org" "~/Dropbox/polyamides/Samples/priorities.org")))
+    ("~/Dropbox/.org/Food.org"
+ "~/Dropbox/.org/Organizer.org"
+ "~/Dropbox/.org/from-mobile.org"
+ "~/Dropbox/.org/Birthdays.org"
+ "~/Books/edu.org"
+ "~/Development/dev.org"
+ "~/Development/Github/eldiet/README.org")))
  '(org-clock-idle-time 10)
  '(org-clock-persist t)
  '(org-modules
@@ -108,9 +114,9 @@ static char *gnus-pointer[] = {
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auto-dim-other-buffers-face ((t (:background "#11110F")))))
-;'(auto-dim-other-buffers-face ((t (:background "#Bebebe")))))
-
+;'(auto-dim-other-buffers-face ((t (:background "black")))))
+;'(auto-dim-other-buffers-face ((t (:background "#Dcdcdc")))))
+'(auto-dim-other-buffers-face ((t (:background "#00000f")))))
 (add-to-list 'custom-theme-load-path "/home/aaron/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/lisp/" )
 (add-to-list 'custom-theme-load-path "home/aaron/.emacs.d/elpa")
@@ -120,30 +126,33 @@ static char *gnus-pointer[] = {
   #+end_src
 
   #+RESULTS:
-  | /home/aaron/.emacs.d/elpa/alect-themes-20160414.114/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160501.1650/ | /home/aaron/.emacs.d/elpa/apropospriate-theme-20160212.930/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/hc-zenburn-theme-20150928.933/ | /home/aaron/.emacs.d/elpa/monokai-theme-20160515.1404/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160412.428/ | /home/aaron/.emacs.d/elpa/ubuntu-theme-20150805.806/ | /home/aaron/.emacs.d/elpa/zenburn-theme-20160501.749/ | /home/aaron/.emacs.d/ | ~/.emacs.d/lisp/moe-theme.el/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
+  | /home/aaron/.emacs.d/ | ~/.emacs.d/lisp/moe-theme.el/ | /home/aaron/.emacs.d/elpa/abyss-theme-20160420.512/ | /home/aaron/.emacs.d/elpa/afternoon-theme-20140104.1059/ | /home/aaron/.emacs.d/elpa/ahungry-theme-20160516.2058/ | /home/aaron/.emacs.d/elpa/alect-themes-20160414.114/ | /home/aaron/.emacs.d/elpa/anti-zenburn-theme-20160501.1650/ | /home/aaron/.emacs.d/elpa/apropospriate-theme-20160615.810/ | /home/aaron/.emacs.d/elpa/arjen-grey-theme-20160403.1215/ | /home/aaron/.emacs.d/elpa/atom-dark-theme-20151119.2335/ | /home/aaron/.emacs.d/elpa/basic-theme-20151010.107/ | /home/aaron/.emacs.d/elpa/cherry-blossom-theme-20150621.2042/ | /home/aaron/.emacs.d/elpa/colorsarenice-theme-20150421.1336/ | /home/aaron/.emacs.d/elpa/dark-mint-theme-20160301.2242/ | /home/aaron/.emacs.d/elpa/darkburn-theme-20151003.100/ | /home/aaron/.emacs.d/elpa/darkokai-theme-20160512.816/ | /home/aaron/.emacs.d/elpa/espresso-theme-20130228.2348/ | /home/aaron/.emacs.d/elpa/forest-blue-theme-20160627.142/ | /home/aaron/.emacs.d/elpa/hc-zenburn-theme-20150928.933/ | /home/aaron/.emacs.d/elpa/molokai-theme-20151016.845/ | /home/aaron/.emacs.d/elpa/monokai-theme-20160628.351/ | /home/aaron/.emacs.d/elpa/omtose-phellack-theme-20160412.428/ | /home/aaron/.emacs.d/elpa/smart-mode-line-powerline-theme-20160520.854/ | /home/aaron/.emacs.d/elpa/smart-mode-line-20160618.1512/ | /home/aaron/.emacs.d/elpa/ubuntu-theme-20150805.806/ | /home/aaron/.emacs.d/elpa/zenburn-theme-20160501.749/ | home/aaron/.emacs.d/elpa | /home/aaron/.emacs.d/themes | custom-theme-directory | t |
+  |                       |                               |                                                     |                                                          |                                                        |                                                      |                                                             |                                                             |                                                           |                                                          |                                                     |                                                               |                                                              |                                                          |                                                        |                                                        |                                                         |                                                           |                                                          |                                                       |                                                       |                                                               |                                                                         |                                                          |                                                      |                                                       |                          |                             |                        |   |
 * Sane defaults
   #+begin_src emacs-lisp :tangle yes
-  (setq auto-revert-interval 1            ; Refresh buffers fast
-      custom-file (make-temp-file "")   ; Discard customization's
-      default-input-method "TeX"        ; Use TeX when toggling input method
-      echo-keystrokes 0.1               ; Show keystrokes asap
-      inhibit-startup-message t         ; No splash screen please
-      initial-scratch-message nil       ; Clean scratch buffer
-      recentf-max-saved-items 100       ; Show more recent files
-      ring-bell-function 'ignore        ; Quiet
-;      sentence-end-double-space nil
-)    ; No double space
+      (setq auto-revert-interval 1            ; Refresh buffers fast
+          custom-file (make-temp-file "")   ; Discard customization's
+          default-input-method "TeX"        ; Use TeX when toggling input method
+          echo-keystrokes 0.1               ; Show keystrokes asap
+          inhibit-startup-message t         ; No splash screen please
+          initial-scratch-message nil       ; Clean scratch buffer
+          recentf-max-saved-items 100       ; Show more recent files
+          ring-bell-function 'ignore        ; Quiet
+          ;      sentence-end-double-space nil
+    )    ; No double space
 
-(put 'narrow-to-region 'disabled nil)
+    (put 'narrow-to-region 'disabled nil)
 
-  (setq-default fill-column 79                    ; Maximum line width
-              ;              split-width-threshold 100         ; Split verticly by default
-	      ) ; Auto-fill-mode everywhere
+      (setq-default fill-column 79                    ; Maximum line width
+                  ;              split-width-threshold 100         ; Split verticly by default
+            ) ; Auto-fill-mode everywhere
+
+    (add-hook 'after-init-hook 'smooth-scrolling-mode) 
 
   #+end_src
 
   #+RESULTS:
-  : 79
+  : t
 
 
 
@@ -170,13 +179,14 @@ static char *gnus-pointer[] = {
 #+begin_src emacs-lisp :tangle yes
 ;; ;; Custom Org-settings
 ;; ;(require 'org-ac)
-
+(add-hook 'org-mode-hook 'org-bullets-mode)
 (setq org-mobile-directory "~/Dropbox/.org/MobileOrg")
 (setq org-src-fontify-natively t)
 (setq org-src-tab-acts-natively t)
 (setq org-src-preserve-indentation t)
 (setq org-enforce-todo-dependencies t)
 (setq org-enforce-todo-checkbox-dependencies t)
+(add-hook 'org-mode-hook 'org-hide-block-all)
 ;; (setq org-beamer-mode t)
 (global-set-key [XF86Launch1] 'helm-list-elisp-packages)
 (define-key global-map "\C-cl" 'org-store-link)
@@ -213,6 +223,7 @@ static char *gnus-pointer[] = {
 
 ;; Aktuelle Zeile in der Agenda hervorheben
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1 )))
+()
 (setq org-agenda-include-diary t)
 
 ;; Latex Export Settings
@@ -225,6 +236,7 @@ static char *gnus-pointer[] = {
    (python . t)
    (latex . t)
    (ipython .t)
+   (sh . t)
    (ledger . t)
    (dot . t))))
 
@@ -273,12 +285,14 @@ static char *gnus-pointer[] = {
 ;; ;; Capture settings
  (setq org-default-notes-file "~/Dropbox/.org/Organizer.org")
 ;;  ;;Org Capture templates
- (setq org-capture-templates
+(setq org-capture-templates
        '(
+	 ("i" "Information" entry (file+headline  "~/Dropbox/.org/Organizer.org" "Captured information")
+	  "* %?\n Entered on %U\n %i")
 	 ("t" "Todo" entry (file+headline "~/Dropbox/.org/Organizer.org" "Tasks")
-             "* TODO %?\n  %i\n  %a")
+             "* TODO %?\n Entered on %U\n  %i")
         ("j" "Journal" entry (file+datetree "~/Dropbox/.org/Journal.org")
-	 "* %?\nEntered on %U\n  %i\n  %a")
+	 "* %?\nEntered on %U\n  %i\n")
 	("c" "Configure" entry (file+headline "~/Dropbox/.org/Organizer.org" "Configure")
 	 )
 	("b" "Birthday" entry (file+headline "~/Dropbox/.org/Birthdays.org" "New Birthdays")
@@ -289,34 +303,8 @@ static char *gnus-pointer[] = {
 \\newpage
 ,#+END_SRC
 
-")
-	("N" "NMR-Labbook" entry (file+datetree "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Labbook.org")
-	 "* %?%^{prompt} \n
-\** Aim\n
-
-\** Setup\n
-	 - Instrument: Bruker DPX 200 Spectrometer \n
-	 - Probehead size: 4 \\si{\\milli\\metre}\n 
-	 - Software: Topspin\n
-	 - Standard used: Adamantane in rotor 102\n
-	 - Spinning frequency: 10 \\si{\\kilo\\hertz} MAS\n
-	 - - 90 $^1H$: P$_1$ = 5\\si{\\micro\\second}, PL$_1$ =  \\si{\\decibel}\n
-	 SR $^1H$ =  \\si{\\hertz} (for 1.64 ppm, in Setup 2)\n
-	 - - 90 $^{13}C$: P$_1$ = 5 \\si{\\micro\\second}, PL$_1$ =  \\si{\\decibel}\n
-	 SR $^{13}C$ =  \\si{\\hertz} (for 38.484 ppm, in Setup 2)\n
-	 
-	 Entered on %U\n  %i\n
-,#+BEGIN_SRC latex
-\\newpage
-,#+END_SRC"
-
-
-
-	 
-	 )
-	
-	 )
-	 )
+")))
+		 
 
 #+end_src
 
@@ -324,7 +312,7 @@ static char *gnus-pointer[] = {
 
 
   #+RESULTS:
-  | t | Todo | entry | (file+headline ~/Dropbox/.org/Organizer.org Tasks) | * TODO %? |
+  | i | Information | entry | (file+headline ~/Dropbox/.org/Organizer.org Captured information) | * %? |
 
 #+RESULTS:
 : org-latex-format-headline-colored-keywords-function
@@ -362,6 +350,19 @@ static char *gnus-pointer[] = {
  
 ** Export settings
 
+** Org-ref
+   #+BEGIN_SRC emacs-lisp :tangle yes
+(require 'org-ref)
+(setq reftex-default-bibliography '("~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/UWS.bib"))
+;; see org-ref for use of these variables
+(setq org-ref-bibliography-notes '("~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis.org")
+      org-ref-default-bibliography '("~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/UWS.bib")
+      org-ref-pdf-directory '("~/Dropbox/polyamides/Literature"))
+   #+END_SRC
+
+   #+RESULTS:
+   | ~/Dropbox/polyamides/Literature |
+
 *** Latex PDF export engine
     Here I set the Latex compiler for the direct PDF export to xelatex.
     I use this, because it support the beamer theme I always use (https://github.com/matze/mtheme) and offers more possibilities.
@@ -372,12 +373,12 @@ static char *gnus-pointer[] = {
 (setq org-latex-pdf-process
    (quote
     ("xelatex -interaction nonstopmode -output-directory %o %f"
-     "bibtex %b" "xelatex -interaction nonstopmode -output-directory %o %f"
+     "biber %b" "xelatex -interaction nonstopmode -output-directory %o %f"
      "xelatex -interaction nonstopmode -output-directory %o %f")))
     #+END_SRC
 
     #+RESULTS:
-    | xelatex -interaction nonstopmode -output-directory %o %f | bibtex %b | xelatex -interaction nonstopmode -output-directory %o %f | xelatex -interaction nonstopmode -output-directory %o %f |
+    | xelatex -interaction nonstopmode -output-directory %o %f | biber %b | xelatex -interaction nonstopmode -output-directory %o %f | xelatex -interaction nonstopmode -output-directory %o %f |
 
 *** Labbook class
 #+begin_src emacs-lisp :tangle yes
@@ -427,6 +428,7 @@ static char *gnus-pointer[] = {
  (setq jedi:complete-on-dot t)                 ; optional
 ;; Company
 (add-hook 'after-init-hook 'global-company-mode) 
+
 ;(company-auctex-init)
 (setq company-idle-delay 0
       company-echo-delay 0
@@ -435,10 +437,11 @@ static char *gnus-pointer[] = {
       company-selection-wrap-around t
       company-transformers '(company-sort-by-occurrence
                              company-sort-by-backend-importance))
+(company-quickhelp-mode 1)
   #+end_src
 
   #+RESULTS:
-  | company-sort-by-occurrence | company-sort-by-backend-importance |
+  : t
   
 * LaTeX
 #+begin_src emacs-lisp :tangle yes
@@ -579,13 +582,14 @@ For fast collaborative LaTeX editing
   (auto-dim-other-buffers-mode t))))
   ;; ;; Helm settings
   ;;(helm-autoresize-mode t)
-  (setq helm-bibtex-bibliography '("/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Thesis/UWS.bib" "/home/aaron/Books/Library.bib"))
+  (setq helm-bibtex-bibliography '("/home/aaron/Books/Library.bib" "/home/aaron/Documents/Publications/publications.bib"))
   (setq helm-bibtex-library-path '(
   "/home/aaron/Dropbox/polyamides/Bachelor_Thesis_Aaron/Literature/"
   "/home/aaron/Books/" 
   "/home/aaron/Dropbox/polyamides/Literature/" 
   "/home/aaron/.dropbox-alt/Dropbox/Macromolecular characterization Group/Theses/"
   ))
+(setq helm-bibtex-full-frame nil)
 ;(setq helm-bibtex-notes-path '("/home/aaron/Publishing/Bachelor_Thesis/Literature/Notes/"))
 (autoload 'helm-bibtex "helm-bibtex" "" t)
 
@@ -617,8 +621,6 @@ For fast collaborative LaTeX editing
   Settings for mail integration, mainly mu4e
 
   #+begin_src emacs-lisp :tangle yes
-  ;;'(send-mail-function sendemail)
-;;(setq mail-user-agent 'mu4e-user-agent)
 ;; Mu4e settings
 (mu4e-maildirs-extension)
 (add-to-list 'load-path "~/.emacs.d/lisp/mu4e-multi")  ;; if it's not already in `load-path'
@@ -693,7 +695,7 @@ For fast collaborative LaTeX editing
 ;; don't keep message buffers around
 (setq message-kill-buffer-on-exit t)
 ;; set update interval (testing, there will be trouble with the credentials)
-(setq mu4e-update-interval 10)
+(setq mu4e-update-interval 3)
 
 ;; HTML rendering settings
 (setq mu4e-html2text-command "html2text")
@@ -951,6 +953,7 @@ link))
 	"http://pit-claudel.fr/clement/blog/feed"
 	"http://chrisalbon.com/feeds/all.rss.xml"
 	"http://www.metal-hammer.de/feed/"
+	"http://feeds.feedburner.com/TheKitchinResearchGroup"
 ))
 (setq-default elfeed-search-filter "@1-week-ago +unread ")
 ;(setq browse-url-browser-function 'conkeror)
@@ -1110,10 +1113,11 @@ link))
   | \.pdf\' | zathura | (file) |
 * Keybindings
 #+begin_src emacs-lisp :tangle yes
-(undo-tree-mode)
-(global-set-key [f12] 'undo-tree-visualize)
 
+(undo-tree-mode)
+(global-unset-key "\C-xu")
 (global-set-key "\C-xu" 'undo)
+(global-set-key [f12] 'undo-tree-visualize)
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
@@ -1196,25 +1200,22 @@ link))
 ** Theme
   - [ ] Change highlight-tail mode to adapt to theme colors
    #+begin_src emacs-lisp :tangle yes
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/moe-theme.el/")
 					;  (load-theme 'leuven)
 (set-default-font "Monospace 14")
 (setq show-paren-style 'expression)
-(load-theme 'monokai)
-(setq highlight-tail-colors '(("#F70057" . 0)
-			      ("#FA518D" . 10)
-			      ("#FB35EA" . 15)
-			      ("#FE8CF4" . 20)
-			      ("#945AFF" . 25)
-			      ("#C9ACFF" . 30)
-			      ("#40CAE4" . 35)
-			      ("#92E7F7" . 40)
-			      ("#74DBCD" . 45)
-			      ("#D3FBF6" . 50)
-			      ("#86C30D" . 55)
-			      ("#BBEF53" . 60)
-			      ("#35331D" . 65)
-			      ("#7B7962" . 70)))
+(load-theme 'afternoon)
+;(load-theme 'monokai)
+;(load-theme 'ahungry)
+;(load-theme 'jazz)
+(setq highlight-tail-colors '(("#483d8b" . 0)
+			      ("#483d8b" . 10)
+			      ("#7b68ee" . 20)
+			      ("#8470ff" . 30)
+			      ("#Add8e6" . 40 )
+			      ))
+
 
 (highlight-tail-mode)
 (highlight-tail-reload)
@@ -1234,10 +1235,14 @@ link))
 
 ** Powerline
    #+BEGIN_SRC emacs-lisp :tangle yes
-  (add-to-list 'load-path "~/.emacs.d/lisp/powerline")
-  (require 'powerline)
- (powerline-default-theme)
-
+;  (add-to-list 'load-path "~/.emacs.d/lisp/powerline")
+ ; (require 'powerline)
+; (powerline-default-theme)
+(setq sml/theme 'respectful)
+(setq sml/shorten-directory t)
+(setq sml/shorten-modes t)
+(smart-mode-line-enable)
+(sml/setup)
 ;;  (powerline-alternate-right)
 
   ;; (add-to-list 'calendar-mode-line-format
@@ -1255,7 +1260,7 @@ link))
    #+END_SRC
 
    #+RESULTS:
-   | %e | (:eval (let* ((active (powerline-selected-window-active)) (mode-line (if active (quote mode-line) (quote mode-line-inactive))) (face1 (if active (quote powerline-active1) (quote powerline-inactive1))) (face2 (if active (quote powerline-active2) (quote powerline-inactive2))) (separator-left (intern (format powerline-%s-%s (powerline-current-separator) (car powerline-default-separator-dir)))) (separator-right (intern (format powerline-%s-%s (powerline-current-separator) (cdr powerline-default-separator-dir)))) (lhs (list (powerline-raw %* nil (quote l)) (when powerline-display-buffer-size (powerline-buffer-size nil (quote l))) (when powerline-display-mule-info (powerline-raw mode-line-mule-info nil (quote l))) (powerline-buffer-id nil (quote l)) (when (and (boundp (quote which-func-mode)) which-func-mode) (powerline-raw which-func-format nil (quote l))) (powerline-raw  ) (funcall separator-left mode-line face1) (when (and (boundp (quote erc-track-minor-mode)) erc-track-minor-mode) (powerline-raw erc-modified-channels-object face1 (quote l))) (powerline-major-mode face1 (quote l)) (powerline-process face1) (powerline-minor-modes face1 (quote l)) (powerline-narrow face1 (quote l)) (powerline-raw   face1) (funcall separator-left face1 face2) (powerline-vc face2 (quote r)) (when (bound-and-true-p nyan-mode) (powerline-raw (list (nyan-create)) face2 (quote l))))) (rhs (list (powerline-raw global-mode-string face2 (quote r)) (funcall separator-right face2 face1) (unless window-system (powerline-raw (char-to-string 57505) face1 (quote l))) (powerline-raw %4l face1 (quote l)) (powerline-raw : face1 (quote l)) (powerline-raw %3c face1 (quote r)) (funcall separator-right face1 mode-line) (powerline-raw  ) (powerline-raw %6p nil (quote r)) (when powerline-display-hud (powerline-hud face2 face1))))) (concat (powerline-render lhs) (powerline-fill face2 (powerline-width rhs)) (powerline-render rhs)))) |
+   : t
 
 
 * Custom functions
