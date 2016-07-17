@@ -91,13 +91,9 @@ static char *gnus-pointer[] = {
  '(mu4e-view-prefer-html t)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/.org/Food.org"
- "~/Dropbox/.org/Organizer.org"
- "~/Dropbox/.org/from-mobile.org"
- "~/Dropbox/.org/Birthdays.org"
- "~/Books/edu.org"
- "~/Development/dev.org"
- "~/Development/Github/eldiet/README.org")))
+    ("~/.org/Food.org"
+ "~/.org/Organizer.org"
+ "~/.org/Birthdays.org")))
  '(org-clock-idle-time 10)
  '(org-clock-persist t)
  '(org-modules
@@ -291,27 +287,22 @@ static char *gnus-pointer[] = {
 
 	))
 ;; ;; Capture settings
- (setq org-default-notes-file "~/Dropbox/.org/Organizer.org")
+ (setq org-default-notes-file "~/.org/Organizer.org")
 ;;  ;;Org Capture templates
 (setq org-capture-templates
        '(
-	 ("i" "Information" entry (file+headline  "~/Dropbox/.org/Organizer.org" "Captured information")
+	 ("i" "Information" entry (file+headline  "~/.org/Organizer.org" "Captured information")
 	  "* %?\n Entered on %U\n %i")
-	 ("t" "Todo" entry (file+headline "~/Dropbox/.org/Organizer.org" "Tasks")
+	 ("t" "Todo" entry (file+headline "~/.org/Organizer.org" "Tasks")
              "* TODO %?\n Entered on %U\n  %i")
-        ("j" "Journal" entry (file+datetree "~/Dropbox/.org/Journal.org")
+        ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
 	 "* %?\nEntered on %U\n  %i\n")
-	("c" "Configure" entry (file+headline "~/Dropbox/.org/Organizer.org" "Configure")
+	("c" "Configure" entry (file+headline "~/.org/Organizer.org" "Configure")
 	 )
-	("b" "Birthday" entry (file+headline "~/Dropbox/.org/Birthdays.org" "New Birthdays")
+	("b" "Birthday" entry (file+headline "~/.org/Birthdays.org" "New Birthdays")
 	 "* APPT %?\n %i\n")
-	("l" "Labbook" entry (file+datetree "~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Labbook.org")
-	 "* %?\nEntered on %U\n  %i\n  %a \n
-,#+BEGIN_SRC latex
-\\newpage
-,#+END_SRC
 
-")))
+))
 		 
 
 #+end_src
@@ -320,7 +311,12 @@ static char *gnus-pointer[] = {
 
 
   #+RESULTS:
-  | i | Information | entry | (file+headline ~/Dropbox/.org/Organizer.org Captured information) | * %? |
+  | i | Information | entry | (file+headline ~/Dropbox/.org/Organizer.org Captured information)      | * %?\n Entered on %U\n %i                                                      |
+  | t | Todo        | entry | (file+headline ~/Dropbox/.org/Organizer.org Tasks)                     | * TODO %?\n Entered on %U\n  %i                                                |
+  | j | Journal     | entry | (file+datetree ~/Dropbox/.org/Journal.org)                             | * %?\nEntered on %U\n  %i\n                                                    |
+  | c | Configure   | entry | (file+headline ~/Dropbox/.org/Organizer.org Configure)                 |                                                                                |
+  | b | Birthday    | entry | (file+headline ~/Dropbox/.org/Birthdays.org New Birthdays)             | * APPT %?\n %i\n                                                               |
+  | l | Labbook     | entry | (file+datetree ~/Dropbox/polyamides/Bachelor_Thesis_Aaron/Labbook.org) | * %?\nEntered on %U\n  %i\n  %a \n\n#+BEGIN_SRC latex\n\newpage\n#+END_SRC\n\n |
 
 #+RESULTS:
 : org-latex-format-headline-colored-keywords-function
