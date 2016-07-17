@@ -1253,7 +1253,6 @@ link))
    #+RESULTS:
    : t
 
-
 * Custom functions
 Handy little hacks that are just not big enough for a library.
 #+BEGIN_SRC emacs-lisp :tangle yes
