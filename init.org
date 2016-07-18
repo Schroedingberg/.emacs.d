@@ -343,6 +343,24 @@ static char *gnus-pointer[] = {
    : kill-whole-line
  
 ** Export settings
+   #+BEGIN_SRC emacs-lisp :tangle no
+   (add-to-list 'org-latex-classes
+          '("koma-article"
+             "\\documentclass{scrartcl}"
+             ("\\section{%s}" . "\\section*{%s}")
+             ("\\subsection{%s}" . "\\subsection*{%s}")
+             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+             ("\\paragraph{%s}" . "\\paragraph*{%s}")
+             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+   #+END_SRC
+
+   #+RESULTS:
+   | koma-article | \documentclass{scrartcl}          | (\section{%s} . \section*{%s}) | (\subsection{%s} . \subsection*{%s}) | (\subsubsection{%s} . \subsubsection*{%s}) | (\paragraph{%s} . \paragraph*{%s})         | (\subparagraph{%s} . \subparagraph*{%s})   |                                     |                                   |                                         |
+   | Labbook      | \documentclass[hyperref]{labbook} | (\part{%s} . \part{%s})        | (\labday{%s} . \labday{%s})          | (\experiment{%s} . \experiment{%s})        | ( \subexperiment{%s} . \subexperiment{%s}) | (\section{%s} . \section{%s})              | (\subsection{%s} . \subsection{%s}) | (\paragraph{%s} . \paragraph{%s}) | (\subparagraph{%s} . \subparagraph{%s}) |
+   | article      | \documentclass[11pt]{article}     | (\section{%s} . \section*{%s}) | (\subsection{%s} . \subsection*{%s}) | (\subsubsection{%s} . \subsubsection*{%s}) | (\paragraph{%s} . \paragraph*{%s})         | (\subparagraph{%s} . \subparagraph*{%s})   |                                     |                                   |                                         |
+   | report       | \documentclass[11pt]{report}      | (\part{%s} . \part*{%s})       | (\chapter{%s} . \chapter*{%s})       | (\section{%s} . \section*{%s})             | (\subsection{%s} . \subsection*{%s})       | (\subsubsection{%s} . \subsubsection*{%s}) |                                     |                                   |                                         |
+   | book         | \documentclass[11pt]{book}        | (\part{%s} . \part*{%s})       | (\chapter{%s} . \chapter*{%s})       | (\section{%s} . \section*{%s})             | (\subsection{%s} . \subsection*{%s})       | (\subsubsection{%s} . \subsubsection*{%s}) |                                     |                                   |                                         |
 
 ** Org-ref
    #+BEGIN_SRC emacs-lisp :tangle yes
